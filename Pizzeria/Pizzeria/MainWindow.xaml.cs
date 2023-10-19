@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -26,51 +27,50 @@ namespace Pizzeria
             InitializeComponent();
         }
 
-        private void RadioButton_Checked(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
         private void pedir_Click(object sender, RoutedEventArgs e)
         {
-            miListado.Items.Clear();
-
-            if ((bool)rbQueso.IsChecked) 
-                miListado.Items.Add(rbQueso.Content);
-            else if ((bool)rbFina.IsChecked)
-                miListado.Items.Add(rbFina.Content);
-            else if ((bool)rbClasica.IsChecked)
-                miListado.Items.Add(rbClasica.Content);
-
-            if ((bool)rbCola.IsChecked)
-                miListado.Items.Add(rbCola.Content);
-            else if ((bool)rb7up.IsChecked)
-                miListado.Items.Add(rb7up.Content);
-            else if ((bool)rbFanta.IsChecked)
-                miListado.Items.Add(rbFanta.Content);
-            else if ((bool)rbAgua.IsChecked)
-                miListado.Items.Add(rbAgua.Content);
-
-            if ((bool)cbMozzarella.IsChecked)
-                miListado.Items.Add(cbMozzarella.Content);
-            if ((bool)cbJamon.IsChecked)
-                miListado.Items.Add(cbJamon.Content);
-            if ((bool)cbChamp.IsChecked)
-                miListado.Items.Add(cbChamp.Content);
-            if ((bool)rbAgua.IsChecked)
-                miListado.Items.Add(rbAgua.Content);
-
+            ProcesarElementos(spBebidas.Children);
+            ProcesarElementos(spTipoMasa.Children);
+            ProcesarElementos(spIngredientes.Children);
         }
 
-        private void reset_Click(object sender, RoutedEventArgs e)
+        private void ResetButton_Click(object sender, RoutedEventArgs e)
         {
-            foreach (Control ctl in containerCanvas.Children)
+            desmarcar(spBebidas.Children);
+            desmarcar(spTipoMasa.Children);
+            desmarcar(spIngredientes.Children);
+            miListado.Items.Clear();
+        }
+
+        private void desmarcar(UIElementCollection elementos)
+        {
+            foreach (UIElement element in elementos)
             {
-                if (ctl.GetType() == typeof(CheckBox))
-                    ((CheckBox)ctl).IsChecked = false;
-                if (ctl.GetType() == typeof(TextBox))
-                    ((TextBox)ctl).Text = String.Empty;
+                if (element is ToggleButton toggleButton)
+                {
+
+                    if (toggleButton.IsChecked == true)
+                    {
+                        toggleButton.IsChecked = false;
+                    }
+                }
             }
         }
+
+        private void ProcesarElementos(UIElementCollection elementos)
+        {
+            foreach (UIElement element in elementos)
+            {
+                if (element is ToggleButton toggleButton)
+                {
+                    
+                    if (toggleButton.IsChecked == true)
+                    {
+                        miListado.Items.Add(toggleButton.Content);
+                    }
+                }
+            }
+        }
+
     }
 }
