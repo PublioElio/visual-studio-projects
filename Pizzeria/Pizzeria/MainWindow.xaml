@@ -27,14 +27,14 @@
         </Style>
     </Window.Resources>
     <Grid x:Name="ventanaPrincipal">
-        <GroupBox x:Name="gbMasa" Header="Tipo de masa" Margin="43,121,571,217">
+        <GroupBox x:Name="gbMasa" Header="Tipo de masa" Margin="413,35,201,303" Foreground="#FFD02626">
             <StackPanel x:Name="spTipoMasa" Margin="10,0,10,0" Height="48">
-                <RadioButton x:Name="rbQueso" Content="Masa rellena de queso"/>
+                <RadioButton x:Name="rbQueso" Content="Masa rellena de queso" Foreground="#FFEC2121"/>
                 <RadioButton x:Name="rbFina" Content="Masa fina"/>
                 <RadioButton x:Name="rbClasica" Content="Masa clásica"/>
             </StackPanel>
         </GroupBox>
-        <GroupBox x:Name="gbBebida" Header="Bebida" Margin="43,255,613,62">
+        <GroupBox x:Name="gbBebida" Header="Bebida" Margin="230,35,438,303" Foreground="#FFD02626">
             <StackPanel x:Name="spBebidas" Margin="10,0,10,0" Height="61">
                 <RadioButton x:Name="rbCola" Content="Coca-Cola" />
                 <RadioButton x:Name="rb7up" Content="7up"/>
@@ -42,8 +42,8 @@
                 <RadioButton x:Name="rbAgua" Content="Agua"/>
             </StackPanel>
         </GroupBox>
-        <GroupBox x:Name="gbIngredientes" Header="Ingredientes" Margin="319,121,349,32">
-            <StackPanel x:Name="spIngredientes" Margin="10,0,10,0" Height="221">
+        <GroupBox x:Name="gbIngredientes" Header="Ingredientes" Margin="230,173,438,60" Foreground="#FFD02626">
+            <StackPanel x:Name="spIngredientes" Margin="10,0,10,0" Height="153">
                 <CheckBox x:Name="cbMozzarella" Content="Mozzarella"/>
                 <CheckBox x:Name="cbJamon" Content="Jamón"/>
                 <CheckBox x:Name="cbChamp" Content="Champiñones"/>
@@ -56,14 +56,14 @@
                 <CheckBox x:Name="cbBacon" Content="Bacon"/>
             </StackPanel>
         </GroupBox>
-        <ListBox x:Name="miListado" d:ItemsSource="{d:SampleData ItemCount=0}" Margin="523,169,83,128" BorderBrush="#FF8BA5F3"/>
-        <Label x:Name="labelInfo" Content="Información del pedido:" HorizontalAlignment="Left" Height="27" Margin="523,137,0,0" VerticalAlignment="Top" Width="152" FontFamily="Segoe UI Semibold" Foreground="#FFFB1616"/>
-        <Button x:Name="pedir" Style="{StaticResource BotonRedondeado}" Content="PEDIR" HorizontalAlignment="Left" Margin="528,352,0,0" VerticalAlignment="Top" Click="pedir_Click" FontFamily="Nirmala UI" Width="69" Foreground="#FF7541D6"/>
-        <Button x:Name="reset" Style="{StaticResource BotonRedondeado}" Content="RESET" HorizontalAlignment="Left" Margin="627,352,0,0" VerticalAlignment="Top" Click="ResetButton_Click" FontFamily="Nirmala UI" Width="60" Foreground="#FF7541D6"/>
-        <Image x:Name="mario" HorizontalAlignment="Left" Height="116" Margin="497,10,0,0" VerticalAlignment="Top" Width="114">
-            <Image.OpacityMask>
-                <ImageBrush ImageSource="/mario.png"/>
-            </Image.OpacityMask>
+        <ListBox x:Name="miListado" d:ItemsSource="{d:SampleData ItemCount=0}" Margin="413,201,201,95" BorderBrush="#FF8BA5F3"/>
+        <Label x:Name="labelInfo" Content="Información del pedido:" HorizontalAlignment="Left" Height="27" Margin="413,169,0,0" VerticalAlignment="Top" Width="152" FontFamily="Segoe UI Semibold" Foreground="#FFD02626"/>
+        <Button x:Name="pedir" Style="{StaticResource BotonRedondeado}" Content="PEDIR" HorizontalAlignment="Left" Margin="430,369,0,0" VerticalAlignment="Top" Click="pedir_Click" FontFamily="Nirmala UI" Width="70" Foreground="#FF7541D6"/>
+        <Button x:Name="reset" Style="{StaticResource BotonRedondeado}" Content="RESET" HorizontalAlignment="Left" Margin="530,369,0,0" VerticalAlignment="Top" Click="ResetButton_Click" FontFamily="Nirmala UI" Width="60" Foreground="#FF7541D6"/>
+        <Image x:Name="mario" HorizontalAlignment="Left" Height="257" Margin="570,0,0,0" VerticalAlignment="Top" Width="228">
+            <Image.Source>
+                <BitmapImage UriSource="mario.png"/>
+            </Image.Source>
         </Image>
     </Grid>
 </Window>
