@@ -29,9 +29,9 @@ namespace Pizzeria
 
         private void pedir_Click(object sender, RoutedEventArgs e)
         {
-            ProcesarElementos(spBebidas.Children);
-            ProcesarElementos(spTipoMasa.Children);
-            ProcesarElementos(spIngredientes.Children);
+            procesarElementos(spBebidas.Children);
+            procesarElementos(spTipoMasa.Children);
+            procesarElementos(spIngredientes.Children);
         }
 
         private void ResetButton_Click(object sender, RoutedEventArgs e)
@@ -57,7 +57,7 @@ namespace Pizzeria
             }
         }
 
-        private void ProcesarElementos(UIElementCollection elementos)
+        private void procesarElementos(UIElementCollection elementos)
         {
             foreach (UIElement element in elementos)
             {

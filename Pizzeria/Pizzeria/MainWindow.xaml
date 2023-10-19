@@ -34,7 +34,7 @@
                 <RadioButton x:Name="rbClasica" Content="Masa clásica"/>
             </StackPanel>
         </GroupBox>
-        <GroupBox x:Name="gbBebida" Header="Bebida" Margin="230,35,438,303" Foreground="#FFD02626">
+        <GroupBox x:Name="gbBebida" Header="Bebida" Margin="230,35,438,276" Foreground="#FFD02626">
             <StackPanel x:Name="spBebidas" Margin="10,0,10,0" Height="61">
                 <RadioButton x:Name="rbCola" Content="Coca-Cola" />
                 <RadioButton x:Name="rb7up" Content="7up"/>
