@@ -1,0 +1,53 @@
+﻿<Window x:Class="Pizzeria.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pizzeria"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="805" RenderTransformOrigin="0.5,0.5">
+    <Window.RenderTransform>
+        <TransformGroup>
+            <ScaleTransform ScaleY="1"/>
+            <SkewTransform/>
+            <RotateTransform/>
+            <TranslateTransform/>
+        </TransformGroup>
+    </Window.RenderTransform>
+    <Grid>
+        <GroupBox x:Name="gbMasa" Header="Tipo de masa" Margin="43,121,613,217">
+            <StackPanel x:Name="TipoMasa" Margin="10,0,10,0" Height="48">
+                <RadioButton x:Name="rbQueso" Content="Rellena de Queso" Checked="RadioButton_Checked"/>
+                <RadioButton x:Name="rbFina" Content="Fina"/>
+                <RadioButton x:Name="rbClasica" Content="Clasica"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="gbBebida" Header="Bebida" Margin="43,255,613,62">
+            <StackPanel x:Name="spBebidas" Margin="10,0,10,0" Height="61">
+                <RadioButton x:Name="rbCola" Content="Coca-Cola" Checked="RadioButton_Checked"/>
+                <RadioButton x:Name="rb7up" Content="7up"/>
+                <RadioButton x:Name="rbFanta" Content="Fanta Naranja"/>
+                <RadioButton x:Name="rbAgua" Content="Agua"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="gbIngredientes" Header="Ingredientes" Margin="228,121,440,32">
+            <StackPanel x:Name="spIngredientes" Margin="10,0,10,0" Height="221">
+                <CheckBox x:Name="cbMozzarella" Content="Mozzarella"/>
+                <CheckBox x:Name="cbJamon" Content="Jamón"/>
+                <CheckBox x:Name="cbChamp" Content="Champiñones"/>
+                <CheckBox x:Name="cbSalchichas" Content="Salchichas"/>
+                <CheckBox x:Name="cbPimientos" Content="Pimientos"/>
+                <CheckBox x:Name="cbAtun" Content="Atún"/>
+                <CheckBox x:Name="cbAceitunas" Content="Aceitunas"/>
+                <CheckBox x:Name="cbPepperoni" Content="Pepperoni"/>
+                <CheckBox x:Name="cbPollo" Content="Pollo"/>
+                <CheckBox x:Name="cbBacon" Content="Bacon"/>
+            </StackPanel>
+        </GroupBox>
+        <ListBox x:Name="miListado" d:ItemsSource="{d:SampleData ItemCount=0}" Margin="420,152,186,145"/>
+        <Label x:Name="labelInfo" Content="Información del pedido:" HorizontalAlignment="Left" Height="27" Margin="420,120,0,0" VerticalAlignment="Top" Width="152" FontFamily="Segoe UI Semibold"/>
+        <Button x:Name="pedir" Content="PEDIR" HorizontalAlignment="Left" Margin="420,352,0,0" VerticalAlignment="Top" Click="pedir_Click"/>
+        <Button x:Name="reset" Content="RESET" HorizontalAlignment="Left" Margin="484,352,0,0" VerticalAlignment="Top" Click="reset_Click"/>
+
+    </Grid>
+</Window>
