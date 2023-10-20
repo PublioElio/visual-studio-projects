@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\adria\\Source\\Repos\\PublioElio\\repos\\Pizzeria\\Pizzeria\\Pizzeria.csproj": {}
+    "C:\\Users\\Propietario\\source\\visual-studio-projects\\Pizzeria\\Pizzeria\\Pizzeria.csproj": {}
   },
   "projects": {
-    "C:\\Users\\adria\\Source\\Repos\\PublioElio\\repos\\Pizzeria\\Pizzeria\\Pizzeria.csproj": {
+    "C:\\Users\\Propietario\\source\\visual-studio-projects\\Pizzeria\\Pizzeria\\Pizzeria.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\adria\\Source\\Repos\\PublioElio\\repos\\Pizzeria\\Pizzeria\\Pizzeria.csproj",
+        "projectUniqueName": "C:\\Users\\Propietario\\source\\visual-studio-projects\\Pizzeria\\Pizzeria\\Pizzeria.csproj",
         "projectName": "Pizzeria",
-        "projectPath": "C:\\Users\\adria\\Source\\Repos\\PublioElio\\repos\\Pizzeria\\Pizzeria\\Pizzeria.csproj",
-        "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\adria\\Source\\Repos\\PublioElio\\repos\\Pizzeria\\Pizzeria\\obj\\",
+        "projectPath": "C:\\Users\\Propietario\\source\\visual-studio-projects\\Pizzeria\\Pizzeria\\Pizzeria.csproj",
+        "packagesPath": "C:\\Users\\Propietario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Propietario\\source\\visual-studio-projects\\Pizzeria\\Pizzeria\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Propietario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
