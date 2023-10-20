@@ -8,10 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="cola.png" />
     <None Remove="mario.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="cola.png" />
     <Resource Include="mario.png" />
   </ItemGroup>
 

@@ -29,15 +29,15 @@
     <Grid x:Name="ventanaPrincipal">
         <GroupBox x:Name="gbMasa" Header="Tipo de masa" Margin="413,35,201,303" Foreground="#FFD02626">
             <StackPanel x:Name="spTipoMasa" Margin="10,0,10,0" Height="48">
-                <RadioButton x:Name="rbQueso" Content="Masa rellena de queso" Foreground="#FFEC2121"/>
+                <RadioButton x:Name="rbQueso" Content="Masa rellena de queso" Foreground="Black"/>
                 <RadioButton x:Name="rbFina" Content="Masa fina"/>
                 <RadioButton x:Name="rbClasica" Content="Masa clásica"/>
             </StackPanel>
         </GroupBox>
         <GroupBox x:Name="gbBebida" Header="Bebida" Margin="230,35,438,276" Foreground="#FFD02626">
             <StackPanel x:Name="spBebidas" Margin="10,0,10,0" Height="61">
-                <RadioButton x:Name="rbCola" Content="Coca-Cola" />
-                <RadioButton x:Name="rb7up" Content="7up"/>
+                <RadioButton x:Name="rbCola" Content="Coca-Cola" Checked="rbCola_Checked" IsChecked="False" />
+                <RadioButton x:Name="rb7up" Content="7up" Checked="rb7up_Checked"/>
                 <RadioButton x:Name="rbFanta" Content="Fanta Naranja"/>
                 <RadioButton x:Name="rbAgua" Content="Agua"/>
             </StackPanel>
@@ -56,14 +56,19 @@
                 <CheckBox x:Name="cbBacon" Content="Bacon"/>
             </StackPanel>
         </GroupBox>
-        <ListBox x:Name="miListado" d:ItemsSource="{d:SampleData ItemCount=0}" Margin="413,201,201,95" BorderBrush="#FF8BA5F3"/>
+        <ListBox x:Name="miListado" d:ItemsSource="{d:SampleData ItemCount=0}" Margin="413,201,201,95" BorderBrush="#FFECA691"/>
         <Label x:Name="labelInfo" Content="Información del pedido:" HorizontalAlignment="Left" Height="27" Margin="413,169,0,0" VerticalAlignment="Top" Width="152" FontFamily="Segoe UI Semibold" Foreground="#FFD02626"/>
         <Button x:Name="pedir" Style="{StaticResource BotonRedondeado}" Content="PEDIR" HorizontalAlignment="Left" Margin="430,369,0,0" VerticalAlignment="Top" Click="pedir_Click" FontFamily="Nirmala UI" Width="70" Foreground="#FF7541D6"/>
         <Button x:Name="reset" Style="{StaticResource BotonRedondeado}" Content="RESET" HorizontalAlignment="Left" Margin="530,369,0,0" VerticalAlignment="Top" Click="ResetButton_Click" FontFamily="Nirmala UI" Width="60" Foreground="#FF7541D6"/>
-        <Image x:Name="mario" HorizontalAlignment="Left" Height="257" Margin="570,0,0,0" VerticalAlignment="Top" Width="228">
+        <Image x:Name="mario" HorizontalAlignment="Left" Height="264" Margin="565,0,0,0" VerticalAlignment="Top" Width="233">
             <Image.Source>
                 <BitmapImage UriSource="mario.png"/>
             </Image.Source>
+        </Image>
+        <Image x:Name="imgBebida" HorizontalAlignment="Left" Height="125" Margin="40,35,0,0" VerticalAlignment="Top" Width="125">
+            <Image.OpacityMask>
+                <ImageBrush Stretch="UniformToFill"/>
+            </Image.OpacityMask>
         </Image>
     </Grid>
 </Window>
