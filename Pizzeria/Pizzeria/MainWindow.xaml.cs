@@ -76,6 +76,7 @@ namespace Pizzeria
             BitmapImage nuevaImagen = new BitmapImage(new Uri(rutaImagen, UriKind.Relative));
             
             imgBebida.Source = nuevaImagen;
+
         }
 
 
