@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Pizzeria",
+    "\\Pizzeria\\Pizzeria"
   ],
+  "SelectedNode": "\\Pizzeria\\Pizzeria\\MainWindow.xaml.cs",
   "PreviewInSolutionExplorer": false
 }
