@@ -50,7 +50,7 @@ namespace Pizzeria
                 if (element is ToggleButton toggleButton && toggleButton.IsChecked == true)
                     toggleButton.IsChecked = false;
 
-            limpiarImagenesEnGrid(ventanaPrincipal);
+            limpiarImagenesEnGrid(ventanaPrincipal); // este método limpia todas las imágenes en la ventana principal, menos la de Mario
         }
 
         private void limpiarImagenesEnGrid(Grid grid)
