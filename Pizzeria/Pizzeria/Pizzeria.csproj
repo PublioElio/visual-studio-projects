@@ -8,13 +8,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="agua.png" />
+    <None Remove="clasica.png" />
     <None Remove="cola.png" />
+    <None Remove="fanta.png" />
+    <None Remove="fina.png" />
     <None Remove="mario.png" />
+    <None Remove="queso.png" />
+    <None Remove="sevenup.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="agua.png" />
+    <Resource Include="clasica.png" />
     <Resource Include="cola.png" />
+    <Resource Include="fanta.png" />
+    <Resource Include="fina.png" />
     <Resource Include="mario.png" />
+    <Resource Include="queso.png" />
+    <Resource Include="sevenup.png" />
   </ItemGroup>
 
 </Project>
