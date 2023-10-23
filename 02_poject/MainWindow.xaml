@@ -1,0 +1,29 @@
+﻿<Window x:Class="_02_poject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_02_poject"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="mainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="17*"/>
+            <ColumnDefinition Width="15*"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="dataGridUsers" Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=4}"/>
+        <StackPanel HorizontalAlignment="Left" Margin="65,70,0,0" Orientation="Vertical" VerticalAlignment="Top" Height="248" Width="147">
+            <Label x:Name="labelUserName" Content="Nombre de usuario" Height="26" Width="147"/>
+            <TextBox x:Name="textBoxUserName" Height="36" TextWrapping="Wrap" Width="147" FontSize="20"/>
+            <Label x:Name="labelSurname" Content="Apellidos" Height="26" Width="147"/>
+            <TextBox x:Name="textBoxSurname" Height="36" TextWrapping="Wrap" Width="147" FontSize="20"/>
+            <Label x:Name="labelAdress" Content="Dirección" Height="26" Width="147"/>
+            <TextBox x:Name="textBoxAdress" Height="36" TextWrapping="Wrap" Width="147" FontSize="20"/>
+            <Label x:Name="labelPhone" Content="Teléfono" Height="26" Width="147"/>
+
+            <TextBox x:Name="textBoxPhone" Height="36" TextWrapping="Wrap" Width="147" FontSize="20"/>
+        </StackPanel>
+        <Button x:Name="btnAdd" Content="AÑADIR" HorizontalAlignment="Left" Height="35" Margin="97,346,0,0" VerticalAlignment="Top" Width="83" Click="Button_Click"/>
+
+    </Grid>
+</Window>

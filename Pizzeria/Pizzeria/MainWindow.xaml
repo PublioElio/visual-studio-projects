@@ -62,7 +62,7 @@
         <ListBox x:Name="miListado" d:ItemsSource="{d:SampleData ItemCount=0}" Margin="413,201,201,95" BorderBrush="#FFECA691"/>
         <Label x:Name="labelInfo" Content="Información del pedido:" HorizontalAlignment="Left" Height="27" Margin="413,169,0,0" VerticalAlignment="Top" Width="152" FontFamily="Segoe UI Semibold" Foreground="#FFD02626"/>
         <Button x:Name="pedir" Style="{StaticResource BotonRedondeado}" Content="PEDIR" HorizontalAlignment="Left" Margin="430,369,0,0" VerticalAlignment="Top" Click="pedir_Click" FontFamily="Nirmala UI" Width="70" Foreground="#FFB31616" Height="29"/>
-        <Button x:Name="reset" Style="{StaticResource BotonRedondeado}" Content="RESET" HorizontalAlignment="Left" Margin="533,369,0,0" VerticalAlignment="Top" Click="ResetButton_Click" FontFamily="Nirmala UI" Width="71" Foreground="#FFB31616" Height="29" />
+        <Button x:Name="reset" Style="{StaticResource BotonRedondeado}" Content="RESET" HorizontalAlignment="Left" Margin="533,369,0,0" VerticalAlignment="Top" Click="resetButton_Click" FontFamily="Nirmala UI" Width="71" Foreground="#FFB31616" Height="29" />
         <Image x:Name="mario" HorizontalAlignment="Left" Height="264" Margin="565,0,0,0" VerticalAlignment="Top" Width="233" Stretch="Fill">
             <Image.Source>
                 <BitmapImage UriSource="/mario.png"/>

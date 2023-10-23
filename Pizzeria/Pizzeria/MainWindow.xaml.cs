@@ -31,22 +31,22 @@ namespace Pizzeria
 
         private void pedir_Click(object sender, RoutedEventArgs e)
         {
-            procesarElementos(spBebidas.Children);
-            procesarElementos(spTipoMasa.Children);
-            procesarElementos(spIngredientes.Children);
+            processElements(spBebidas.Children);
+            processElements(spTipoMasa.Children);
+            processElements(spIngredientes.Children);
         }
 
-        private void ResetButton_Click(object sender, RoutedEventArgs e)
+        private void resetButton_Click(object sender, RoutedEventArgs e)
         {
-            desmarcar(spBebidas.Children);
-            desmarcar(spTipoMasa.Children);
-            desmarcar(spIngredientes.Children);
+            uncheck(spBebidas.Children);
+            uncheck(spTipoMasa.Children);
+            uncheck(spIngredientes.Children);
             miListado.Items.Clear();
         }
 
-        private void desmarcar(UIElementCollection elementos)
+        private void uncheck(UIElementCollection elements)
         {
-            foreach (UIElement element in elementos)
+            foreach (UIElement element in elements)
                 if (element is ToggleButton toggleButton && toggleButton.IsChecked == true)
                     toggleButton.IsChecked = false;
 
@@ -61,9 +61,9 @@ namespace Pizzeria
             
         }
 
-        private void procesarElementos(UIElementCollection elementos)
+        private void processElements(UIElementCollection elements)
         {
-            foreach (UIElement element in elementos)
+            foreach (UIElement element in elements)
                 if (element is ToggleButton toggleButton && toggleButton.IsChecked == true)
                     miListado.Items.Add(toggleButton.Content);
         }
