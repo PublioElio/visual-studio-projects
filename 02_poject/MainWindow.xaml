@@ -5,25 +5,36 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_02_poject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" MinWidth="550" MinHeight="430" Height="430" Width="550">
     <Grid x:Name="mainGrid">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="17*"/>
-            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="29*"/>
+            <ColumnDefinition Width="51*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="dataGridUsers" Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=4}"/>
-        <StackPanel HorizontalAlignment="Left" Margin="65,70,0,0" Orientation="Vertical" VerticalAlignment="Top" Height="248" Width="147">
+        <DataGrid x:Name="dataGridUsers" d:ItemsSource="{d:SampleData ItemCount=4}" Margin="10,0,1,-1" Grid.Column="1" VerticalGridLinesBrush="Black" HorizontalGridLinesBrush="#FF8A8A8A">
+            <DataGrid.BindingGroup>
+                <BindingGroup/>
+            </DataGrid.BindingGroup>
+        </DataGrid>
+        <StackPanel Margin="17,32,0,104" Orientation="Vertical" HorizontalAlignment="Left" Width="166">
             <Label x:Name="labelUserName" Content="Nombre de usuario" Height="26" Width="147"/>
             <TextBox x:Name="textBoxUserName" Height="36" TextWrapping="Wrap" Width="147" FontSize="20"/>
             <Label x:Name="labelSurname" Content="Apellidos" Height="26" Width="147"/>
-            <TextBox x:Name="textBoxSurname" Height="36" TextWrapping="Wrap" Width="147" FontSize="20"/>
+            <TextBox x:Name="textBoxSurname" Height="36" TextWrapping="Wrap" Width="147" FontSize="20" RenderTransformOrigin="0.5,0.5">
+                <TextBox.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0" Y="1"/>
+                    </TransformGroup>
+                </TextBox.RenderTransform>
+            </TextBox>
             <Label x:Name="labelAdress" Content="Dirección" Height="26" Width="147"/>
             <TextBox x:Name="textBoxAdress" Height="36" TextWrapping="Wrap" Width="147" FontSize="20"/>
             <Label x:Name="labelPhone" Content="Teléfono" Height="26" Width="147"/>
-
             <TextBox x:Name="textBoxPhone" Height="36" TextWrapping="Wrap" Width="147" FontSize="20"/>
         </StackPanel>
-        <Button x:Name="btnAdd" Content="AÑADIR" HorizontalAlignment="Left" Height="35" Margin="97,346,0,0" VerticalAlignment="Top" Width="83" Click="Button_Click"/>
-
+        <Button x:Name="btnAdd" Content="AÑADIR" Margin="48,315,0,0" Click="Button_Click" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="103"/>
     </Grid>
 </Window>
