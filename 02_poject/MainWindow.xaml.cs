@@ -41,16 +41,29 @@ namespace _02_poject
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             string name, surname, adress, phone;
-            iniztalizeUser(out name, out surname, out adress, out phone);
+            initalizeUser(out name, out surname, out adress, out phone);
 
             if (isFilled(name, surname, adress, phone))
             {
-                userList.Add(new User { name = name, surname = surname, adress = adress, phone = phone });
+                if (dataGridUsers.SelectedItem != null)
+                {
+                    User selectedUser = (User)dataGridUsers.SelectedItem;
+                    selectedUser.name = textBoxUserName.Text;
+                    selectedUser.surname = textBoxSurname.Text;
+                    selectedUser.adress = textBoxAdress.Text;
+                    selectedUser.phone = textBoxPhone.Text;
+                    dataGridUsers.Items.Refresh();
+                    dataGridUsers.SelectedItem = null;
+                }
+                else
+                {
+                    userList.Add(new User { name = name, surname = surname, adress = adress, phone = phone });
+                }
+                dataGridUsers.Items.Refresh();
                 clearTexBoxes();
             }
             else
                 MessageBox.Show("No es posible dejar campos en blanco.");
-
         }
 
         private void clearTexBoxes()
@@ -66,12 +79,30 @@ namespace _02_poject
             return !string.IsNullOrEmpty(name) && !string.IsNullOrEmpty(surname) && !string.IsNullOrEmpty(adress) && !string.IsNullOrEmpty(phone);
         }
 
-        private void iniztalizeUser(out string name, out string surname, out string adress, out string phone)
+        private void initalizeUser(out string name, out string surname, out string adress, out string phone)
         {
             name = textBoxUserName.Text;
             surname = textBoxSurname.Text;
             adress = textBoxAdress.Text;
             phone = textBoxPhone.Text;
         }
+        
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (dataGridUsers.SelectedItem != null)
+            {
+                User selectedUser = (User)dataGridUsers.SelectedItem;
+                importToTextBoxes(selectedUser);
+            }
+        }
+
+        private void importToTextBoxes(User selectedUser)
+        {
+            textBoxUserName.Text = selectedUser.name;
+            textBoxSurname.Text = selectedUser.surname;
+            textBoxAdress.Text = selectedUser.adress;
+            textBoxPhone.Text = selectedUser.phone;
+        }
+
     }
 }

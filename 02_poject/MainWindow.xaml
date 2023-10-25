@@ -8,15 +8,15 @@
         Title="MainWindow" MinWidth="550" MinHeight="430" Height="430" Width="550">
     <Grid x:Name="mainGrid">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="29*"/>
-            <ColumnDefinition Width="51*"/>
+            <ColumnDefinition Width="213*"/>
+            <ColumnDefinition Width="337*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="dataGridUsers" d:ItemsSource="{d:SampleData ItemCount=4}" Margin="10,0,1,-1" Grid.Column="1" VerticalGridLinesBrush="Black" HorizontalGridLinesBrush="#FF8A8A8A">
+        <DataGrid x:Name="dataGridUsers" d:ItemsSource="{d:SampleData ItemCount=4}" Margin="0,0,0,-1" Grid.Column="1" VerticalGridLinesBrush="Black" HorizontalGridLinesBrush="#FF8A8A8A" IsReadOnly="True" HorizontalAlignment="Center" Width="338" SelectionChanged="DataGrid_SelectionChanged" SelectionMode="Single">
             <DataGrid.BindingGroup>
                 <BindingGroup/>
             </DataGrid.BindingGroup>
         </DataGrid>
-        <StackPanel Margin="17,32,0,104" Orientation="Vertical" HorizontalAlignment="Left" Width="166">
+        <StackPanel Margin="0,32,0,104" Orientation="Vertical" HorizontalAlignment="Center" Width="166">
             <Label x:Name="labelUserName" Content="Nombre de usuario" Height="26" Width="147"/>
             <TextBox x:Name="textBoxUserName" Height="36" TextWrapping="Wrap" Width="147" FontSize="20"/>
             <Label x:Name="labelSurname" Content="Apellidos" Height="26" Width="147"/>
@@ -35,6 +35,6 @@
             <Label x:Name="labelPhone" Content="Teléfono" Height="26" Width="147"/>
             <TextBox x:Name="textBoxPhone" Height="36" TextWrapping="Wrap" Width="147" FontSize="20"/>
         </StackPanel>
-        <Button x:Name="btnAdd" Content="AÑADIR" Margin="48,315,0,0" Click="Button_Click" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="103"/>
+        <Button x:Name="btnAdd" Content="ACEPTAR" Margin="0,315,0,0" Click="Button_Click" Height="35" VerticalAlignment="Top" HorizontalAlignment="Center" Width="104"/>
     </Grid>
 </Window>
