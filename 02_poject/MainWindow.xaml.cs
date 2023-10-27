@@ -35,10 +35,34 @@ namespace _02_poject
         public MainWindow()
         {
             InitializeComponent();
-            dataGridUsers.ItemsSource = userList;       
+            dataGridUsers.ItemsSource = userList;
+
+            // Creating focus events for the text boxes
+            TextBoxFocusEvents(textBoxUserName);
+            TextBoxFocusEvents(textBoxSurname);
+            TextBoxFocusEvents(textBoxAdress);
+            TextBoxFocusEvents(textBoxPhone);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void TextBoxFocusEvents(TextBox textBox)
+        {
+            textBox.GotFocus += textBox_gotFocus;
+            textBox.LostFocus += textBox_LostFocus;
+        }
+
+        private void textBox_gotFocus(object sender, RoutedEventArgs e)
+        {
+            if (sender is TextBox textBox)
+                textBox.Background = Brushes.Coral;
+        }
+
+        private void textBox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (sender is TextBox textBox)
+                textBox.Background = Brushes.White;
+        }
+
+        private void aceptar_Click(object sender, RoutedEventArgs e)
         {
             string name, surname, adress, phone;
             initalizeUser(out name, out surname, out adress, out phone);
@@ -104,5 +128,18 @@ namespace _02_poject
             textBoxPhone.Text = selectedUser.phone;
         }
 
+        private void btnBorrar_Click(object sender, RoutedEventArgs e)
+        {
+            if (dataGridUsers.SelectedItem != null)
+            {
+                User selectedUser = (User)dataGridUsers.SelectedItem;
+                userList.Remove(selectedUser);
+            }
+        }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            clearTexBoxes();
+        }
     }
 }

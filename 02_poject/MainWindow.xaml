@@ -5,22 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_02_poject"
         mc:Ignorable="d"
-        Title="MainWindow" MinWidth="550" MinHeight="430" Height="430" Width="550">
+        Title="MainWindow" MinWidth="900" MinHeight="430" Height="430" Width="900">
     <Grid x:Name="mainGrid">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="213*"/>
-            <ColumnDefinition Width="337*"/>
+            <ColumnDefinition Width="300*"/>
+            <ColumnDefinition Width="250*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="dataGridUsers" d:ItemsSource="{d:SampleData ItemCount=4}" Margin="0,0,0,-1" Grid.Column="1" VerticalGridLinesBrush="Black" HorizontalGridLinesBrush="#FF8A8A8A" IsReadOnly="True" HorizontalAlignment="Center" Width="338" SelectionChanged="DataGrid_SelectionChanged" SelectionMode="Single">
+        <DataGrid x:Name="dataGridUsers" d:ItemsSource="{d:SampleData ItemCount=4}" Margin="0,-1,0,0" Grid.Column="1" VerticalGridLinesBrush="Black" HorizontalGridLinesBrush="#FF8A8A8A" IsReadOnly="True" HorizontalAlignment="Center" Width="409" SelectionChanged="DataGrid_SelectionChanged" SelectionMode="Single" ColumnWidth="*" AutomationProperties.IsColumnHeader="True">
             <DataGrid.BindingGroup>
                 <BindingGroup/>
             </DataGrid.BindingGroup>
         </DataGrid>
-        <StackPanel Margin="0,32,0,104" Orientation="Vertical" HorizontalAlignment="Center" Width="166">
-            <Label x:Name="labelUserName" Content="Nombre de usuario" Height="26" Width="147"/>
-            <TextBox x:Name="textBoxUserName" Height="36" TextWrapping="Wrap" Width="147" FontSize="20"/>
-            <Label x:Name="labelSurname" Content="Apellidos" Height="26" Width="147"/>
-            <TextBox x:Name="textBoxSurname" Height="36" TextWrapping="Wrap" Width="147" FontSize="20" RenderTransformOrigin="0.5,0.5">
+        <StackPanel x:Name="spForm" Margin="28,32,0,74" Orientation="Vertical" HorizontalAlignment="Left" Width="405">
+            <Label x:Name="labelUserName" Content="Nombre de usuario" Height="26" Width="147" HorizontalAlignment="Left"/>
+            <TextBox x:Name="textBoxUserName" Height="36" TextWrapping="Wrap" Width="405" FontSize="20" HorizontalAlignment="Left"/>
+            <Label x:Name="labelSurname" Content="Apellidos" Height="26" Width="147" HorizontalAlignment="Left"/>
+            <TextBox x:Name="textBoxSurname" Height="36" TextWrapping="Wrap" Width="405" FontSize="20" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left">
                 <TextBox.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -30,11 +30,13 @@
                     </TransformGroup>
                 </TextBox.RenderTransform>
             </TextBox>
-            <Label x:Name="labelAdress" Content="Dirección" Height="26" Width="147"/>
-            <TextBox x:Name="textBoxAdress" Height="36" TextWrapping="Wrap" Width="147" FontSize="20"/>
-            <Label x:Name="labelPhone" Content="Teléfono" Height="26" Width="147"/>
-            <TextBox x:Name="textBoxPhone" Height="36" TextWrapping="Wrap" Width="147" FontSize="20"/>
+            <Label x:Name="labelAdress" Content="Dirección" Height="26" Width="147" HorizontalAlignment="Left"/>
+            <TextBox x:Name="textBoxAdress" Height="36" TextWrapping="Wrap" Width="405" FontSize="20" HorizontalAlignment="Left"/>
+            <Label x:Name="labelPhone" Content="Teléfono" Height="26" Width="147" HorizontalAlignment="Left"/>
+            <TextBox x:Name="textBoxPhone" Height="36" TextWrapping="Wrap" Width="405" FontSize="20" HorizontalAlignment="Left"/>
         </StackPanel>
-        <Button x:Name="btnAdd" Content="ACEPTAR" Margin="0,315,0,0" Click="Button_Click" Height="35" VerticalAlignment="Top" HorizontalAlignment="Center" Width="104"/>
+        <Button x:Name="btnAdd" Content="ACEPTAR" Margin="28,353,0,0" Click="aceptar_Click" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104"/>
+        <Button x:Name="btnBorrar" Content="BORRAR" Margin="181,353,0,0" Click="btnBorrar_Click" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104"/>
+        <Button x:Name="btnClear" Content="LIMPIAR" Margin="329,353,0,0" Click="btnClear_Click" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104"/>
     </Grid>
 </Window>
