@@ -40,8 +40,8 @@
                 <TextBlock Name="tbCountChildren" Text="Cantidad: 0" VerticalAlignment="Center"/>
             </StackPanel>
         </StackPanel>
-        <Button x:Name="btnAdd" Content="ACEPTAR" Margin="28,353,0,0" Click="aceptar_Click" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104"/>
-        <Button x:Name="btnBorrar" Content="BORRAR" Margin="181,353,0,0" Click="btnBorrar_Click" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104"/>
+        <Button x:Name="btnAdd" Content="ACEPTAR" Margin="28,353,0,0" Click="acccept_Click" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104"/>
+        <Button x:Name="btnBorrar" Content="BORRAR" Margin="181,353,0,0" Click="btnDelete_Click" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104"/>
         <Button x:Name="btnClear" Content="_LIMPIAR" Margin="329,353,0,0" Click="btnClear_Click" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104"/>
     </Grid>
 </Window>

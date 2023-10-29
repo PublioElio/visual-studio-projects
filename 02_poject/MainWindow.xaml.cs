@@ -53,7 +53,7 @@ namespace _02_poject
                 textBox.Background = Brushes.White;
         }
 
-        private void aceptar_Click(object sender, RoutedEventArgs e)
+        private void acccept_Click(object sender, RoutedEventArgs e)
         {
             string name, surname, adress, phone;
             int children;
@@ -68,10 +68,7 @@ namespace _02_poject
                     selectedUser.surname = textBoxSurname.Text;
                     selectedUser.adress = textBoxAdress.Text;
                     selectedUser.phone = textBoxPhone.Text;
-                    if ((bool)checkBox.IsChecked)
-                        selectedUser.children = (int)slider.Value;
-                    else
-                        selectedUser.children = 0;
+                    selectedUser.children = (bool)checkBox.IsChecked ? (int)slider.Value : 0;
                     dataGridUsers.Items.Refresh();
                     dataGridUsers.SelectedItem = null;
                 }
@@ -106,10 +103,7 @@ namespace _02_poject
             surname = textBoxSurname.Text;
             adress = textBoxAdress.Text;
             phone = textBoxPhone.Text;
-            if ((bool) checkBox.IsChecked)
-                children = (int) slider.Value;
-            else
-                children = 0;
+            children = (bool) checkBox.IsChecked ? (int)slider.Value : 0;
         }
         
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -136,7 +130,7 @@ namespace _02_poject
             }
         }
 
-        private void btnBorrar_Click(object sender, RoutedEventArgs e)
+        private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
             if (dataGridUsers.SelectedItem != null)
             {

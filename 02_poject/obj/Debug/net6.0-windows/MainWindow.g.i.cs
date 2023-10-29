@@ -288,7 +288,7 @@ namespace _02_poject {
             this.btnAdd = ((System.Windows.Controls.Button)(target));
             
             #line 43 "..\..\..\MainWindow.xaml"
-            this.btnAdd.Click += new System.Windows.RoutedEventHandler(this.aceptar_Click);
+            this.btnAdd.Click += new System.Windows.RoutedEventHandler(this.acccept_Click);
             
             #line default
             #line hidden
@@ -297,7 +297,7 @@ namespace _02_poject {
             this.btnBorrar = ((System.Windows.Controls.Button)(target));
             
             #line 44 "..\..\..\MainWindow.xaml"
-            this.btnBorrar.Click += new System.Windows.RoutedEventHandler(this.btnBorrar_Click);
+            this.btnBorrar.Click += new System.Windows.RoutedEventHandler(this.btnDeleteç_Click);
             
             #line default
             #line hidden
