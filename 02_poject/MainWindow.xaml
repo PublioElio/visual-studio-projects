@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_02_poject"
         mc:Ignorable="d"
-        Title="MainWindow" MinWidth="900" MinHeight="430" Height="430" Width="900">
+        Title="MainWindow" MinWidth="900" MinHeight="450" Height="450" Width="900">
     <Grid x:Name="mainGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="300*"/>
@@ -34,9 +34,14 @@
             <TextBox x:Name="textBoxAdress" Height="36" TextWrapping="Wrap" Width="405" FontSize="20" HorizontalAlignment="Left"/>
             <Label x:Name="labelPhone" Content="Teléfono" Height="26" Width="147" HorizontalAlignment="Left"/>
             <TextBox x:Name="textBoxPhone" Height="36" TextWrapping="Wrap" Width="405" FontSize="20" HorizontalAlignment="Left"/>
+            <StackPanel x:Name="spChildren" Orientation="Horizontal" Margin="0,10,0,10">
+                <CheckBox Name="checkBox" Content="Tengo hijos" Margin="0,0,10,0" Checked="checkBox_Checked" Unchecked="checkBox_Unchecked"/>
+                <Slider Name="slider" Width="200" TickFrequency="1" Minimum="1" Maximum="20" Value="1" Margin="0,0,10,0" IsEnabled="False" ValueChanged="slider_ValueChanged" />
+                <TextBlock Name="tbCountChildren" Text="Cantidad: 0" VerticalAlignment="Center"/>
+            </StackPanel>
         </StackPanel>
         <Button x:Name="btnAdd" Content="ACEPTAR" Margin="28,353,0,0" Click="aceptar_Click" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104"/>
         <Button x:Name="btnBorrar" Content="BORRAR" Margin="181,353,0,0" Click="btnBorrar_Click" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104"/>
-        <Button x:Name="btnClear" Content="LIMPIAR" Margin="329,353,0,0" Click="btnClear_Click" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104"/>
+        <Button x:Name="btnClear" Content="_LIMPIAR" Margin="329,353,0,0" Click="btnClear_Click" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104"/>
     </Grid>
 </Window>

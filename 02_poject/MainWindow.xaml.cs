@@ -1,18 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace _02_poject
 {
@@ -27,10 +16,12 @@ namespace _02_poject
             public string surname { get; set; }
             public string adress { get; set; }
             public string phone { get; set; }
+            public int children { get; set; }
         }
 
         // I've used ObservableCollection because it's a data structure that allows notifying data changes (it implements the INotifyPropertyChanged interface)
         ObservableCollection<User> userList = new ObservableCollection<User> { };
+        private int children;
 
         public MainWindow()
         {
@@ -65,7 +56,8 @@ namespace _02_poject
         private void aceptar_Click(object sender, RoutedEventArgs e)
         {
             string name, surname, adress, phone;
-            initalizeUser(out name, out surname, out adress, out phone);
+            int children;
+            initalizeUser(out name, out surname, out adress, out phone, out children);
 
             if (isFilled(name, surname, adress, phone))
             {
@@ -76,13 +68,15 @@ namespace _02_poject
                     selectedUser.surname = textBoxSurname.Text;
                     selectedUser.adress = textBoxAdress.Text;
                     selectedUser.phone = textBoxPhone.Text;
+                    if ((bool)checkBox.IsChecked)
+                        selectedUser.children = (int)slider.Value;
+                    else
+                        selectedUser.children = 0;
                     dataGridUsers.Items.Refresh();
                     dataGridUsers.SelectedItem = null;
                 }
                 else
-                {
-                    userList.Add(new User { name = name, surname = surname, adress = adress, phone = phone });
-                }
+                    userList.Add(new User { name = name, surname = surname, adress = adress, phone = phone, children = children });
                 dataGridUsers.Items.Refresh();
                 clearTexBoxes();
             }
@@ -96,6 +90,9 @@ namespace _02_poject
             textBoxSurname.Clear();
             textBoxAdress.Clear();
             textBoxPhone.Clear();
+            checkBox.IsChecked = false;
+            slider.Value = double.MinValue;
+            btnAdd.Content = "ACEPTAR";
         }
 
         private static bool isFilled(string name, string surname, string adress, string phone)
@@ -103,12 +100,16 @@ namespace _02_poject
             return !string.IsNullOrEmpty(name) && !string.IsNullOrEmpty(surname) && !string.IsNullOrEmpty(adress) && !string.IsNullOrEmpty(phone);
         }
 
-        private void initalizeUser(out string name, out string surname, out string adress, out string phone)
+        private void initalizeUser(out string name, out string surname, out string adress, out string phone, out int children)
         {
             name = textBoxUserName.Text;
             surname = textBoxSurname.Text;
             adress = textBoxAdress.Text;
             phone = textBoxPhone.Text;
+            if ((bool) checkBox.IsChecked)
+                children = (int) slider.Value;
+            else
+                children = 0;
         }
         
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -122,10 +123,17 @@ namespace _02_poject
 
         private void importToTextBoxes(User selectedUser)
         {
+            btnAdd.Content = "MODIFICAR";
             textBoxUserName.Text = selectedUser.name;
             textBoxSurname.Text = selectedUser.surname;
             textBoxAdress.Text = selectedUser.adress;
             textBoxPhone.Text = selectedUser.phone;
+            if (selectedUser.children > 0)
+            {
+                checkBox.IsChecked = true;
+                slider.Value = selectedUser.children;
+                tbCountChildren.Text = "Cantidad: " + slider.Value;
+            }
         }
 
         private void btnBorrar_Click(object sender, RoutedEventArgs e)
@@ -134,12 +142,41 @@ namespace _02_poject
             {
                 User selectedUser = (User)dataGridUsers.SelectedItem;
                 userList.Remove(selectedUser);
+                clearTexBoxes();
             }
         }
 
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
             clearTexBoxes();
+            dataGridUsers.SelectedItem = null;
+        }
+        private void checkBox_Checked(object sender, RoutedEventArgs e)
+        {
+            slider.IsEnabled = true;
+            updateChildrenNum();
+        }
+
+        private void checkBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            slider.IsEnabled = false;
+            slider.Value = double.MinValue;
+            tbCountChildren.Text = "Cantidad: 0";
+        }
+
+        private void slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            updateChildrenNum();
+        }
+
+        private void updateChildrenNum()
+        {
+            if (checkBox.IsChecked == true)
+            {
+                int childrenNum = (int)slider.Value;
+                tbCountChildren.Text = "Cantidad: " + childrenNum;
+            }
+
         }
     }
 }
