@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -10,6 +11,11 @@ namespace _02_poject
     /// </summary>
     public partial class MainWindow : Window
     {
+        private double MIN_HEIGHT = 0.65;
+        private double MAX_HEIGHT = 2.30;
+        private string ACCEPT_TXT = "ACEPTAR";
+        private string MODIFY_TXT = "MODIFICAR";
+        private string ERROR_MSG = "No es posible dejar campos en blanco.";
         private class User
         {
             public string name { get; set; }
@@ -17,11 +23,11 @@ namespace _02_poject
             public string adress { get; set; }
             public string phone { get; set; }
             public int children { get; set; }
+            public double height { get; set; }
         }
 
         // I've used ObservableCollection because it's a data structure that allows notifying data changes (it implements the INotifyPropertyChanged interface)
         ObservableCollection<User> userList = new ObservableCollection<User> { };
-        private int children;
 
         public MainWindow()
         {
@@ -57,7 +63,8 @@ namespace _02_poject
         {
             string name, surname, adress, phone;
             int children;
-            initalizeUser(out name, out surname, out adress, out phone, out children);
+            double height;
+            initalizeUser(out name, out surname, out adress, out phone, out children, out height);
 
             if (isFilled(name, surname, adress, phone))
             {
@@ -69,19 +76,20 @@ namespace _02_poject
                     selectedUser.adress = textBoxAdress.Text;
                     selectedUser.phone = textBoxPhone.Text;
                     selectedUser.children = (bool)checkBox.IsChecked ? (int)slider.Value : 0;
+                    selectedUser.height = Double.Parse(tbHeight.Text);
                     dataGridUsers.Items.Refresh();
                     dataGridUsers.SelectedItem = null;
                 }
                 else
-                    userList.Add(new User { name = name, surname = surname, adress = adress, phone = phone, children = children });
+                    userList.Add(new User { name = name, surname = surname, adress = adress, phone = phone, children = children, height = height });
                 dataGridUsers.Items.Refresh();
-                clearTexBoxes();
+                clearForm();
             }
             else
-                MessageBox.Show("No es posible dejar campos en blanco.");
+                MessageBox.Show(ERROR_MSG);
         }
 
-        private void clearTexBoxes()
+        private void clearForm()
         {
             textBoxUserName.Clear();
             textBoxSurname.Clear();
@@ -89,7 +97,8 @@ namespace _02_poject
             textBoxPhone.Clear();
             checkBox.IsChecked = false;
             slider.Value = double.MinValue;
-            btnAdd.Content = "ACEPTAR";
+            tbHeight.Text = MIN_HEIGHT.ToString();
+            btnAdd.Content = ACCEPT_TXT;
         }
 
         private static bool isFilled(string name, string surname, string adress, string phone)
@@ -97,13 +106,14 @@ namespace _02_poject
             return !string.IsNullOrEmpty(name) && !string.IsNullOrEmpty(surname) && !string.IsNullOrEmpty(adress) && !string.IsNullOrEmpty(phone);
         }
 
-        private void initalizeUser(out string name, out string surname, out string adress, out string phone, out int children)
+        private void initalizeUser(out string name, out string surname, out string adress, out string phone, out int children, out double height)
         {
             name = textBoxUserName.Text;
             surname = textBoxSurname.Text;
             adress = textBoxAdress.Text;
             phone = textBoxPhone.Text;
             children = (bool) checkBox.IsChecked ? (int)slider.Value : 0;
+            height = Double.Parse(tbHeight.Text);
         }
         
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -117,7 +127,7 @@ namespace _02_poject
 
         private void importToTextBoxes(User selectedUser)
         {
-            btnAdd.Content = "MODIFICAR";
+            btnAdd.Content = MODIFY_TXT;
             textBoxUserName.Text = selectedUser.name;
             textBoxSurname.Text = selectedUser.surname;
             textBoxAdress.Text = selectedUser.adress;
@@ -128,6 +138,7 @@ namespace _02_poject
                 slider.Value = selectedUser.children;
                 tbCountChildren.Text = "Cantidad: " + slider.Value;
             }
+            tbHeight.Text = selectedUser.height.ToString();
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
@@ -136,13 +147,13 @@ namespace _02_poject
             {
                 User selectedUser = (User)dataGridUsers.SelectedItem;
                 userList.Remove(selectedUser);
-                clearTexBoxes();
+                clearForm();
             }
         }
 
         private void btnClear_Click(object sender, RoutedEventArgs e)
         {
-            clearTexBoxes();
+            clearForm();
             dataGridUsers.SelectedItem = null;
         }
         private void checkBox_Checked(object sender, RoutedEventArgs e)
@@ -171,6 +182,20 @@ namespace _02_poject
                 tbCountChildren.Text = "Cantidad: " + childrenNum;
             }
 
+        }
+
+        private void Increase(object sender, RoutedEventArgs e)
+        {
+            double num = Convert.ToDouble(tbHeight.Text);
+            double result = num >= MAX_HEIGHT ? MAX_HEIGHT : num + 0.05;
+            tbHeight.Text = result.ToString("F2"); // this is to limit the number of decimal places to two
+        }
+
+        private void Decrease(object sender, RoutedEventArgs e)
+        {
+            double num = Convert.ToDouble(tbHeight.Text);
+            double result = num <= MIN_HEIGHT ? MIN_HEIGHT : num - 0.05;
+            tbHeight.Text = result.ToString("F2");
         }
     }
 }
