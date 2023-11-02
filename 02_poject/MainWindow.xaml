@@ -5,54 +5,74 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_02_poject"
         mc:Ignorable="d"
-        Title="MainWindow" MinWidth="900" MinHeight="500" Height="500" Width="900">
-    
+        Title="MainWindow" MinWidth="900" MinHeight="650" Height="650" Width="1000">
+
     <Grid x:Name="mainGrid">
-        
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="300*"/>
-            <ColumnDefinition Width="250*"/>
+            <ColumnDefinition Width="300*"/>
         </Grid.ColumnDefinitions>
-        
-        <DataGrid x:Name="dataGridUsers" d:ItemsSource="{d:SampleData ItemCount=4}" Margin="0,-1,0,0" Grid.Column="1" VerticalGridLinesBrush="Black" HorizontalGridLinesBrush="#FF8A8A8A" IsReadOnly="True" HorizontalAlignment="Center" Width="409" SelectionChanged="DataGrid_SelectionChanged" SelectionMode="Single" ColumnWidth="*" AutomationProperties.IsColumnHeader="True">
+
+        <DataGrid x:Name="dataGridUsers" d:ItemsSource="{d:SampleData ItemCount=4}" Margin="0,-1,0,0" Grid.Column="1" VerticalGridLinesBrush="Black" HorizontalGridLinesBrush="#FF8A8A8A" IsReadOnly="True" SelectionChanged="DataGrid_SelectionChanged" SelectionMode="Single" ColumnWidth="*" AutomationProperties.IsColumnHeader="True">
             <DataGrid.BindingGroup>
                 <BindingGroup/>
             </DataGrid.BindingGroup>
         </DataGrid>
-        
+
         <StackPanel x:Name="spForm" Margin="28,32,0,46" Orientation="Vertical" HorizontalAlignment="Left" Width="405">
-            
+
             <Label x:Name="labelUserName" Content="Nombre de usuario" Height="26" Width="147" HorizontalAlignment="Left" FontWeight="Bold"/>
-            <TextBox x:Name="textBoxUserName" Height="36" TextWrapping="Wrap" Width="405" FontSize="20" HorizontalAlignment="Left"/>
-            
+            <TextBox x:Name="textBoxUserName" Height="30" TextWrapping="Wrap" Width="405" FontSize="20" HorizontalAlignment="Left"/>
+
             <Label x:Name="labelSurname" Content="Apellidos" Height="26" Width="147" HorizontalAlignment="Left" FontWeight="Bold"/>
-            <TextBox x:Name="textBoxSurname" Height="36" TextWrapping="Wrap" Width="405" FontSize="20" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" />
+            <TextBox x:Name="textBoxSurname" Height="30" TextWrapping="Wrap" Width="405" FontSize="20" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" />
 
 
             <Label x:Name="labelAdress" Content="Dirección" Height="26" Width="147" HorizontalAlignment="Left" FontWeight="Bold"/>
-            <TextBox x:Name="textBoxAdress" Height="36" TextWrapping="Wrap" Width="405" FontSize="20" HorizontalAlignment="Left"/>
-            
+            <TextBox x:Name="textBoxAdress" Height="30" TextWrapping="Wrap" Width="405" FontSize="20" HorizontalAlignment="Left"/>
+
+
             <Label x:Name="labelPhone" Content="Teléfono" Height="26" Width="147" HorizontalAlignment="Left" FontWeight="Bold"/>
-            <TextBox x:Name="textBoxPhone" Height="36" TextWrapping="Wrap" Width="405" FontSize="20" HorizontalAlignment="Left"/>
-            
-            <StackPanel x:Name="spChildren" Orientation="Horizontal" Margin="0,10,0,10">
+            <TextBox x:Name="textBoxPhone" Height="30" TextWrapping="Wrap" Width="405" FontSize="20" HorizontalAlignment="Left"/>
+
+            <StackPanel x:Name="spDateHeight" Orientation="Horizontal" HorizontalAlignment="Center" Width="403" Margin="0,10,0,0">
+
+                <StackPanel Margin="25,0,0,0">
+                    <Label x:Name="labelBirthDate" Content="Fecha de nacimiento:" Height="26" Width="129" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <DatePicker x:Name="datePicker" HorizontalAlignment="Left" FirstDayOfWeek="Monday" IsTodayHighlighted="True" DisplayDate="2023-11-02" AutomationProperties.HelpText="Fecha de nacimiento" Width="147"/>
+                </StackPanel>
+
+                <StackPanel Margin="100,0,0,0" HorizontalAlignment="Right">
+                    <Label x:Name="labelHeight" Content="Altura:" Height="26" Width="47" HorizontalAlignment="Center" FontWeight="Bold"/>
+                    <StackPanel x:Name="spHeight" Orientation="Horizontal">
+                        <RepeatButton x:Name="btnDecrease" Width="25" DockPanel.Dock="Top" Delay="500" Interval="10" Click="Decrease" Content="&lt;" FontFamily="Segoe UI Symbol" />
+                        <TextBlock Name="tbHeight" Width="50" DockPanel.Dock="Top" TextAlignment="Center" FontSize="16" Text="0,65" />
+                        <RepeatButton x:Name="btnIncrease" Width="25" DockPanel.Dock="Top" Delay="500" Interval="10" Click="Increase" Content=">" FontFamily="Segoe UI Symbol" />
+                    </StackPanel>
+                </StackPanel>
+
+            </StackPanel>
+
+            <StackPanel x:Name="spChildren" Orientation="Horizontal" Margin="0,20,0,10">
                 <CheckBox Name="checkBox" Content="Tengo hijos" Margin="0,0,10,0" Checked="checkBox_Checked" Unchecked="checkBox_Unchecked" FontWeight="Bold"/>
                 <Slider Name="slider" Width="200" TickFrequency="1" Minimum="1" Maximum="20" Value="1" Margin="0,0,10,0" IsEnabled="False" ValueChanged="slider_ValueChanged" />
                 <TextBlock Name="tbCountChildren" Text="Cantidad: 0" VerticalAlignment="Center"/>
             </StackPanel>
 
-            <Label x:Name="labelHeight" Content="Altura" Height="26" Width="47" HorizontalAlignment="Center" FontWeight="Bold"/>
-            <StackPanel x:Name="spHeight" Orientation="Horizontal" Margin="0,10,0,10" HorizontalAlignment="Center">
-                <RepeatButton x:Name="btnDecrease" Width="25" DockPanel.Dock="Top" Delay="500" Interval="10" Click="Decrease" Content="&lt;" FontFamily="Segoe UI Symbol" />
-                <TextBlock Name="tbHeight" Width="50" DockPanel.Dock="Top" TextAlignment="Center" FontSize="16" Text="0,65" />
-                <RepeatButton x:Name="btnIncrease" Width="25" DockPanel.Dock="Top" Delay="500" Interval="10" Click="Increase" Content=">" FontFamily="Segoe UI Symbol" />
+            <StackPanel x:Name="spChildData" Visibility="Visible">
+                <Label x:Name="labelChildName" Content="Nombre y apellidos del hijo:" Height="26" Width="175" HorizontalAlignment="Left" FontWeight="Bold"/>
+                <TextBox x:Name="textBoxChildName" Height="30" TextWrapping="Wrap" Width="405" FontSize="20" HorizontalAlignment="Left"/>
+                <ListBox Height="89" Margin="0,15,0,15" d:ItemsSource="{d:SampleData ItemCount=4}"/>
             </StackPanel>
-            
+
+            <StackPanel x:Name="spButtons" Orientation="Horizontal">
+                <Button x:Name="btnAdd" Content="ACEPTAR" Margin="0,0,0,0" Click="acccept_Click" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104"/>
+                <Button x:Name="btnBorrar" Content="BORRAR" Margin="45,0,45,0" Click="btnDelete_Click" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104"/>
+                <Button x:Name="btnClear" Content="_LIMPIAR" Margin="0,0,0,0" Click="btnClear_Click" Height="35" VerticalAlignment="Top" HorizontalAlignment="Right" Width="104"/>
+            </StackPanel>
+
         </StackPanel>
-        
-        <Button x:Name="btnAdd" Content="ACEPTAR" Margin="28,403,0,0" Click="acccept_Click" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104"/>
-        <Button x:Name="btnBorrar" Content="BORRAR" Margin="181,403,0,0" Click="btnDelete_Click" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104"/>
-        <Button x:Name="btnClear" Content="_LIMPIAR" Margin="329,403,0,0" Click="btnClear_Click" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104"/>
-        
+
     </Grid>
 </Window>

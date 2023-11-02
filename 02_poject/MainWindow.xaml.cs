@@ -22,8 +22,9 @@ namespace _02_poject
             public string surname { get; set; }
             public string adress { get; set; }
             public string phone { get; set; }
-            public int children { get; set; }
+            public string birthDate { get; set; }
             public double height { get; set; }
+            public int children { get; set; }           
         }
 
         // I've used ObservableCollection because it's a data structure that allows notifying data changes (it implements the INotifyPropertyChanged interface)
@@ -61,10 +62,10 @@ namespace _02_poject
 
         private void acccept_Click(object sender, RoutedEventArgs e)
         {
-            string name, surname, adress, phone;
+            string name, surname, adress, phone, birthDate;
             int children;
             double height;
-            initalizeUser(out name, out surname, out adress, out phone, out children, out height);
+            initalizeUser(out name, out surname, out adress, out phone, out height, out birthDate, out children);
 
             if (isFilled(name, surname, adress, phone))
             {
@@ -75,13 +76,14 @@ namespace _02_poject
                     selectedUser.surname = textBoxSurname.Text;
                     selectedUser.adress = textBoxAdress.Text;
                     selectedUser.phone = textBoxPhone.Text;
-                    selectedUser.children = (bool)checkBox.IsChecked ? (int)slider.Value : 0;
+                    selectedUser.birthDate = datePicker.Text;
                     selectedUser.height = Double.Parse(tbHeight.Text);
+                    selectedUser.children = (bool)checkBox.IsChecked ? (int)slider.Value : 0;
                     dataGridUsers.Items.Refresh();
                     dataGridUsers.SelectedItem = null;
                 }
                 else
-                    userList.Add(new User { name = name, surname = surname, adress = adress, phone = phone, children = children, height = height });
+                    userList.Add(new User { name = name, surname = surname, adress = adress, phone = phone, height = height, birthDate = birthDate, children = children});
                 dataGridUsers.Items.Refresh();
                 clearForm();
             }
@@ -95,9 +97,10 @@ namespace _02_poject
             textBoxSurname.Clear();
             textBoxAdress.Clear();
             textBoxPhone.Clear();
+            datePicker.Text = DateTime.Now.ToString();
+            tbHeight.Text = MIN_HEIGHT.ToString();
             checkBox.IsChecked = false;
             slider.Value = double.MinValue;
-            tbHeight.Text = MIN_HEIGHT.ToString();
             btnAdd.Content = ACCEPT_TXT;
         }
 
@@ -106,14 +109,15 @@ namespace _02_poject
             return !string.IsNullOrEmpty(name) && !string.IsNullOrEmpty(surname) && !string.IsNullOrEmpty(adress) && !string.IsNullOrEmpty(phone);
         }
 
-        private void initalizeUser(out string name, out string surname, out string adress, out string phone, out int children, out double height)
+        private void initalizeUser(out string name, out string surname, out string adress, out string phone, out double height, out string birthDate, out int children)
         {
             name = textBoxUserName.Text;
             surname = textBoxSurname.Text;
             adress = textBoxAdress.Text;
             phone = textBoxPhone.Text;
-            children = (bool) checkBox.IsChecked ? (int)slider.Value : 0;
+            birthDate = datePicker.Text;
             height = Double.Parse(tbHeight.Text);
+            children = (bool) checkBox.IsChecked ? (int)slider.Value : 0;
         }
         
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -139,6 +143,7 @@ namespace _02_poject
                 tbCountChildren.Text = "Cantidad: " + slider.Value;
             }
             tbHeight.Text = selectedUser.height.ToString();
+            datePicker.Text = selectedUser.birthDate.ToString();
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
