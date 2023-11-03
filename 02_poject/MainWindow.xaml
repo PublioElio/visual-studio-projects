@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_02_poject"
         mc:Ignorable="d"
-        Title="MainWindow" MinWidth="900" MinHeight="650" Height="650" Width="1000">
+        Title="MainWindow" MinWidth="900" MinHeight="675" Height="675" Width="1000">
 
     <Grid x:Name="mainGrid">
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300*"/>
-            <ColumnDefinition Width="300*"/>
+            <ColumnDefinition Width="489*"/>
+            <ColumnDefinition Width="510*"/>
         </Grid.ColumnDefinitions>
 
         <DataGrid x:Name="dataGridUsers" d:ItemsSource="{d:SampleData ItemCount=4}" Margin="0,-1,0,0" Grid.Column="1" VerticalGridLinesBrush="Black" HorizontalGridLinesBrush="#FF8A8A8A" IsReadOnly="True" SelectionChanged="DataGrid_SelectionChanged" SelectionMode="Single" ColumnWidth="*" AutomationProperties.IsColumnHeader="True">
@@ -23,18 +23,18 @@
         <StackPanel x:Name="spForm" Margin="28,32,0,46" Orientation="Vertical" HorizontalAlignment="Left" Width="405">
 
             <Label x:Name="labelUserName" Content="Nombre de usuario" Height="26" Width="147" HorizontalAlignment="Left" FontWeight="Bold"/>
-            <TextBox x:Name="textBoxUserName" Height="30" TextWrapping="Wrap" Width="405" FontSize="20" HorizontalAlignment="Left"/>
+            <TextBox x:Name="textBoxUserName" Height="30" TextWrapping="Wrap" Width="405" FontSize="20" HorizontalAlignment="Left" GotFocus="textBox_gotFocus" LostFocus="textBox_LostFocus"/>
 
             <Label x:Name="labelSurname" Content="Apellidos" Height="26" Width="147" HorizontalAlignment="Left" FontWeight="Bold"/>
-            <TextBox x:Name="textBoxSurname" Height="30" TextWrapping="Wrap" Width="405" FontSize="20" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" />
+            <TextBox x:Name="textBoxSurname" Height="30" TextWrapping="Wrap" Width="405" FontSize="20" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" GotFocus="textBox_gotFocus" LostFocus="textBox_LostFocus" />
 
 
             <Label x:Name="labelAdress" Content="Dirección" Height="26" Width="147" HorizontalAlignment="Left" FontWeight="Bold"/>
-            <TextBox x:Name="textBoxAdress" Height="30" TextWrapping="Wrap" Width="405" FontSize="20" HorizontalAlignment="Left"/>
+            <TextBox x:Name="textBoxAdress" Height="30" TextWrapping="Wrap" Width="405" FontSize="20" HorizontalAlignment="Left" GotFocus="textBox_gotFocus" LostFocus="textBox_LostFocus" />
 
 
             <Label x:Name="labelPhone" Content="Teléfono" Height="26" Width="147" HorizontalAlignment="Left" FontWeight="Bold"/>
-            <TextBox x:Name="textBoxPhone" Height="30" TextWrapping="Wrap" Width="405" FontSize="20" HorizontalAlignment="Left"/>
+            <TextBox x:Name="textBoxPhone" Height="30" TextWrapping="Wrap" Width="405" FontSize="20" HorizontalAlignment="Left" GotFocus="textBox_gotFocus" LostFocus="textBox_LostFocus" />
 
             <StackPanel x:Name="spDateHeight" Orientation="Horizontal" HorizontalAlignment="Center" Width="403" Margin="0,10,0,0">
 
@@ -62,8 +62,8 @@
 
             <StackPanel x:Name="spChildData" Visibility="Visible">
                 <Label x:Name="labelChildName" Content="Nombre y apellidos del hijo:" Height="26" Width="175" HorizontalAlignment="Left" FontWeight="Bold"/>
-                <TextBox x:Name="textBoxChildName" Height="30" TextWrapping="Wrap" Width="405" FontSize="20" HorizontalAlignment="Left"/>
-                <ListBox Height="89" Margin="0,15,0,15" d:ItemsSource="{d:SampleData ItemCount=4}"/>
+                <TextBox x:Name="textBoxChildName" Height="30" TextWrapping="Wrap" Width="405" FontSize="20" HorizontalAlignment="Left" KeyDown="OnKeyDownHandler" />
+                <ListBox x:Name="lbChildList" Height="89" Margin="0,15,0,15" d:ItemsSource="{d:SampleData ItemCount=4}"/>
             </StackPanel>
 
             <StackPanel x:Name="spButtons" Orientation="Horizontal">
