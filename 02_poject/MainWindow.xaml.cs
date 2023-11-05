@@ -28,7 +28,6 @@ namespace _02_poject
             public string birthDate { get; set; }
             public double height { get; set; }
             public int children { get; set; }
-
             public List<string> childrenList = new List<string>();
         }
 
@@ -58,6 +57,7 @@ namespace _02_poject
             string name, surname, adress, phone, birthDate;
             int children;
             double height;
+
             initalizeUser(out name, out surname, out adress, out phone, out height, out birthDate, out children);
 
             if (isFilled(name, surname, adress, phone))
@@ -148,6 +148,10 @@ namespace _02_poject
             }
             tbHeight.Text = selectedUser.height.ToString();
             datePicker.Text = selectedUser.birthDate.ToString();
+            foreach (var child in selectedUser.childrenList)
+            {
+                lbChildList.Items.Add(child);
+            }
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
@@ -168,13 +172,15 @@ namespace _02_poject
         private void checkBox_Checked(object sender, RoutedEventArgs e)
         {
             slider.IsEnabled = true;
+            spChildData.IsEnabled = true;
             updateChildrenNum();
         }
 
         private void checkBox_Unchecked(object sender, RoutedEventArgs e)
         {
             slider.IsEnabled = false;
-            slider.Value = double.MinValue;
+            spChildData.IsEnabled = false;
+            slider.Value = 0;
             tbCountChildren.Text = "Cantidad: 0";
         }
 
@@ -218,22 +224,16 @@ namespace _02_poject
             {
                 string newChildren = textBoxChildName.Text.ToLower();
                 if (string.IsNullOrEmpty(textBoxChildName.Text)) // Ha introducido un campo vacío
-                {
                     MessageBox.Show("Debe introducir un nombre.");
-                }
                 else
                 {
-                    bool nameExists = userList.Any(user => user.childrenList.Any(child => child.ToLower() == newChildren)) || lbChildList.Items.Contains(newChildren);
+                    bool nameExists = userList.Any(user => user.childrenList.Any(child => child.ToLower() == newChildren)) || lbChildList.Items.Cast<string>().Any(item => item.ToLower() == newChildren.ToLower());
                     if (nameExists) // El nombre del hijo ya existe en el listado
-                    {
                         MessageBox.Show("El nombre del hijo ya existe en la lista.");
-                    }
                     else
                     {
-                        if (lbChildList.Items.Count >= slider.Value) // Ya ha introducido el número máximo de hijos
-                        {
+                        if (lbChildList.Items.Count + 1 >= slider.Value) // Ya ha introducido el número máximo de hijos
                             MessageBox.Show("Ya ha introducido el máximo número de hijos.");
-                        }
                         else
                         {
                             lbChildList.Items.Add(textBoxChildName.Text);
@@ -242,6 +242,22 @@ namespace _02_poject
                     }
                 }
             }
+        }
+
+        private void datePicker_SelectedDateChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        {
+            DatePicker datePicker = sender as DatePicker;
+            if (datePicker.SelectedDate.HasValue && datePicker.SelectedDate > DateTime.Now)
+            {
+                MessageBox.Show("Debe seleccionar una fecha posterior a la actual.");
+                datePicker.SelectedDate = DateTime.Now;
+            }
+        }
+
+        private void lbChildList_PreviewKeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Delete && lbChildList.SelectedItem != null)
+                lbChildList.Items.Remove(lbChildList.SelectedItem);
         }
     }
 }
