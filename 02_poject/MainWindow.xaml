@@ -56,14 +56,20 @@
 
             <StackPanel x:Name="spChildren" Orientation="Horizontal" Margin="0,20,0,10">
                 <CheckBox Name="checkBox" Content="Tengo hijos" Margin="0,0,10,0" Checked="checkBox_Checked" Unchecked="checkBox_Unchecked" FontWeight="Bold"/>
-                <Slider Name="slider" Width="200" TickFrequency="1" Minimum="0" Maximum="10" Value="1" Margin="0,0,10,0" IsEnabled="False" ValueChanged="slider_ValueChanged" />
+                <Slider Name="slider" Width="200" TickFrequency="1" Minimum="0" Maximum="10" Value="0" Margin="0,0,10,0" IsEnabled="False" ValueChanged="slider_ValueChanged" />
                 <TextBlock Name="tbCountChildren" Text="Cantidad: 0" VerticalAlignment="Center"/>
             </StackPanel>
 
-            <StackPanel x:Name="spChildData" Visibility="Visible" IsEnabled="False">
-                <Label x:Name="labelChildName" Content="Nombre y apellidos del hijo:" Height="26" Width="175" HorizontalAlignment="Left" FontWeight="Bold"/>
-                <TextBox x:Name="textBoxChildName" Height="30" TextWrapping="Wrap" Width="405" FontSize="20" HorizontalAlignment="Left" KeyDown="OnKeyDownHandler" />
-                <ListBox x:Name="lbChildList" Height="89" Margin="0,15,0,15" d:ItemsSource="{d:SampleData ItemCount=4}" PreviewKeyUp="lbChildList_PreviewKeyUp"/>
+            <StackPanel x:Name="spChildData" IsEnabled="False" Orientation="Horizontal">
+                <StackPanel Width="250">
+                    <Label x:Name="labelChildName" Content="Nombre y apellidos del hijo:" Height="26" Width="175" HorizontalAlignment="Left" FontWeight="Bold"/>
+                    <TextBox x:Name="textBoxChildName" Height="30" TextWrapping="Wrap" Width="250" FontSize="20" HorizontalAlignment="Left" KeyDown="OnKeyDownHandler" />
+                    <ListBox x:Name="lbChildList" Height="89" Margin="0,15,0,15" d:ItemsSource="{d:SampleData ItemCount=4}" PreviewKeyUp="lbChildList_PreviewKeyUp" Width="250"/>
+                </StackPanel>
+                <StackPanel x:Name="spTreeView" Width="150" Margin="5">
+                    <TreeView x:Name="treeView" Width="150" Height="155"/>
+                </StackPanel>
+                
             </StackPanel>
 
             <StackPanel x:Name="spButtons" Orientation="Horizontal">

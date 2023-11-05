@@ -32,7 +32,7 @@ namespace _02_poject
         }
 
         // I've used ObservableCollection because it's a data structure that allows notifying data changes (it implements the INotifyPropertyChanged interface)
-        ObservableCollection<User> userList = new ObservableCollection<User> { };
+        private ObservableCollection<User> userList = new ObservableCollection<User> { };
 
         public MainWindow()
         {
@@ -80,12 +80,13 @@ namespace _02_poject
                     dataGridUsers.Items.Refresh();
                     dataGridUsers.SelectedItem = null;
                 }
-                else
+                else {
                     userList.Add(new User { name = name, surname = surname, adress = adress, phone = phone, height = height, birthDate = birthDate, children = children });
-                foreach (var item in lbChildList.Items)
-                {
-                    userList.Last().childrenList.Add(item.ToString());
-                }
+                    foreach (var item in lbChildList.Items)
+                    {
+                        userList.Last().childrenList.Add(item.ToString());
+                    }
+                }                  
                 dataGridUsers.Items.Refresh();
                 clearForm();
             }
@@ -105,6 +106,7 @@ namespace _02_poject
             lbChildList.Items.Clear();
             checkBox.IsChecked = false;
             slider.Value = double.MinValue;
+            treeView.Items.Clear();
             btnAdd.Content = ACCEPT_TXT;
         }
 
@@ -119,7 +121,7 @@ namespace _02_poject
             surname = textBoxSurname.Text;
             adress = textBoxAdress.Text;
             phone = textBoxPhone.Text;
-            birthDate = datePicker.Text;
+            birthDate = string.IsNullOrWhiteSpace(datePicker.Text) ? DateTime.Now.ToString() : datePicker.Text;
             height = Double.Parse(tbHeight.Text);
             children = (bool)checkBox.IsChecked ? (int)slider.Value : 0;
         }
@@ -128,8 +130,20 @@ namespace _02_poject
         {
             if (dataGridUsers.SelectedItem != null)
             {
+                clearForm();
                 User selectedUser = (User)dataGridUsers.SelectedItem;
                 importToForm(selectedUser);
+
+                TreeViewItem userItem = new TreeViewItem();
+                userItem.Header = selectedUser.name;
+                foreach (var child in selectedUser.childrenList)
+                {
+                    TreeViewItem childItem = new TreeViewItem();
+                    childItem.Header = child;
+                    userItem.Items.Add(childItem);
+                }
+                treeView.Items.Clear();
+                treeView.Items.Add(userItem);
             }
         }
 
@@ -173,6 +187,7 @@ namespace _02_poject
         {
             slider.IsEnabled = true;
             spChildData.IsEnabled = true;
+            slider.Value = 1;
             updateChildrenNum();
         }
 
@@ -191,6 +206,9 @@ namespace _02_poject
             {
                 MessageBox.Show("Debe de suprimir algún hijo de la lista");
                 slider.Value = lbChildList.Items.Count;
+            }
+            if (slider.Value < 1) { 
+                checkBox.IsChecked = false;
             }
         }
 
@@ -227,12 +245,12 @@ namespace _02_poject
                     MessageBox.Show("Debe introducir un nombre.");
                 else
                 {
-                    bool nameExists = userList.Any(user => user.childrenList.Any(child => child.ToLower() == newChildren)) || lbChildList.Items.Cast<string>().Any(item => item.ToLower() == newChildren.ToLower());
+                    bool nameExists = lbChildList.Items.Cast<string>().Any(item => item.ToLower() == newChildren.ToLower());
                     if (nameExists) // El nombre del hijo ya existe en el listado
                         MessageBox.Show("El nombre del hijo ya existe en la lista.");
                     else
                     {
-                        if (lbChildList.Items.Count + 1 >= slider.Value) // Ya ha introducido el número máximo de hijos
+                        if (lbChildList.Items.Count >= (int) slider.Value) // Ya ha introducido el número máximo de hijos
                             MessageBox.Show("Ya ha introducido el máximo número de hijos.");
                         else
                         {
