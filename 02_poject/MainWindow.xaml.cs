@@ -74,18 +74,14 @@ namespace _02_poject
                     selectedUser.children = (bool)checkBox.IsChecked ? (int)slider.Value : 0;
                     selectedUser.childrenList.Clear();
                     foreach (var item in lbChildList.Items)
-                    {
                         selectedUser.childrenList.Add(item.ToString());
-                    }
                     dataGridUsers.Items.Refresh();
                     dataGridUsers.SelectedItem = null;
                 }
                 else {
                     userList.Add(new User { name = name, surname = surname, adress = adress, phone = phone, height = height, birthDate = birthDate, children = children });
                     foreach (var item in lbChildList.Items)
-                    {
                         userList.Last().childrenList.Add(item.ToString());
-                    }
                 }                  
                 dataGridUsers.Items.Refresh();
                 clearForm();
@@ -163,9 +159,7 @@ namespace _02_poject
             tbHeight.Text = selectedUser.height.ToString();
             datePicker.Text = selectedUser.birthDate.ToString();
             foreach (var child in selectedUser.childrenList)
-            {
                 lbChildList.Items.Add(child);
-            }
         }
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
@@ -237,19 +231,19 @@ namespace _02_poject
 
         private void OnKeyDownHandler(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Return) // Cuando pulsa enter empiezan las comprobaciones
+            if (e.Key == Key.Return) // Pressing Intro starts checking the entered value
             {
                 string newChildren = tbChildName.Text.ToLower();
-                if (string.IsNullOrEmpty(tbChildName.Text)) // Ha introducido un campo vacío
-                    MessageBox.Show("Debe introducir un nombre.");
+                if (string.IsNullOrEmpty(tbChildName.Text)) // Empty textbox
+                    MessageBox.Show(ERROR_MSG);
                 else
                 {
                     bool nameExists = lbChildList.Items.Cast<string>().Any(item => item.ToLower() == newChildren.ToLower());
-                    if (nameExists) // El nombre del hijo ya existe en el listado
+                    if (nameExists) // Children name already in the listbox
                         MessageBox.Show("El nombre del hijo ya existe en la lista.");
                     else
                     {
-                        if (lbChildList.Items.Count >= (int) slider.Value) // Ya ha introducido el número máximo de hijos
+                        if (lbChildList.Items.Count >= (int) slider.Value) // Maximum number of children reached
                             MessageBox.Show("Ya ha introducido el máximo número de hijos.");
                         else
                         {
