@@ -283,11 +283,13 @@ namespace _02_poject
         private void tbChildName_GotFocus(object sender, RoutedEventArgs e)
         {
             lbChildHelp.Content = "Escriba un nuevo nombre y pulse Enter";
+            tbChildName.Background = Brushes.LightGray;
         }
 
         private void tbChildName_LostFocus(object sender, RoutedEventArgs e)
         {
             lbChildHelp.Content = "";
+            tbChildName.Background = Brushes.White;
         }
 
         private void lbChildList_SelectionChanged(object sender, SelectionChangedEventArgs e)

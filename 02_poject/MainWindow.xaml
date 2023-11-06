@@ -25,21 +25,21 @@
             </DataGrid.BindingGroup>
         </DataGrid>
 
-        <StackPanel x:Name="spForm" Margin="28,32,0,46" Orientation="Vertical" HorizontalAlignment="Left" Width="405">
+        <StackPanel x:Name="spForm" Margin="28,32,0,83" Orientation="Vertical" HorizontalAlignment="Left" Width="405">
 
             <Label x:Name="labelUserName" Content="Nombre de usuario" Height="26" Width="147" HorizontalAlignment="Left" FontWeight="Bold"/>
-            <TextBox x:Name="textBoxUserName" Height="25" TextWrapping="Wrap" Width="405" FontSize="14" HorizontalAlignment="Left" GotFocus="textBox_gotFocus" LostFocus="textBox_LostFocus"/>
+            <TextBox x:Name="textBoxUserName" Height="20" TextWrapping="Wrap" Width="405" FontSize="14" HorizontalAlignment="Left" GotFocus="textBox_gotFocus" LostFocus="textBox_LostFocus"/>
 
             <Label x:Name="labelSurname" Content="Apellidos" Height="26" Width="147" HorizontalAlignment="Left" FontWeight="Bold"/>
-            <TextBox x:Name="textBoxSurname" Height="25" TextWrapping="Wrap" Width="405" FontSize="14" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" GotFocus="textBox_gotFocus" LostFocus="textBox_LostFocus" />
+            <TextBox x:Name="textBoxSurname" Height="20" TextWrapping="Wrap" Width="405" FontSize="14" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" GotFocus="textBox_gotFocus" LostFocus="textBox_LostFocus" />
 
 
             <Label x:Name="labelAdress" Content="Dirección" Height="26" Width="147" HorizontalAlignment="Left" FontWeight="Bold"/>
-            <TextBox x:Name="textBoxAdress" Height="25" TextWrapping="Wrap" Width="405" FontSize="14" HorizontalAlignment="Left" GotFocus="textBox_gotFocus" LostFocus="textBox_LostFocus" />
+            <TextBox x:Name="textBoxAdress" Height="20" TextWrapping="Wrap" Width="405" FontSize="14" HorizontalAlignment="Left" GotFocus="textBox_gotFocus" LostFocus="textBox_LostFocus" />
 
 
             <Label x:Name="labelPhone" Content="Teléfono" Height="26" Width="147" HorizontalAlignment="Left" FontWeight="Bold"/>
-            <TextBox x:Name="textBoxPhone" Height="25" TextWrapping="Wrap" Width="405" FontSize="14" HorizontalAlignment="Left" GotFocus="textBox_gotFocus" LostFocus="textBox_LostFocus" />
+            <TextBox x:Name="textBoxPhone" Height="20" TextWrapping="Wrap" Width="405" FontSize="14" HorizontalAlignment="Left" GotFocus="textBox_gotFocus" LostFocus="textBox_LostFocus" />
 
             <StackPanel x:Name="spDateHeight" Orientation="Horizontal" HorizontalAlignment="Center" Width="403" Margin="0,10,0,0">
 
@@ -61,21 +61,21 @@
 
             <StackPanel x:Name="spChildren" Orientation="Horizontal" Margin="0,20,0,10">
                 <CheckBox Name="checkBox" Content="Tengo hijos" Margin="0,0,10,0" Checked="checkBox_Checked" Unchecked="checkBox_Unchecked" FontWeight="Bold"/>
-                <Slider Name="slider" Width="200" TickFrequency="1" Minimum="0" Maximum="10" Value="0" Margin="0,0,10,0" IsEnabled="False" ValueChanged="slider_ValueChanged" />
+                <Slider Name="slider" Width="200" IsSnapToTickEnabled="True" TickFrequency="1" Minimum="0" Maximum="10" Value="0" Margin="0,0,10,0" IsEnabled="False" ValueChanged="slider_ValueChanged" />
                 <TextBlock Name="tbCountChildren" Text="Cantidad: 0" VerticalAlignment="Center"/>
             </StackPanel>
 
             <StackPanel x:Name="spChildData" IsEnabled="False" Orientation="Horizontal">
                 <StackPanel Width="250">
                     <Label x:Name="labelChildName" Content="Nombre y apellidos del hijo:" Height="26" Width="175" HorizontalAlignment="Left" FontWeight="Bold"/>
-                    <TextBox x:Name="tbChildName" Height="25" TextWrapping="Wrap" Width="250" FontSize="14" HorizontalAlignment="Left" KeyDown="OnKeyDownHandler" GotFocus="tbChildName_GotFocus" LostFocus="tbChildName_LostFocus">
+                    <TextBox x:Name="tbChildName" Height="20" TextWrapping="Wrap" Width="250" FontSize="14" HorizontalAlignment="Left" KeyDown="OnKeyDownHandler" GotFocus="tbChildName_GotFocus" LostFocus="tbChildName_LostFocus">
                         <TextBox.ToolTip>
                             <ToolTip Content="Escriba un nuevo nombre y pulse Enter"/>
                         </TextBox.ToolTip>
                     </TextBox>
                     <ListBox x:Name="lbChildList" Height="89" Margin="0,5,0,0" d:ItemsSource="{d:SampleData ItemCount=4}" PreviewKeyUp="lbChildList_PreviewKeyUp" Width="250" SelectionChanged="lbChildList_SelectionChanged">
                         <ListBox.ToolTip>
-                            <ToolTip Content="Pulse Suprimir para eliminar el nombre"/>
+                            <ToolTip Content="Seleccione un nombre y pulse Suprimir para borrarlo"/>
                         </ListBox.ToolTip>
                     </ListBox>
                     <Label x:Name="lbChildHelp" Content="" Height="25" Width="250" HorizontalAlignment="Left"/>
@@ -83,7 +83,7 @@
                 <StackPanel x:Name="spTreeView" Width="150" Margin="5,0,0,0">
                     <TreeView x:Name="treeView" Width="150" Height="170"/>
                 </StackPanel>
-                
+
             </StackPanel>
 
             <StackPanel x:Name="spButtons" Orientation="Horizontal" Margin="0,15,0,0">
