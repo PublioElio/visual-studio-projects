@@ -43,7 +43,7 @@ namespace _02_poject
         private void textBox_gotFocus(object sender, RoutedEventArgs e)
         {
             if (sender is TextBox textBox)
-                textBox.Background = Brushes.Coral;
+                textBox.Background = Brushes.LightGray;
         }
 
         private void textBox_LostFocus(object sender, RoutedEventArgs e)
@@ -102,7 +102,7 @@ namespace _02_poject
             textBoxPhone.Clear();
             datePicker.Text = DateTime.Now.ToString();
             tbHeight.Text = MIN_HEIGHT.ToString();
-            textBoxChildName.Clear();
+            tbChildName.Clear();
             lbChildList.Items.Clear();
             checkBox.IsChecked = false;
             slider.Value = double.MinValue;
@@ -207,9 +207,8 @@ namespace _02_poject
                 MessageBox.Show("Debe de suprimir algún hijo de la lista");
                 slider.Value = lbChildList.Items.Count;
             }
-            if (slider.Value < 1) { 
+            if (slider.Value < 1) 
                 checkBox.IsChecked = false;
-            }
         }
 
         private void updateChildrenNum()
@@ -240,8 +239,8 @@ namespace _02_poject
         {
             if (e.Key == Key.Return) // Cuando pulsa enter empiezan las comprobaciones
             {
-                string newChildren = textBoxChildName.Text.ToLower();
-                if (string.IsNullOrEmpty(textBoxChildName.Text)) // Ha introducido un campo vacío
+                string newChildren = tbChildName.Text.ToLower();
+                if (string.IsNullOrEmpty(tbChildName.Text)) // Ha introducido un campo vacío
                     MessageBox.Show("Debe introducir un nombre.");
                 else
                 {
@@ -254,8 +253,8 @@ namespace _02_poject
                             MessageBox.Show("Ya ha introducido el máximo número de hijos.");
                         else
                         {
-                            lbChildList.Items.Add(textBoxChildName.Text);
-                            textBoxChildName.Clear();
+                            lbChildList.Items.Add(tbChildName.Text);
+                            tbChildName.Clear();
                         }
                     }
                 }
@@ -275,7 +274,25 @@ namespace _02_poject
         private void lbChildList_PreviewKeyUp(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Delete && lbChildList.SelectedItem != null)
+            {
                 lbChildList.Items.Remove(lbChildList.SelectedItem);
+                lbChildHelp.Content = "";
+            }    
+        }
+
+        private void tbChildName_GotFocus(object sender, RoutedEventArgs e)
+        {
+            lbChildHelp.Content = "Escriba un nuevo nombre y pulse Enter";
+        }
+
+        private void tbChildName_LostFocus(object sender, RoutedEventArgs e)
+        {
+            lbChildHelp.Content = "";
+        }
+
+        private void lbChildList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            lbChildHelp.Content = "Pulse Suprimir para eliminar el nombre";
         }
     }
 }
