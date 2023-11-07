@@ -71,7 +71,7 @@ namespace _02_poject
                     selectedUser.phone = textBoxPhone.Text;
                     selectedUser.birthDate = datePicker.Text;
                     selectedUser.height = Double.Parse(tbHeight.Text);
-                    selectedUser.children = (bool)checkBox.IsChecked ? (int)slider.Value : 0;
+                    selectedUser.children = (bool)toggleHijos.IsChecked ? (int)slider.Value : 0;
                     selectedUser.childrenList.Clear();
                     foreach (var item in lbChildList.Items)
                         selectedUser.childrenList.Add(item.ToString());
@@ -100,7 +100,7 @@ namespace _02_poject
             tbHeight.Text = MIN_HEIGHT.ToString();
             tbChildName.Clear();
             lbChildList.Items.Clear();
-            checkBox.IsChecked = false;
+            toggleHijos.IsChecked = false;
             slider.Value = double.MinValue;
             treeView.Items.Clear();
             btnAdd.Content = ACCEPT_TXT;
@@ -119,7 +119,7 @@ namespace _02_poject
             phone = textBoxPhone.Text;
             birthDate = string.IsNullOrWhiteSpace(datePicker.Text) ? DateTime.Now.ToString() : datePicker.Text;
             height = Double.Parse(tbHeight.Text);
-            children = (bool)checkBox.IsChecked ? (int)slider.Value : 0;
+            children = (bool)toggleHijos.IsChecked ? (int)slider.Value : 0;
         }
 
         private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -152,7 +152,7 @@ namespace _02_poject
             textBoxPhone.Text = selectedUser.phone;
             if (selectedUser.children > 0)
             {
-                checkBox.IsChecked = true;
+                toggleHijos.IsChecked = true;
                 slider.Value = selectedUser.children;
                 tbCountChildren.Text = "Cantidad: " + slider.Value;
             }
@@ -177,7 +177,7 @@ namespace _02_poject
             clearForm();
             dataGridUsers.SelectedItem = null;
         }
-        private void checkBox_Checked(object sender, RoutedEventArgs e)
+        private void ToggleButton_Checked(object sender, RoutedEventArgs e)
         {
             slider.IsEnabled = true;
             spChildData.IsEnabled = true;
@@ -185,10 +185,12 @@ namespace _02_poject
             updateChildrenNum();
         }
 
-        private void checkBox_Unchecked(object sender, RoutedEventArgs e)
+        private void ToggleButton_Unchecked(object sender, RoutedEventArgs e)
         {
             slider.IsEnabled = false;
             spChildData.IsEnabled = false;
+            tbChildName.Clear();
+            lbChildList.Items.Clear();
             slider.Value = 0;
             tbCountChildren.Text = "Cantidad: 0";
         }
@@ -202,12 +204,12 @@ namespace _02_poject
                 slider.Value = lbChildList.Items.Count;
             }
             if (slider.Value < 1) 
-                checkBox.IsChecked = false;
+                toggleHijos.IsChecked = false;
         }
 
         private void updateChildrenNum()
         {
-            if (checkBox.IsChecked == true)
+            if (toggleHijos.IsChecked == true)
             {
                 int childrenNum = (int)slider.Value;
                 tbCountChildren.Text = "Cantidad: " + childrenNum;
