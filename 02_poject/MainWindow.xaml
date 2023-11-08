@@ -77,8 +77,8 @@
     <Grid x:Name="mainGrid" Background="White" ContextMenu="{StaticResource ColorContextMenu}">
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="500"/>
-            <ColumnDefinition Width="550*"/>
+            <ColumnDefinition Width="475"/>
+            <ColumnDefinition Width="425*"/>
         </Grid.ColumnDefinitions>
 
         <DataGrid x:Name="dataGridUsers" d:ItemsSource="{d:SampleData ItemCount=4}" Grid.Column="1" VerticalGridLinesBrush="Black" HorizontalGridLinesBrush="#FF8A8A8A" IsReadOnly="True" SelectionChanged="DataGrid_SelectionChanged" SelectionMode="Single" ColumnWidth="*" AutomationProperties.IsColumnHeader="True">
