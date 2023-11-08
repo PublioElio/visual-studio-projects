@@ -1,0 +1,22 @@
+﻿<Window x:Class="calculo_salario.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:calculo_salario"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="475" Width="400">
+    <Grid x:Name="mainGrid" Background="#F1F1F1">
+
+        <Grid x:Name="gridFormulario" HorizontalAlignment="Center" Height="440" VerticalAlignment="Center" Width="350">
+            <Label x:Name="lbSalario" Content="CALCULADORA DE SALARIO" HorizontalAlignment="Center" VerticalAlignment="Top" Width="164" FontFamily="Bahnschrift SemiBold" Margin="0,10,0,0"/>
+            <Grid Margin="0,40,0,271" >
+                <Label Content="Salario bruto: " />
+                
+            </Grid>
+        </Grid>
+
+
+
+    </Grid>
+</Window>
