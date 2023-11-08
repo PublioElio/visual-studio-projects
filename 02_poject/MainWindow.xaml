@@ -7,6 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" MinWidth="900" MinHeight="675" Height="675" Width="1000">
     <Window.Resources>
+
+        <ContextMenu x:Key="ColorContextMenu">
+            <MenuItem Header="Cambiar fondo rojo" Click="CambiarColor_Click"/>
+            <MenuItem Header="Cambiar fondo verde" Click="CambiarColor_Click"/>
+            <MenuItem Header="Cambiar fondo azul" Click="CambiarColor_Click"/>
+        </ContextMenu>
+
         <Style TargetType="TreeViewItem">
             <Setter Property="IsExpanded" Value="True" />
         </Style>
@@ -67,7 +74,7 @@
 
     </Window.Resources>
 
-    <Grid x:Name="mainGrid" >
+    <Grid x:Name="mainGrid" Background="White" ContextMenu="{StaticResource ColorContextMenu}">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="510"/>

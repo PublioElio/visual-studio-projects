@@ -292,5 +292,24 @@ namespace _02_poject
         {
             lbChildHelp.Content = "Pulse Suprimir para eliminar el nombre";
         }
+
+        private void CambiarColor_Click(object sender, RoutedEventArgs e)
+        {
+            MenuItem menuItem = (MenuItem)sender;
+
+            if (menuItem.Header.ToString() == "Cambiar fondo rojo")
+            {
+                mainGrid.Background = Brushes.LightCoral;
+            }
+            else if (menuItem.Header.ToString() == "Cambiar fondo verde")
+            {
+                mainGrid.Background = Brushes.LightGreen;
+            }
+            else if (menuItem.Header.ToString() == "Cambiar fondo azul")
+            {
+                mainGrid.Background = Brushes.LightSkyBlue;
+            }
+        }
+
     }
 }
