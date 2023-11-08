@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_02_poject"
         mc:Ignorable="d"
-        Title="MainWindow" MinWidth="900" MinHeight="675" Height="675" Width="1000">
+        Title="MainWindow" MinWidth="900" MinHeight="675" Height="675" Width="900">
     <Window.Resources>
 
         <ContextMenu x:Key="ColorContextMenu">
@@ -77,7 +77,7 @@
     <Grid x:Name="mainGrid" Background="White" ContextMenu="{StaticResource ColorContextMenu}">
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="510"/>
+            <ColumnDefinition Width="500"/>
             <ColumnDefinition Width="550*"/>
         </Grid.ColumnDefinitions>
 

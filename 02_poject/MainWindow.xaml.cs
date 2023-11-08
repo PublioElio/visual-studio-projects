@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 using System.Windows.Media;
 
@@ -18,7 +19,8 @@ namespace _02_poject
         private double MAX_HEIGHT = 2.30;
         private string ACCEPT_TXT = "ACEPTAR";
         private string MODIFY_TXT = "MODIFICAR";
-        private string ERROR_MSG = "No es posible dejar campos en blanco.";
+        private string ERROR_EMPTY_FIELDS = "No es posible dejar campos en blanco.";
+        private string ERROR_EMPTY_CHILD_NAMES = "Debe introducir todos los nombres de sus hijos.";
         private class User
         {
             public string name { get; set; }
@@ -62,32 +64,39 @@ namespace _02_poject
 
             if (isFilled(name, surname, adress, phone))
             {
-                if (dataGridUsers.SelectedItem != null)
+                if (lbChildList.Items.Count == (int)slider.Value)
                 {
-                    User selectedUser = (User)dataGridUsers.SelectedItem;
-                    selectedUser.name = textBoxUserName.Text;
-                    selectedUser.surname = textBoxSurname.Text;
-                    selectedUser.adress = textBoxAdress.Text;
-                    selectedUser.phone = textBoxPhone.Text;
-                    selectedUser.birthDate = datePicker.Text;
-                    selectedUser.height = Double.Parse(tbHeight.Text);
-                    selectedUser.children = (bool)toggleHijos.IsChecked ? (int)slider.Value : 0;
-                    selectedUser.childrenList.Clear();
-                    foreach (var item in lbChildList.Items)
-                        selectedUser.childrenList.Add(item.ToString());
+                    if (dataGridUsers.SelectedItem != null)
+                    {
+                        User selectedUser = (User)dataGridUsers.SelectedItem;
+                        selectedUser.name = textBoxUserName.Text;
+                        selectedUser.surname = textBoxSurname.Text;
+                        selectedUser.adress = textBoxAdress.Text;
+                        selectedUser.phone = textBoxPhone.Text;
+                        selectedUser.birthDate = datePicker.Text;
+                        selectedUser.height = Double.Parse(tbHeight.Text);
+                        selectedUser.children = (bool)toggleHijos.IsChecked ? (int)slider.Value : 0;
+                        selectedUser.childrenList.Clear();
+                        foreach (var item in lbChildList.Items)
+                            selectedUser.childrenList.Add(item.ToString());
+                        dataGridUsers.Items.Refresh();
+                        dataGridUsers.SelectedItem = null;
+                    }
+                    else
+                    {
+                        userList.Add(new User { name = name, surname = surname, adress = adress, phone = phone, height = height, birthDate = birthDate, children = children });
+                        foreach (var item in lbChildList.Items)
+                            userList.Last().childrenList.Add(item.ToString());
+                    }
                     dataGridUsers.Items.Refresh();
-                    dataGridUsers.SelectedItem = null;
+                    clearForm();
                 }
                 else {
-                    userList.Add(new User { name = name, surname = surname, adress = adress, phone = phone, height = height, birthDate = birthDate, children = children });
-                    foreach (var item in lbChildList.Items)
-                        userList.Last().childrenList.Add(item.ToString());
-                }                  
-                dataGridUsers.Items.Refresh();
-                clearForm();
+                    MessageBox.Show(ERROR_EMPTY_CHILD_NAMES);
+                }
             }
             else
-                MessageBox.Show(ERROR_MSG);
+                MessageBox.Show(ERROR_EMPTY_FIELDS);
         }
 
         private void clearForm()
@@ -237,7 +246,7 @@ namespace _02_poject
             {
                 string newChildren = tbChildName.Text.ToLower();
                 if (string.IsNullOrEmpty(tbChildName.Text)) // Empty textbox
-                    MessageBox.Show(ERROR_MSG);
+                    MessageBox.Show(ERROR_EMPTY_FIELDS);
                 else
                 {
                     bool nameExists = lbChildList.Items.Cast<string>().Any(item => item.ToLower() == newChildren.ToLower());
@@ -296,18 +305,21 @@ namespace _02_poject
         private void CambiarColor_Click(object sender, RoutedEventArgs e)
         {
             MenuItem menuItem = (MenuItem)sender;
+            string header = menuItem.Header.ToString();
 
-            if (menuItem.Header.ToString() == "Cambiar fondo rojo")
+            switch (header)
             {
-                mainGrid.Background = Brushes.LightCoral;
-            }
-            else if (menuItem.Header.ToString() == "Cambiar fondo verde")
-            {
-                mainGrid.Background = Brushes.LightGreen;
-            }
-            else if (menuItem.Header.ToString() == "Cambiar fondo azul")
-            {
-                mainGrid.Background = Brushes.LightSkyBlue;
+                case "Cambiar fondo rojo":
+                    mainGrid.Background = Brushes.LightCoral;
+                    break;
+                case "Cambiar fondo verde":
+                    mainGrid.Background = Brushes.LightGreen;
+                    break;
+                case "Cambiar fondo azul":
+                    mainGrid.Background = Brushes.LightSkyBlue;
+                    break;
+                default:
+                    break;
             }
         }
 
