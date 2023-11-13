@@ -87,7 +87,7 @@
             </DataGrid.BindingGroup>
         </DataGrid>
 
-        <StackPanel x:Name="spForm" Margin="28,32,0,70" Orientation="Vertical" HorizontalAlignment="Left" Width="405">
+        <StackPanel x:Name="spForm" Margin="28,32,0,27" Orientation="Vertical" HorizontalAlignment="Left" Width="405">
 
             <Label x:Name="labelUserName" Content="Nombre de usuario" Height="26" Width="147" HorizontalAlignment="Left" FontWeight="Bold"/>
             <TextBox x:Name="textBoxUserName" Height="20" TextWrapping="Wrap" Width="405" FontSize="14" HorizontalAlignment="Left" GotFocus="textBox_gotFocus" LostFocus="textBox_LostFocus"/>
@@ -96,8 +96,8 @@
             <TextBox x:Name="textBoxSurname" Height="20" TextWrapping="Wrap" Width="405" FontSize="14" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" GotFocus="textBox_gotFocus" LostFocus="textBox_LostFocus" />
 
 
-            <Label x:Name="labelAdress" Content="Dirección" Height="26" Width="147" HorizontalAlignment="Left" FontWeight="Bold"/>
-            <TextBox x:Name="textBoxAdress" Height="20" TextWrapping="Wrap" Width="405" FontSize="14" HorizontalAlignment="Left" GotFocus="textBox_gotFocus" LostFocus="textBox_LostFocus" />
+            <Label x:Name="labelAddress" Content="Dirección" Height="26" Width="147" HorizontalAlignment="Left" FontWeight="Bold"/>
+            <TextBox x:Name="textBoxAddress" Height="20" TextWrapping="Wrap" Width="405" FontSize="14" HorizontalAlignment="Left" GotFocus="textBox_gotFocus" LostFocus="textBox_LostFocus" />
 
 
             <Label x:Name="labelPhone" Content="Teléfono" Height="26" Width="147" HorizontalAlignment="Left" FontWeight="Bold"/>
@@ -152,6 +152,12 @@
                 <Button x:Name="btnAdd" Content="ACEPTAR" Margin="0,0,0,0" Click="acccept_Click" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104"/>
                 <Button x:Name="btnBorrar" Content="BORRAR" Margin="45,0,45,0" Click="btnDelete_Click" Height="35" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104"/>
                 <Button x:Name="btnClear" Content="_LIMPIAR" Margin="0,0,0,0" Click="btnClear_Click" Height="35" VerticalAlignment="Top" HorizontalAlignment="Right" Width="104"/>
+            </StackPanel>
+
+            <StackPanel x:Name="spSearch" Orientation="Horizontal" Margin="0,15,0,0" >
+                <Label x:Name="lblSearch" Content="Buscar ususario:" Height="26" Width="100" HorizontalAlignment="Left" FontWeight="Bold" VerticalAlignment="Center"/>
+                <TextBox x:Name="tbSearch" Width="200" Height="20" VerticalAlignment="Center" />
+                <Button x:Name="btnSearch" Content="BUSCAR" Height="20" Width="80" Margin="15,0,0,0" VerticalAlignment="Center" Click="btnSearch_Click" />
             </StackPanel>
         </StackPanel>
     </Grid>

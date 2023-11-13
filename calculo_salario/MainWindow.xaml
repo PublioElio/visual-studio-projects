@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:calculo_salario"
         mc:Ignorable="d"
-        Title="MainWindow" Height="475" Width="400">
+        Title="MainWindow" Height="475" MinWidth="400" Width="400"  MinHeight="475">
 
     <Window.Resources>
 
@@ -123,6 +123,12 @@
         <Style TargetType="RadioButton">
             <Setter Property="BorderBrush" Value="#3b2b46"/>
             <Setter Property="BorderThickness" Value="2"/>
+            <Style.Triggers>
+                <Trigger Property="IsChecked" Value="True">
+                    <Setter Property="BorderBrush" Value="#606978"/>
+                    <Setter Property="Background" Value="#606978" />
+                </Trigger>
+            </Style.Triggers>
         </Style>
 
         <!-- TextBox Styles -->

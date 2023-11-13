@@ -25,7 +25,7 @@ namespace _02_poject
         {
             public string name { get; set; }
             public string surname { get; set; }
-            public string adress { get; set; }
+            public string address { get; set; }
             public string phone { get; set; }
             public string birthDate { get; set; }
             public double height { get; set; }
@@ -40,6 +40,8 @@ namespace _02_poject
         {
             InitializeComponent();
             dataGridUsers.ItemsSource = userList;
+
+            LoadDefaultUsers();
         }
 
         private void textBox_gotFocus(object sender, RoutedEventArgs e)
@@ -71,7 +73,7 @@ namespace _02_poject
                         User selectedUser = (User)dataGridUsers.SelectedItem;
                         selectedUser.name = textBoxUserName.Text;
                         selectedUser.surname = textBoxSurname.Text;
-                        selectedUser.adress = textBoxAdress.Text;
+                        selectedUser.address = textBoxAddress.Text;
                         selectedUser.phone = textBoxPhone.Text;
                         selectedUser.birthDate = datePicker.Text;
                         selectedUser.height = Double.Parse(tbHeight.Text);
@@ -84,7 +86,7 @@ namespace _02_poject
                     }
                     else
                     {
-                        userList.Add(new User { name = name, surname = surname, adress = adress, phone = phone, height = height, birthDate = birthDate, children = children });
+                        userList.Add(new User { name = name, surname = surname, address = adress, phone = phone, height = height, birthDate = birthDate, children = children });
                         foreach (var item in lbChildList.Items)
                             userList.Last().childrenList.Add(item.ToString());
                     }
@@ -103,7 +105,7 @@ namespace _02_poject
         {
             textBoxUserName.Clear();
             textBoxSurname.Clear();
-            textBoxAdress.Clear();
+            textBoxAddress.Clear();
             textBoxPhone.Clear();
             datePicker.Text = DateTime.Now.ToString();
             tbHeight.Text = MIN_HEIGHT.ToString();
@@ -124,7 +126,7 @@ namespace _02_poject
         {
             name = textBoxUserName.Text;
             surname = textBoxSurname.Text;
-            adress = textBoxAdress.Text;
+            adress = textBoxAddress.Text;
             phone = textBoxPhone.Text;
             birthDate = string.IsNullOrWhiteSpace(datePicker.Text) ? DateTime.Now.ToString() : datePicker.Text;
             height = Double.Parse(tbHeight.Text);
@@ -157,7 +159,7 @@ namespace _02_poject
             btnAdd.Content = MODIFY_TXT;
             textBoxUserName.Text = selectedUser.name;
             textBoxSurname.Text = selectedUser.surname;
-            textBoxAdress.Text = selectedUser.adress;
+            textBoxAddress.Text = selectedUser.address;
             textBoxPhone.Text = selectedUser.phone;
             if (selectedUser.children > 0)
             {
@@ -321,6 +323,118 @@ namespace _02_poject
                 default:
                     break;
             }
+        }
+
+        private void btnSearch_Click(object sender, RoutedEventArgs e)
+        {
+            string searchText = tbSearch.Text;
+
+            if (string.IsNullOrEmpty(searchText))
+                MessageBox.Show("Ingrese un término de búsqueda");
+            else
+            {
+                List<User> foundUsers = SearchUsers(searchText);
+                if (foundUsers.Count > 0)
+                {
+                    userList.Clear();
+                    foreach (User user in foundUsers)
+                        userList.Add(user);
+                }
+                else
+                    MessageBox.Show("No se ha encontrado ningún usuario");
+            }
+        }
+
+        private List<User> SearchUsers(string searchText)
+        {
+            return userList.Where(user => user.surname.Contains(searchText)).ToList();
+        }
+
+        private void LoadDefaultUsers()
+        {
+            userList.Add(new User
+            {
+                name = "Antonio",
+                surname = "Pérez Jiménez",
+                address = "C/ Conejito",
+                phone = "654888145",
+                birthDate = "04/03/1990",
+                height = 170.5,
+                children = 2,
+                childrenList = new List<string> { "Miguel", "Damián" }
+            });
+
+            userList.Add(new User
+            {
+                name = "Francisco Javier",
+                surname = "Huerta Martínez",
+                address = "Avda. Velázquez",
+                phone = "956283485",
+                birthDate = "08/19/1991",
+                height = 170.5,
+                children = 2,
+                childrenList = new List<string> { "Pedro", "Susana" }
+            });
+
+            userList.Add(new User
+            {
+                name = "Jairo",
+                surname = "Gómez Díaz",
+                address = "C/ Conejito",
+                phone = "658989232",
+                birthDate = "09/06/1998",
+                height = 175.0,
+                children = 1,
+                childrenList = new List<string> { "Alicia" }
+            });
+
+            userList.Add(new User
+            {
+                name = "Francisca",
+                surname = "Hernández Pont",
+                address = "Avda. Andalucía",
+                phone = "987654321",
+                birthDate = "18/10/1995",
+                height = 160.0,
+                children = 1,
+                childrenList = new List<string> { "Manuela" }
+            });
+
+            userList.Add(new User
+            {
+                name = "Pablo",
+                surname = "Martínez Alvarado",
+                address = "C/ Toneleros",
+                phone = "658989232",
+                birthDate = "23/03/1985",
+                height = 180.0,
+                children = 0,
+                childrenList = new List<string>()
+            });
+
+            userList.Add(new User
+            {
+                name = "Susana",
+                surname = "Domínguez Piñeiro",
+                address = "Pasaje de Jeréz",
+                phone = "956283485",
+                birthDate = "20/04/2000",
+                height = 165.5,
+                children = 3,
+                childrenList = new List<string> { "Miguel", "Pedro", "Sara" }
+            });
+
+            userList.Add(new User
+            {
+                name = "Carlos",
+                surname = "Díaz Gómez",
+                address = "C/ Voltaire",
+                phone = "985658325",
+                birthDate = "15/05/1998",
+                height = 175.0,
+                children = 1,
+                childrenList = new List<string> { "Sandra" }
+            });
         }
 
     }
