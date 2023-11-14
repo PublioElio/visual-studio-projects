@@ -151,14 +151,14 @@
             <Label x:Name="lablTitulo" Content="CALCULADORA DE SALARIO" Foreground="#3b2b46" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="350" FontFamily="Bahnschrift SemiBold" Height="36" VerticalAlignment="Top" FontSize="20"/>
 
             <Label x:Name="labelEdad" Foreground="#424e5e" Content="Edad:" HorizontalAlignment="Left" Margin="234,58,0,0" VerticalAlignment="Top" Width="auto" Height="auto" FontFamily="Bahnschrift" FontSize="14"/>
-            <TextBox x:Name="txtBoxEdad" MaxLength="3" HorizontalAlignment="Left" Margin="283,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="33" Height="auto" FontFamily="Arial" FontSize="14"/>
+            <TextBox x:Name="txtBoxEdad" MaxLength="2" HorizontalAlignment="Left" Margin="283,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="25" Height="auto" FontFamily="Arial" FontSize="14" PreviewTextInput="OnlyNumbers_PreviewTextInput" LostFocus="txtBoxEdad_LostFocus"/>
 
-            <Label x:Name="labelSalarioBruto" Foreground="#424e5e" Content="Salario bruto:" HorizontalAlignment="Left" Margin="6,134,0,0" VerticalAlignment="Top" Width="auto" Height="auto" FontFamily="Bahnschrift" FontSize="14"/>
-            <TextBox x:Name="txtBoxSalarioBruto" HorizontalAlignment="Left" MaxLength="6" Margin="106,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" Height="auto" FontFamily="Arial" FontSize="14"/>
+            <Label x:Name="labelSalarioBruto" Foreground="#424e5e" Content="Salario bruto:" HorizontalAlignment="Left" Margin="152,134,0,0" VerticalAlignment="Top" Width="auto" Height="auto" FontFamily="Bahnschrift" FontSize="14"/>
+            <TextBox x:Name="txtBoxSalarioBruto" HorizontalAlignment="Left" MaxLength="6" Margin="252,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" Height="auto" FontFamily="Arial" FontSize="14" PreviewTextInput="OnlyNumbers_PreviewTextInput" LostFocus="txtBoxSalarioBruto_LostFocus"/>
 
-            <GroupBox x:Name="groupBoxPagas" Foreground="#424e5e" Header="Número de pagas" Margin="198,122,36,272">
+            <GroupBox x:Name="groupBoxPagas" Foreground="#424e5e" Header="Número de pagas" Margin="17,124,217,270">
                 <StackPanel x:Name="spPagas" Height="17" Orientation="Horizontal" Width="84" HorizontalAlignment="Left" Margin="11,0,0,0">
-                    <RadioButton x:Name="radio12" Content="12" Width="34" />
+                    <RadioButton x:Name="radio12" Content="12" Width="34" IsChecked="True"/>
                     <RadioButton x:Name="radio14" Content="14" Width="34" Margin="10,0,0,0"/>
                 </StackPanel>
             </GroupBox>
@@ -171,10 +171,14 @@
                 <ComboBoxItem x:Name="Viudo" Content="Viudo"/>
             </ComboBox>
 
-
             <ToggleButton x:Name="toggleBtnDiscapacidad" Style="{StaticResource ToggleIOS}" Margin="200,204,120,221"/>
             <Label x:Name="labelDiscapacidad" Foreground="#424e5e" Content="Discapacidad 33% o superior" HorizontalAlignment="Left" Margin="6,198,0,0" VerticalAlignment="Top" Width="auto" Height="auto" FontFamily="Bahnschrift" FontSize="14"/>
-            <CheckBox Content="CheckBox" Foreground="#424e5e" HorizontalAlignment="Left" Margin="10,254,0,0" VerticalAlignment="Top"/>
+
+            <CheckBox x:Name="cbMovGeografica" Content="Movilidad Geográfica" Foreground="#424e5e" HorizontalAlignment="Left" Margin="10,254,0,0" VerticalAlignment="Top"/>
+
+            <Button x:Name="btnCalcular" Content="Calcular" HorizontalAlignment="Left" Margin="17,333,0,0" VerticalAlignment="Top" Height="32" Width="64" Click="btnCalcular_Click"/>
+            <TextBox x:Name="txtBoxResultado" HorizontalAlignment="Left" MaxLength="6" Margin="187,340,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52" Height="auto" FontFamily="Arial" FontSize="14" IsEnabled="False"/>
+            <Label x:Name="labelSalarioBruto_Copiar" Foreground="#424e5e" Content="Resultado:" HorizontalAlignment="Left" Margin="110,336,0,0" VerticalAlignment="Top" Width="auto" Height="auto" FontFamily="Bahnschrift" FontSize="14"/>
 
         </Grid>
 
