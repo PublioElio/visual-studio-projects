@@ -78,7 +78,7 @@ namespace calculo_salario
                 int numeroPagas = radio12.IsChecked == true ? 12 : 14;
 
                 double salarioFinal = salario * (1 + porcentaje) / numeroPagas;
-                txtBoxResultado.Text = salarioFinal.ToString();
+                txtBoxResultado.Text = Math.Round(salarioFinal, 2).ToString();
             }
         }
 
