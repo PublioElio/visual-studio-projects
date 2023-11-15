@@ -11,7 +11,40 @@
 
         <!--  paleta de color https://paletadecolores.com.mx/paleta/ffffea/a795a5/7a959e/424e5e/3b2b46/ -->
 
-        <!-- ToggleButton Styles -->
+        <!-- Estilo personalizado para el botón -->
+        <Style x:Key="CustomButtonStyle" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" Background="#FFEDD5ED" CornerRadius="8" BorderThickness="0">
+                            <Grid>
+                                <Rectangle x:Name="rectangle" Opacity="0" Fill="White"/>
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content="CALCULAR"/>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background">
+                                    <Setter.Value>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                            <GradientStop Color="#FFEDD5ED" Offset="0"/>
+                                            <GradientStop Color="White" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="rectangle" Property="Opacity" Value="0.2"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    
+
+
+    <!-- ToggleButton Styles -->
         <Style TargetType="{x:Type ToggleButton}" x:Key="ToggleIOS">
             <Setter Property="Template">
                 <Setter.Value>
@@ -39,7 +72,7 @@
                                     <Storyboard>
                                         <ColorAnimation Storyboard.TargetName="Border"
                                                     Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                    To="#7a959e"
+                                                    To="#7f067f"
                                                     Duration="0:0:0.1" />
                                         <ThicknessAnimation Storyboard.TargetName="Ellipse"
                                                         Storyboard.TargetProperty="Margin"
@@ -82,9 +115,9 @@
                                                 <ColumnDefinition Width="5*" />
                                                 <ColumnDefinition Width="*" />
                                             </Grid.ColumnDefinitions>
-                                            <Border x:Name="Border"  Grid.ColumnSpan="2" CornerRadius="0" Background="White" BorderBrush="#a795a5" BorderThickness="1" />
-                                            <Border Grid.Column="0" CornerRadius="0"  Margin="1"  Background="White"  BorderBrush="#1f2432" BorderThickness="0,0,0,0" />
-                                            <Path x:Name="Arrow" Grid.Column="1"   Fill="#606978"  HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center" Data="M0,0 L0,2 L4,6 L8,2 L8,0 L4,4 z"/>
+                                            <Border x:Name="Border"  Grid.ColumnSpan="2" CornerRadius="0" Background="White" BorderBrush="#7f067f" BorderThickness="1" />
+                                            <Border Grid.Column="0" CornerRadius="0"  Margin="1"  Background="White"  BorderBrush="#7f067f" BorderThickness="0,0,0,0" />
+                                            <Path x:Name="Arrow" Grid.Column="1"   Fill="#7f067f"  HorizontalAlignment="Right" Margin="0,0,5,0" VerticalAlignment="Center" Data="M0,0 L0,2 L4,6 L8,2 L8,0 L4,4 z"/>
                                         </Grid>
                                     </ControlTemplate>
                                 </ToggleButton.Template>
@@ -110,7 +143,6 @@
         <!-- Groupbox Styles -->
         <Style TargetType="GroupBox">
             <Setter Property="Background" Value="White"/>
-            <Setter Property="BorderBrush" Value="Black"/>
             <Setter Property="BorderThickness" Value="0"/>
             <Setter Property="Effect">
                 <Setter.Value>
@@ -121,23 +153,24 @@
 
         <!-- Radio Button Styles -->
         <Style TargetType="RadioButton">
-            <Setter Property="BorderBrush" Value="#3b2b46"/>
+            <Setter Property="BorderBrush" Value="#7f067f"/>
             <Setter Property="BorderThickness" Value="2"/>
             <Style.Triggers>
                 <Trigger Property="IsChecked" Value="True">
-                    <Setter Property="BorderBrush" Value="#606978"/>
-                    <Setter Property="Background" Value="#606978" />
+                    <Setter Property="BorderBrush" Value="#7f067f"/>
+                    <Setter Property="Background" Value="#7f067f" />
                 </Trigger>
             </Style.Triggers>
         </Style>
 
         <!-- TextBox Styles -->
         <Style TargetType="TextBox">
-            <Setter Property="BorderBrush" Value="#a795a5" />
+            <Setter Property="BorderBrush" Value="#7f067f" />
             <Setter Property="BorderThickness" Value="1" />
             <Style.Triggers>
                 <Trigger Property="IsFocused" Value="True">
                     <Setter Property="BorderThickness" Value="1" />
+                    <Setter Property="BorderBrush" Value="Red" />
                 </Trigger>
             </Style.Triggers>
         </Style>
@@ -147,38 +180,47 @@
 
     <Grid x:Name="mainGrid" Background="White">
 
-        <Grid x:Name="gridFormulario" HorizontalAlignment="Center" Height="440" VerticalAlignment="Center" Width="350">
-            <Label x:Name="lablTitulo" Content="CALCULADORA DE SALARIO" Foreground="#3b2b46" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="350" FontFamily="Bahnschrift SemiBold" Height="36" VerticalAlignment="Top" FontSize="20"/>
+        <Grid x:Name="gridFormulario" Height="440" VerticalAlignment="Center" Margin="25,0,25,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="89*"/>
+                <ColumnDefinition Width="86*"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="lablTitulo" Content="CALCULADORA DE SALARIO" Foreground="#3b2b46" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="350" FontFamily="Bahnschrift SemiBold" Height="36" VerticalAlignment="Top" FontSize="20" Grid.ColumnSpan="2"/>
 
-            <Label x:Name="labelEdad" Foreground="#424e5e" Content="Edad:" HorizontalAlignment="Left" Margin="234,58,0,0" VerticalAlignment="Top" Width="auto" Height="auto" FontFamily="Bahnschrift" FontSize="14"/>
-            <TextBox x:Name="txtBoxEdad" MaxLength="2" HorizontalAlignment="Left" Margin="283,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="25" Height="auto" FontFamily="Arial" FontSize="14" PreviewTextInput="OnlyNumbers_PreviewTextInput" LostFocus="txtBoxEdad_LostFocus"/>
+            <Label x:Name="labelSalarioBruto" Foreground="#424e5e" Content="Salario bruto:" Margin="6,41,0,0" VerticalAlignment="Top" Height="auto" FontFamily="Bahnschrift" FontSize="14" HorizontalAlignment="Left" Width="95"/>
+            <TextBox x:Name="txtBoxSalarioBruto" MaxLength="6" Margin="106,45,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="auto" FontFamily="Arial" FontSize="14" PreviewTextInput="OnlyNumbers_PreviewTextInput" LostFocus="txtBoxSalarioBruto_LostFocus"/>
 
-            <Label x:Name="labelSalarioBruto" Foreground="#424e5e" Content="Salario bruto:" HorizontalAlignment="Left" Margin="152,134,0,0" VerticalAlignment="Top" Width="auto" Height="auto" FontFamily="Bahnschrift" FontSize="14"/>
-            <TextBox x:Name="txtBoxSalarioBruto" HorizontalAlignment="Left" MaxLength="6" Margin="252,138,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" Height="auto" FontFamily="Arial" FontSize="14" PreviewTextInput="OnlyNumbers_PreviewTextInput" LostFocus="txtBoxSalarioBruto_LostFocus"/>
+            <Label x:Name="labelEdad" Foreground="#424e5e" Content="Edad:" Margin="30,41,0,0" VerticalAlignment="Top" Height="auto" FontFamily="Bahnschrift" FontSize="14" Grid.Column="1" HorizontalAlignment="Left" Width="46"/>
+            <TextBox x:Name="txtBoxEdad" MaxLength="2" Margin="95,45,39,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="auto" FontFamily="Arial" FontSize="14" PreviewTextInput="OnlyNumbers_PreviewTextInput" LostFocus="txtBoxEdad_LostFocus" Grid.Column="1"/>
 
-            <GroupBox x:Name="groupBoxPagas" Foreground="#424e5e" Header="Número de pagas" Margin="17,124,217,270">
+
+            <GroupBox x:Name="groupBoxPagas" Foreground="#FF481F61" Header="Número de pagas" Margin="0,89,37,305" HorizontalAlignment="Right" Width="116" FontFamily="Bahnschrift" BorderBrush="#FFA977D4">
                 <StackPanel x:Name="spPagas" Height="17" Orientation="Horizontal" Width="84" HorizontalAlignment="Left" Margin="11,0,0,0">
                     <RadioButton x:Name="radio12" Content="12" Width="34" IsChecked="True"/>
                     <RadioButton x:Name="radio14" Content="14" Width="34" Margin="10,0,0,0"/>
                 </StackPanel>
             </GroupBox>
 
-            <Label x:Name="labelSitFamiliar" Foreground="#424e5e" Content="Situación Familiar:" HorizontalAlignment="Left" Margin="6,58,0,0" VerticalAlignment="Top" Width="auto" FontFamily="Bahnschrift" FontSize="14"/>
-            <ComboBox x:Name="comboBoxSitFamiliar" Style="{StaticResource ComboBoxFlat}" HorizontalAlignment="Left" Margin="136,60,0,0" VerticalAlignment="Top" Width="88" FontFamily="Bahnschrift SemiCondensed" FontSize="14">
+            <Label x:Name="labelSitFamiliar" Foreground="#424e5e" Content="Situación Familiar:" Margin="0,177,26,0" VerticalAlignment="Top" Width="126" FontFamily="Bahnschrift" FontSize="14" HorizontalAlignment="Right"/>
+            <ComboBox x:Name="comboBoxSitFamiliar" Style="{StaticResource ComboBoxFlat}" Margin="0,179,10,0" VerticalAlignment="Top" FontFamily="Bahnschrift SemiCondensed" FontSize="14" Grid.Column="1">
                 <ComboBoxItem x:Name="Casado" Content="Casado"/>
                 <ComboBoxItem x:Name="Soltero" Content="Soltero"/>
                 <ComboBoxItem x:Name="Divorciado" Content="Divorciado"/>
                 <ComboBoxItem x:Name="Viudo" Content="Viudo"/>
             </ComboBox>
 
-            <ToggleButton x:Name="toggleBtnDiscapacidad" Style="{StaticResource ToggleIOS}" Margin="200,204,120,221"/>
-            <Label x:Name="labelDiscapacidad" Foreground="#424e5e" Content="Discapacidad 33% o superior" HorizontalAlignment="Left" Margin="6,198,0,0" VerticalAlignment="Top" Width="auto" Height="auto" FontFamily="Bahnschrift" FontSize="14"/>
+            <ToggleButton x:Name="toggleBtnDiscapacidad" Style="{StaticResource ToggleIOS}" Margin="116,104,0,320" Grid.Column="1" HorizontalAlignment="Left" Width="30"/>
+            <Label x:Name="labelDiscapacidad" Foreground="#424e5e" Content="Discapacidad:" HorizontalAlignment="Left" Margin="15,99,0,0" VerticalAlignment="Top" Width="auto" Height="auto" FontFamily="Bahnschrift" FontSize="14" Grid.Column="1"/>
 
-            <CheckBox x:Name="cbMovGeografica" Content="Movilidad Geográfica" Foreground="#424e5e" HorizontalAlignment="Left" Margin="10,254,0,0" VerticalAlignment="Top"/>
+            <CheckBox x:Name="cbMovGeografica" Content="Movilidad Geográfica" Foreground="#424e5e" HorizontalAlignment="Right" Margin="0,244,14,0" VerticalAlignment="Top" FontFamily="Bahnschrift" FontSize="14" BorderBrush="#FF481F61">
+                <CheckBox.Background>
+                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.InactiveBorderColorKey}}"/>
+                </CheckBox.Background>
+            </CheckBox>
 
-            <Button x:Name="btnCalcular" Content="Calcular" HorizontalAlignment="Left" Margin="17,333,0,0" VerticalAlignment="Top" Height="32" Width="64" Click="btnCalcular_Click"/>
-            <TextBox x:Name="txtBoxResultado" HorizontalAlignment="Left" MaxLength="6" Margin="187,340,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="52" Height="auto" FontFamily="Arial" FontSize="14" IsEnabled="False"/>
-            <Label x:Name="labelSalarioBruto_Copiar" Foreground="#424e5e" Content="Resultado:" HorizontalAlignment="Left" Margin="110,336,0,0" VerticalAlignment="Top" Width="auto" Height="auto" FontFamily="Bahnschrift" FontSize="14"/>
+            <Button x:Name="btnCalcular" Style="{StaticResource CustomButtonStyle}" Content="CALCULAR" Margin="54,319,41,89" Click="btnCalcular_Click"/>
+            <TextBox x:Name="txtBoxResultado" MaxLength="7" Margin="91,326,16,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="auto" FontFamily="Arial" FontSize="14" IsEnabled="False" Grid.Column="1"/>
+            <Label x:Name="labelSalarioBruto_Copiar" Foreground="#424e5e" Content="Resultado:" Margin="10,322,81,0" VerticalAlignment="Top" Width="auto" Height="auto" FontFamily="Bahnschrift" FontSize="14" Grid.Column="1"/>
 
         </Grid>
 

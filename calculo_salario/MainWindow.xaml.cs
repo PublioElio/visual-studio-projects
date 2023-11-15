@@ -29,7 +29,6 @@ namespace calculo_salario
         public MainWindow()
         {
             InitializeComponent();
-            comboBoxSitFamiliar.SelectedIndex = 0;
         }
 
         private void OnlyNumbers_PreviewTextInput(object sender, TextCompositionEventArgs e)
@@ -37,9 +36,7 @@ namespace calculo_salario
             TextBox textBox = sender as TextBox;
 
             if (!char.IsDigit(e.Text, e.Text.Length - 1))
-            {
                 e.Handled = true; // Sólo permite introducir valores numéricos
-            }
         }
 
         private void txtBoxSalarioBruto_LostFocus(object sender, RoutedEventArgs e)
@@ -67,8 +64,10 @@ namespace calculo_salario
 
         private void btnCalcular_Click(object sender, RoutedEventArgs e)
         {
-            if (string.IsNullOrEmpty(txtBoxEdad.Text) || string.IsNullOrEmpty(txtBoxSalarioBruto.Text))
-                MessageBox.Show("Debe cumplimentar los campos EDAD y SALARIO BRUTO");
+            ComboBoxItem estadoCivil = comboBoxSitFamiliar.SelectedItem as ComboBoxItem;
+            if (string.IsNullOrEmpty(txtBoxEdad.Text) || string.IsNullOrEmpty(txtBoxSalarioBruto.Text)
+                || estadoCivil == null )
+                MessageBox.Show("Debe cumplimentar los campos:\nEDAD, SALARIO BRUTO y SITUACIÓN FAMILIAR");
             else
             {
 
@@ -131,7 +130,7 @@ namespace calculo_salario
             if (cbMovGeografica.IsChecked == true)
                 porcentaje -= 0.01;
 
-            return porcentaje;
+            return Math.Round(porcentaje, 2);
         }
     }
 }
