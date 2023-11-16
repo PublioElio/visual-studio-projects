@@ -1,0 +1,17 @@
+C:\Users\adria\source\repos\PublioElio\repos\formulario-calculo-salario2\formulario-calculo-salario2\bin\Debug\formulario-calculo-salario2.exe.config
+C:\Users\adria\source\repos\PublioElio\repos\formulario-calculo-salario2\formulario-calculo-salario2\bin\Debug\formulario-calculo-salario2.exe
+C:\Users\adria\source\repos\PublioElio\repos\formulario-calculo-salario2\formulario-calculo-salario2\bin\Debug\formulario-calculo-salario2.pdb
+C:\Users\adria\source\repos\PublioElio\repos\formulario-calculo-salario2\formulario-calculo-salario2\obj\Debug\formulario-calculo-salario2.csproj.AssemblyReference.cache
+C:\Users\adria\source\repos\PublioElio\repos\formulario-calculo-salario2\formulario-calculo-salario2\obj\Debug\MainWindow.g.cs
+C:\Users\adria\source\repos\PublioElio\repos\formulario-calculo-salario2\formulario-calculo-salario2\obj\Debug\View\calculo_salario.g.cs
+C:\Users\adria\source\repos\PublioElio\repos\formulario-calculo-salario2\formulario-calculo-salario2\obj\Debug\App.g.cs
+C:\Users\adria\source\repos\PublioElio\repos\formulario-calculo-salario2\formulario-calculo-salario2\obj\Debug\formulario-calculo-salario2_MarkupCompile.cache
+C:\Users\adria\source\repos\PublioElio\repos\formulario-calculo-salario2\formulario-calculo-salario2\obj\Debug\formulario-calculo-salario2_MarkupCompile.lref
+C:\Users\adria\source\repos\PublioElio\repos\formulario-calculo-salario2\formulario-calculo-salario2\obj\Debug\MainWindow.baml
+C:\Users\adria\source\repos\PublioElio\repos\formulario-calculo-salario2\formulario-calculo-salario2\obj\Debug\View\calculo_salario.baml
+C:\Users\adria\source\repos\PublioElio\repos\formulario-calculo-salario2\formulario-calculo-salario2\obj\Debug\formulario-calculo-salario2.g.resources
+C:\Users\adria\source\repos\PublioElio\repos\formulario-calculo-salario2\formulario-calculo-salario2\obj\Debug\formulario_calculo_salario2.Properties.Resources.resources
+C:\Users\adria\source\repos\PublioElio\repos\formulario-calculo-salario2\formulario-calculo-salario2\obj\Debug\formulario-calculo-salario2.csproj.GenerateResource.cache
+C:\Users\adria\source\repos\PublioElio\repos\formulario-calculo-salario2\formulario-calculo-salario2\obj\Debug\formulario-calculo-salario2.csproj.CoreCompileInputs.cache
+C:\Users\adria\source\repos\PublioElio\repos\formulario-calculo-salario2\formulario-calculo-salario2\obj\Debug\formulario-calculo-salario2.exe
+C:\Users\adria\source\repos\PublioElio\repos\formulario-calculo-salario2\formulario-calculo-salario2\obj\Debug\formulario-calculo-salario2.pdb
