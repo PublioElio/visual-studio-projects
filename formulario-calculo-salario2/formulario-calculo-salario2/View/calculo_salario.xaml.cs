@@ -54,27 +54,96 @@ namespace formulario_calculo_salario2.View
 
         private void txtBoxSalarioBruto_LostFocus(object sender, RoutedEventArgs e)
         {
+
             TextBox textBox = sender as TextBox;
-
-            try
+            int.TryParse(textBox.Text, out int number);
+            if (!(number >= MIN_SALARIO && number <= MAX_SALARIO))
             {
-                if (!int.TryParse(textBox.Text, out int number) || !(number >= MIN_SALARIO && number <= MAX_SALARIO))
-                {
-                    textBox.Text = string.Empty;
+                textBox.Text = string.Empty;
+                MessageBox.Show("SALARIO NO VÁLIDO. Debe introducir un número entre " + MIN_SALARIO + " y " + MAX_SALARIO);
+            }
+        }
 
-                    // Crear un tooltip
-                    ToolTip toolTip = new ToolTip();
-                    toolTip.ToolTipTitle = "Error";
-                    toolTip.ToolTipIcon = ToolTipIcon.Error;
-                    toolTip.IsBalloon = true;
-                    toolTip.Show($"SALARIO NO VÁLIDO. Debe introducir un número entre {MIN_SALARIO} y {MAX_SALARIO}", textBox, 0, -30, 2000);
+        private void txtBoxEdad_LostFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox textBox = sender as TextBox;
+            int.TryParse(textBox.Text, out int number);
+            if (!(number >= MIN_EDAD && number <= MAX_EDAD))
+            {
+                textBox.Text = string.Empty;
+                MessageBox.Show("EDAD NO VÁLIDA. Debe introducir un número entre " + MIN_EDAD + " y " + MAX_EDAD);
+            }
+        }
+
+        private void btnCalcular_Click(object sender, RoutedEventArgs e)
+        {
+            ComboBoxItem estadoCivil = comboBoxSitFamiliar.SelectedItem as ComboBoxItem;
+            if (string.IsNullOrEmpty(txtBoxEdad.Text) || string.IsNullOrEmpty(txtBoxSalarioBruto.Text)
+                || estadoCivil == null)
+                MessageBox.Show("Debe cumplimentar los campos:\nEDAD, SALARIO BRUTO y SITUACIÓN FAMILIAR");
+            else
+            {
+
+                int.TryParse(txtBoxSalarioBruto.Text, out int salario);
+                double porcentaje = calcularPorcentaje(salario);
+
+                // Pagas
+                int numeroPagas = radio12.IsChecked == true ? 12 : 14;
+
+                double salarioFinal = salario * (1 + porcentaje) / numeroPagas;
+                txtBoxResultado.Text = Math.Round(salarioFinal, 2).ToString();
+            }
+        }
+
+        private double calcularPorcentaje(int salario)
+        {
+            double porcentaje = 0;
+
+            // Edad
+            if (int.TryParse(txtBoxEdad.Text, out int edad))
+            {
+                if (edad >= 50)
+                    porcentaje -= 0.02;
+                else if (edad >= 20 && edad < 50)
+                    porcentaje += 0.01;
+            }
+
+            // Salario Bruto
+            if (salario <= 15000)
+                porcentaje += 0.08;
+            else if (salario <= 30000)
+                porcentaje += 0.15;
+            else if (salario > 30000)
+                porcentaje += 0.20;
+
+
+            // Estado civil
+            ComboBoxItem estadoCivil = comboBoxSitFamiliar.SelectedItem as ComboBoxItem;
+            if (estadoCivil != null)
+            {
+                switch (estadoCivil.Content.ToString())
+                {
+                    case "Soltero":
+                        porcentaje += 0.02;
+                        break;
+                    case "Viudo":
+                        porcentaje -= 0.02;
+                        break;
+                    case "Divorciado":
+                        porcentaje -= 0.01;
+                        break;
                 }
             }
-            catch (Exception ex)
-            {
-                // Manejar excepciones si el valor no es un número
-                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+
+            // Discapacidad
+            if (toggleBtnDiscapacidad.IsChecked == true)
+                porcentaje -= 0.05;
+
+            // Movilidad geográfica
+            if (cbMovGeografica.IsChecked == true)
+                porcentaje -= 0.01;
+
+            return Math.Round(porcentaje, 2);
         }
 
     }
