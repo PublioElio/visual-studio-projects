@@ -60,7 +60,11 @@ namespace formulario_calculo_salario2.View
             if (!(number >= MIN_SALARIO && number <= MAX_SALARIO))
             {
                 textBox.Text = string.Empty;
-                MessageBox.Show("SALARIO NO VÁLIDO. Debe introducir un número entre " + MIN_SALARIO + " y " + MAX_SALARIO);
+                tblockAlert.Text = "SALARIO NO VÁLIDO. Debe introducir un número entre " + MIN_SALARIO + " y " + MAX_SALARIO;
+            }
+            else
+            {
+                tblockAlert.Text = string.Empty;
             }
         }
 
@@ -71,7 +75,11 @@ namespace formulario_calculo_salario2.View
             if (!(number >= MIN_EDAD && number <= MAX_EDAD))
             {
                 textBox.Text = string.Empty;
-                MessageBox.Show("EDAD NO VÁLIDA. Debe introducir un número entre " + MIN_EDAD + " y " + MAX_EDAD);
+                tblockAlert.Text = "EDAD NO VÁLIDA. Debe introducir un número entre " + MIN_EDAD + " y " + MAX_EDAD;
+            }
+            else
+            {
+                tblockAlert.Text = string.Empty;
             }
         }
 
@@ -83,7 +91,7 @@ namespace formulario_calculo_salario2.View
                 MessageBox.Show("Debe cumplimentar los campos:\nEDAD, SALARIO BRUTO y SITUACIÓN FAMILIAR");
             else
             {
-
+                tblockAlert.Text = string.Empty;
                 int.TryParse(txtBoxSalarioBruto.Text, out int salario);
                 double porcentaje = calcularPorcentaje(salario);
 

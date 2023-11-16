@@ -44,7 +44,7 @@
                                     <Storyboard>
                                         <ColorAnimation Storyboard.TargetName="Border"
                                                     Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)"
-                                                    To="MediumPurple"
+                                                    To="#653df2"
                                                     Duration="0:0:0.1" />
                                         <ThicknessAnimation Storyboard.TargetName="Ellipse"
                                                         Storyboard.TargetProperty="Margin"
@@ -61,9 +61,9 @@
                                                     To="White"
                                                     Duration="0:0:0.1" />
                                         <ThicknessAnimation Storyboard.TargetName="Ellipse"
-                                                        Storyboard.TargetProperty="Margin"
-                                                        To="2 1 2 1"
-                                                        Duration="0:0:0.1" />
+                                                            Storyboard.TargetProperty="Margin"
+                                                            To="2 1 2 1"
+                                                            Duration="0:0:0.1" />
                                     </Storyboard>
                                 </BeginStoryboard>
                             </EventTrigger>
@@ -72,7 +72,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-
+        
         <!-- Groupbox Styles -->
         <Style TargetType="GroupBox">
             <Setter Property="BorderThickness" 
@@ -169,7 +169,7 @@
             
             <Border.Background>
                 <LinearGradientBrush StartPoint="0,1" EndPoint="1,0">
-                    <GradientStop Color="AliceBlue" Offset="0.9"/>
+                    
                     <GradientStop Color="Transparent" Offset="0.4" />
                     <GradientStop Color="White" Offset="0.1" />
                 </LinearGradientBrush>
@@ -329,12 +329,12 @@
                                      CaretBrush="#1391c5"
                                      BorderBrush="DarkGray"
                                      BorderThickness="0,0,0,2"
-                                     Padding="50,0,0,0"
+                                     Padding="70,0,0,0"
                                      PreviewTextInput="OnlyNumbers_PreviewTextInput"
                                      LostFocus="txtBoxSalarioBruto_LostFocus">
                                 <TextBox.Background>
                                     <ImageBrush ImageSource="\Img\ico1.png"
-                                                Stretch="None"
+                                                Stretch="Uniform"
                                                 AlignmentX="Left"/>
                                 </TextBox.Background>
                             </TextBox>
@@ -345,7 +345,7 @@
                                        FontWeight="Medium"
                                        FontFamily="Montserrat"
                                        Margin="0,10,0,0"/>
-                            
+
                             <ComboBox x:Name="comboBoxSitFamiliar" 
                                       Style="{StaticResource ComboBoxFlat}" 
                                       Margin="0,0,0,0" 
@@ -362,6 +362,7 @@
                             <GroupBox x:Name="groupBoxPagas" 
                                       Foreground="Black"
                                       FontFamily="Montserrat"
+                                      FontWeight="Medium"
                                       Header="Número de pagas:"
                                       FontSize="14"
                                       Margin="0,10,0,10" 
@@ -378,7 +379,7 @@
                             </GroupBox>
 
                         </StackPanel>
-                        
+
                         <StackPanel Grid.Column="1"
                                     Margin="10,30,0,0">
                             <!-- Edad -->
@@ -394,97 +395,134 @@
                                      FontFamily="Montserrat"
                                      MaxLength="2"
                                      Foreground="DarkBlue"
-                                     CaretBrush="#1391c5"
+                                     CaretBrush="DarkBlue"
                                      BorderBrush="DarkGray"
                                      BorderThickness="0,0,0,2"
-                                     Padding="50,0,0,0"
+                                     Padding="70,0,0,0"
                                      PreviewTextInput="OnlyNumbers_PreviewTextInput"
                                      LostFocus="txtBoxEdad_LostFocus">
                                 <TextBox.Background>
-                                    <ImageBrush ImageSource="\Img\ico1.png"
-                                                Stretch="None"
+                                    <ImageBrush ImageSource="\Img\ico2.png"
+                                                Stretch="Uniform"
                                                 AlignmentX="Left"/>
                                 </TextBox.Background>
                             </TextBox>
 
-                            
+
                             <StackPanel Orientation="Horizontal"
                                         Margin="15,15,0,0">
-                                <Label x:Name="labelDiscapacidad" 
-                                       Foreground="Black" 
-                                       Content="Discapacidad:" 
-                                       HorizontalAlignment="Left" 
-                                       Margin="0,0,0,0" 
-                                       VerticalAlignment="Top" 
-                                       Width="auto" 
-                                       Height="auto" 
-                                       FontFamily="Montserrat" 
-                                       FontSize="18"/>
+                                <TextBlock x:Name="labelDiscapacidad" 
+                                           Foreground="Black"
+                                           FontWeight="Medium"
+                                           Text="Discapacidad:" 
+                                           HorizontalAlignment="Left" 
+                                           Margin="0,0,0,0" 
+                                           VerticalAlignment="Top" 
+                                           Width="auto" 
+                                           Height="auto" 
+                                           FontFamily="Montserrat" 
+                                           FontSize="18"/>
                                 <ToggleButton x:Name="toggleBtnDiscapacidad" 
                                               Style="{StaticResource ToggleIOS}" 
                                               Margin="5,0,0,0"
                                               HorizontalAlignment="Left" 
                                               Width="40"/>
                             </StackPanel>
-                           
-                            
 
-                            <CheckBox x:Name="cbMovGeografica" Content="Movilidad Geográfica" Foreground="#424e5e" HorizontalAlignment="Right" Margin="0,244,14,0" VerticalAlignment="Top" FontFamily="Bahnschrift" FontSize="14" BorderBrush="#FF481F61">
+                            <CheckBox x:Name="cbMovGeografica" 
+                                      Content="Movilidad Geográfica" 
+                                      Foreground="Black"
+                                      FontWeight="Medium"
+                                      HorizontalAlignment="Center" 
+                                      Margin="0,15,0,0" 
+                                      VerticalAlignment="Top" 
+                                      FontFamily="Montserrat" 
+                                      FontSize="16" 
+                                      BorderBrush="#FF481F61">
                                 <CheckBox.Background>
                                     <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.InactiveBorderColorKey}}"/>
                                 </CheckBox.Background>
                             </CheckBox>
 
-
-
-
-
                         </StackPanel>
-                        
+
                     </Grid>
 
+                    <TextBlock x:Name="tblockAlert" 
+                               Foreground="DarkBlue"
+                               FontWeight="Medium"
+                               Text="" 
+                               HorizontalAlignment="Center" 
+                               Margin="0,0,0,0" 
+                               VerticalAlignment="Top" 
+                               Width="auto" 
+                               Height="auto" 
+                               FontFamily="Montserrat" 
+                               FontSize="12"/>                  
 
-                    
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,20,0,0">
 
-                    <Button x:Name="btnCalcular"
-						    BorderThickness="0"
-						    Content="CALCULAR"
-						    FontSize="16"
-						    FontFamily="Montserrat"
-						    Cursor="Hand"
-						    Grid.Column="1"
-						    
-                            Margin="0,50,0,0">
+                        <Button x:Name="btnCalcular"
+				                Content="CALCULAR"
+				                FontSize="16"
+				                FontFamily="Montserrat"
+                                Cursor="Hand"
+                                Click="btnCalcular_Click">
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Setter Property="Background" Value="Transparent"/>
+                                    <Setter Property="Foreground" Value="Black"/>
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="Black"/>
+                                            <Setter Property="Foreground" Value="White"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Button.Style>
+                            <!-- Hay que anular la plantilla predeterminada del botón para que el estilo anterior se aplique -->
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Width="150" Height="40"
+                                            CornerRadius="20"
+                                            BorderBrush="Black"
+                                            BorderThickness="1"
+                                            Background="{TemplateBinding Background}">      
+                                        <ContentPresenter VerticalAlignment="Center"
+                                                          HorizontalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
 
-                        <Button.Style>
-                            <Style TargetType="Button">
-                                <Setter Property="Background" Value="LightGray"/>
-                                <Setter Property="Foreground" Value="Black"/>
-                                <Style.Triggers>
-                                    <Trigger Property="IsMouseOver" Value="True">
-                                        <Setter Property="Background" Value="Black"/>
-                                        <Setter Property="Foreground" Value="White"/>
-                                    </Trigger>
-                                </Style.Triggers>
-                            </Style>
-                        </Button.Style>
-                        <!-- Hay que anular la plantill predeterminada del botón para que el estilo anterior se aplique -->
-                        <Button.Template>
-                            <ControlTemplate TargetType="Button">
-                                <Border Width="150" Height="40"
-                                        CornerRadius="20"
-                                        Background="{TemplateBinding Background}">
-                                    <ContentPresenter VerticalAlignment="Center"
-                                                      HorizontalAlignment="Center"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Button.Template>
-                    </Button>
+                        <TextBlock Text="Resultado: "
+                                   Foreground="Black"
+                                   FontSize="18"
+                                   FontWeight="Medium"
+                                   FontFamily="Montserrat"
+                                   VerticalAlignment="Center"
+                                   Margin="20,0,0,0"
+                                   />
+
+                        <TextBox x:Name="txtBoxResultado" 
+                                 MaxLength="7" 
+                                 Margin="10,0,0,0" 
+                                 TextWrapping="Wrap"
+                                 Width="80" Height="25"
+                                 Background="Transparent"
+                                 BorderThickness="0,0,0,2"
+                                 BorderBrush="DarkGray"
+                                 VerticalAlignment="Center"  
+                                 FontFamily="Montserrat"
+                                 FontWeight="Medium"
+                                 FontSize="18" 
+                                 Foreground="DarkBlue"
+                                 IsEnabled="False"/>
+                    </StackPanel>
 
 
                 </StackPanel>
-
-
 
             </Grid>
 
