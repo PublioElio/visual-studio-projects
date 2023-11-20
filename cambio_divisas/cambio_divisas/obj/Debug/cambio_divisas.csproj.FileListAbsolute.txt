@@ -1,0 +1,15 @@
+C:\Users\Propietario\source\visual-studio-projects\cambio_divisas\cambio_divisas\bin\Debug\cambio_divisas.exe.config
+C:\Users\Propietario\source\visual-studio-projects\cambio_divisas\cambio_divisas\bin\Debug\cambio_divisas.exe
+C:\Users\Propietario\source\visual-studio-projects\cambio_divisas\cambio_divisas\bin\Debug\cambio_divisas.pdb
+C:\Users\Propietario\source\visual-studio-projects\cambio_divisas\cambio_divisas\obj\Debug\cambio_divisas.csproj.AssemblyReference.cache
+C:\Users\Propietario\source\visual-studio-projects\cambio_divisas\cambio_divisas\obj\Debug\MainWindow.g.cs
+C:\Users\Propietario\source\visual-studio-projects\cambio_divisas\cambio_divisas\obj\Debug\App.g.cs
+C:\Users\Propietario\source\visual-studio-projects\cambio_divisas\cambio_divisas\obj\Debug\cambio_divisas_MarkupCompile.cache
+C:\Users\Propietario\source\visual-studio-projects\cambio_divisas\cambio_divisas\obj\Debug\cambio_divisas_MarkupCompile.lref
+C:\Users\Propietario\source\visual-studio-projects\cambio_divisas\cambio_divisas\obj\Debug\MainWindow.baml
+C:\Users\Propietario\source\visual-studio-projects\cambio_divisas\cambio_divisas\obj\Debug\cambio_divisas.g.resources
+C:\Users\Propietario\source\visual-studio-projects\cambio_divisas\cambio_divisas\obj\Debug\cambio_divisas.Properties.Resources.resources
+C:\Users\Propietario\source\visual-studio-projects\cambio_divisas\cambio_divisas\obj\Debug\cambio_divisas.csproj.GenerateResource.cache
+C:\Users\Propietario\source\visual-studio-projects\cambio_divisas\cambio_divisas\obj\Debug\cambio_divisas.csproj.CoreCompileInputs.cache
+C:\Users\Propietario\source\visual-studio-projects\cambio_divisas\cambio_divisas\obj\Debug\cambio_divisas.exe
+C:\Users\Propietario\source\visual-studio-projects\cambio_divisas\cambio_divisas\obj\Debug\cambio_divisas.pdb

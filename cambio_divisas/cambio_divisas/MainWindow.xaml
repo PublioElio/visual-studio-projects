@@ -1,0 +1,175 @@
+﻿<Window x:Name="cambioDivisa" x:Class="cambio_divisas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cambio_divisas"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Height="520" 
+        Width="499">
+
+    <Grid x:Name="gridMain">
+
+        <Label x:Name="lblDivisa"
+               Foreground="#424e5e" 
+               Content="Divisa origen:" 
+               Margin="32,46,0,0" 
+               FontFamily="Bahnschrift" 
+               FontSize="16" 
+               Width="112" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbDivisa" 
+                  Margin="149,48,0,0" 
+                  FontFamily="Bahnschrift SemiCondensed" 
+                  FontSize="14" 
+                  Width="100" Height="25" 
+                  HorizontalAlignment="Left" 
+                  VerticalAlignment="Top"
+                  SelectionChanged="cbDivisa_SelectionChanged">
+            <ComboBoxItem x:Name="euro" Content="euro"/>
+            <ComboBoxItem x:Name="dolar" Content="dólar"/>
+        </ComboBox>
+
+        <Label x:Name="lblCantidad"
+               Foreground="#424e5e" 
+               Content="Cantidad:" 
+               Margin="32,118,0,0" 
+               FontFamily="Bahnschrift" 
+               FontSize="16" 
+               Width="88" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxCantidad" 
+                 HorizontalAlignment="Left" 
+                 Margin="149,118,0,0" 
+                 TextWrapping="Wrap"
+                 FontFamily="Bahnschrift" 
+                 FontSize="20" 
+                 Text="" 
+                 Width="78" Height="25" 
+                 VerticalAlignment="Top"
+                 MaxLength="7"
+                 PreviewTextInput="OnlyNumbers_PreviewTextInput"/>
+
+        <GroupBox x:Name="gbDivisaDest" 
+                  Header="Seleccione divisa destino:" 
+                  Margin="308,47,0,0"
+                  Width="152"  Height="133" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+            <StackPanel x:Name="spDivisaDest" Height="110">
+                <CheckBox x:Name="checkEuro" 
+                          Content="Euros" 
+                          Margin="10,5,0,0" 
+                          FontFamily="Bahnschrift" 
+                          FontSize="14" 
+                          Width="59"
+                          HorizontalAlignment="Left"/>
+
+                <CheckBox x:Name="checkDolar" 
+                          Content="Dólares" 
+                          Margin="10,5,0,0"  
+                          FontFamily="Bahnschrift" 
+                          FontSize="14" Width="70"
+                          HorizontalAlignment="Left" />
+
+                <CheckBox x:Name="checkLibra" 
+                          Content="Libras" 
+                          Margin="10,5,0,0"  
+                          FontFamily="Bahnschrift" 
+                          FontSize="14" Width="59"
+                          HorizontalAlignment="Left" />
+
+                <CheckBox x:Name="checkYen" 
+                          Content="Yenes" 
+                          Margin="10,5,0,0"  
+                          FontFamily="Bahnschrift" 
+                          FontSize="14" Width="59"
+                          HorizontalAlignment="Left" />
+
+                <CheckBox x:Name="checkFranco" 
+                          Content="Francos suizos" 
+                          Margin="10,5,0,0" 
+                          FontFamily="Bahnschrift" 
+                          FontSize="14" Width="121"
+                          HorizontalAlignment="Left" />
+            </StackPanel>
+        </GroupBox>
+
+        <GroupBox x:Name="gbFpago" 
+                  Header="Forma de pago:" 
+                  Margin="28,173,0,0" HorizontalAlignment="Left" Width="259" Height="46" VerticalAlignment="Top">
+            <StackPanel x:Name="spFpago" 
+                        HorizontalAlignment="Left"
+                        Orientation="Horizontal"
+                        Margin="0,5,0,0">
+
+                <RadioButton x:Name="rbEfectivo" 
+                             Content="Efectivo" 
+                             HorizontalAlignment="Left"
+                             FontFamily="Bahnschrift" 
+                             FontSize="12"
+                             Margin="10,0,0,0"/>
+
+                <RadioButton x:Name="rbTransferencia" 
+                             Content="Transferencia"
+                             FontFamily="Bahnschrift" 
+                             FontSize="12"
+                             HorizontalAlignment="Left" 
+                             Margin="10,0,0,0"/>
+
+                <RadioButton x:Name="rbTarjeta" 
+                             Content="Tarjeta"
+                             FontFamily="Bahnschrift" 
+                             FontSize="12"
+                             HorizontalAlignment="Left" 
+                             Margin="10,0,0,0"/>
+            </StackPanel>
+        </GroupBox>
+
+        <CheckBox x:Name="checkBoxClienteHab" 
+                    Content="Cliente habitual" 
+                    FontFamily="Bahnschrift" 
+                    FontSize="14" 
+                    Width="121" 
+                  Margin="324,196,0,0" 
+                  HorizontalAlignment="Left" 
+                  Height="15" 
+                  VerticalAlignment="Top" />
+
+        <Button x:Name="btnAceptar" 
+                Content="ACEPTAR"
+                FontFamily="Bahnschrift" 
+                FontSize="14"
+                HorizontalAlignment="Left" 
+                Margin="203,242,0,0" 
+                VerticalAlignment="Top" 
+                Height="42" Width="84" 
+                Click="btnAceptar_Click"/>
+
+        <Label x:Name="lblResultado"
+            Foreground="#424e5e" 
+            Content="Resultado:" 
+            Margin="42,319,0,0" 
+            FontFamily="Bahnschrift" 
+            FontSize="14" 
+            Width="78" Height="25" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+        <ListBox x:Name="listBoxResult" 
+                 d:ItemsSource="{d:SampleData ItemCount=5}" 
+                 Margin="42,349,0,0" 
+                 HorizontalAlignment="Left" 
+                 Width="136" Height="109" 
+                 VerticalAlignment="Top"/>
+
+        <Label x:Name="lblErrors" 
+               Content="" 
+               HorizontalAlignment="Left"
+               FontFamily="Bahnschrift" 
+               FontSize="14"
+               Foreground="Red"
+               Height="71" 
+               Margin="227,349,0,84" 
+               VerticalContentAlignment="Center"
+               HorizontalContentAlignment="Center"
+               Width="233"/>
+
+    </Grid>
+</Window>
