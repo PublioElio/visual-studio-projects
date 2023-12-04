@@ -1,0 +1,164 @@
+﻿<Window x:Class="examen_camionero_AdrianoDiaz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:examen_camionero_AdrianoDiaz"
+        mc:Ignorable="d"
+        Title="MainWindow" 
+        Height="600" 
+        Width="475"
+        MinHeight="600"
+        MinWidth="475"
+        >
+    <Grid Margin="25,0,0,0" HorizontalAlignment="Left" Width="450">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="104*"/>
+            <ColumnDefinition Width="121*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="lblDestino"
+               Foreground="#424e5e" 
+               Content="Destino de la ruta:" 
+               Margin="14,46,0,0" 
+               FontFamily="Bahnschrift" 
+               FontSize="16" 
+               Width="151" Height="30" 
+               HorizontalAlignment="Left" 
+               VerticalAlignment="Top" 
+               Grid.ColumnSpan="2"/>
+
+        <ComboBox x:Name="cbDestino" 
+                  Margin="14,81,0,0" 
+                  FontFamily="Bahnschrift SemiCondensed" 
+                  FontSize="14" 
+                  Width="138" Height="25" 
+                  HorizontalAlignment="Left" 
+                  VerticalAlignment="Top" 
+                  Grid.ColumnSpan="2" SelectionChanged="seleccionarDestino"
+                  >
+            <ComboBoxItem x:Name="barcelona" Content="Barcelona"/>
+            <ComboBoxItem x:Name="corunya" Content="Coruña"/>
+        </ComboBox>
+
+        <GroupBox x:Name="gbMercancias" 
+                  Header="Mercancía:" 
+                  Margin="14,121,0,0" HorizontalAlignment="Left" Width="138" Height="108" VerticalAlignment="Top" Grid.ColumnSpan="2">
+            <StackPanel x:Name="spMarcancias" 
+                        HorizontalAlignment="Left"
+                        Orientation="Vertical" Width="117">
+
+                <RadioButton x:Name="rbAceite" 
+                             Content="Aceite" 
+                             HorizontalAlignment="Left"
+                             FontFamily="Bahnschrift" 
+                             FontSize="12"
+                             Margin="10,10,0,0"/>
+
+                <RadioButton x:Name="rbFruta" 
+                             Content="Fruta"
+                             FontFamily="Bahnschrift" 
+                             FontSize="12"
+                             HorizontalAlignment="Left" 
+                             Margin="10,10,0,0"/>
+
+                <RadioButton x:Name="rbPeligrosas" 
+                             Content="M. Peligrosas"
+                             FontFamily="Bahnschrift" 
+                             FontSize="12"
+                             HorizontalAlignment="Left" 
+                             Margin="10,10,0,0"/>
+            </StackPanel>
+        </GroupBox>
+
+        <CheckBox x:Name="checkBoxNocturnidad" 
+                    Content="Nocturnidad" 
+                    FontFamily="Bahnschrift" 
+                    FontSize="14" 
+                    Width="121" 
+                  Margin="14,252,0,0" 
+                  HorizontalAlignment="Left" 
+                  Height="15" 
+                  VerticalAlignment="Top" Grid.ColumnSpan="2" />
+
+
+        <CheckBox x:Name="checkBoxRemolque" 
+                    Content="Incorpora Remolque" 
+                    FontFamily="Bahnschrift" 
+                    FontSize="14" 
+                    Width="151" 
+                  Margin="14,279,0,0" 
+                  HorizontalAlignment="Left" 
+                  Height="15" 
+                  VerticalAlignment="Top" Grid.ColumnSpan="2" />
+
+        <Button x:Name="btnCalcular" 
+                Content="CALCULAR"
+                FontFamily="Bahnschrift" 
+                FontSize="14"
+                HorizontalAlignment="Left" 
+                Margin="14,332,0,0" 
+                VerticalAlignment="Top" 
+                Height="42" Width="165" Grid.ColumnSpan="2" Click="btnCalcular_Click"/>
+
+        <Button x:Name="btnReset" 
+                Content="RESET"
+                FontFamily="Bahnschrift" 
+                FontSize="14"
+                HorizontalAlignment="Left" 
+                Margin="14,402,0,0" 
+                VerticalAlignment="Top" 
+                Height="42" Width="165" Grid.ColumnSpan="2" Click="btnReset_Click"/>
+
+        <Label x:Name="lblParadas"
+               Foreground="#424e5e" 
+               Content="Paradas:" 
+               Margin="10,47,0,0" 
+               FontFamily="Bahnschrift" 
+               FontSize="16" 
+               Width="75" Height="30" 
+               HorizontalAlignment="Left" 
+               VerticalAlignment="Top" 
+               Grid.Column="2"/>
+
+        <ListBox x:Name="lbListaParadas" 
+           Margin="10,77,27,0" 
+           d:ItemsSource="{d:SampleData ItemCount=4}" 
+           Grid.Column="2" 
+           Height="152"
+           VerticalAlignment="Top" 
+           SelectionMode="Multiple">
+            <ListBox.ToolTip>
+                <ToolTip Content="Seleccione paradas"/>
+            </ListBox.ToolTip>
+        </ListBox>
+
+        <Label x:Name="lblDesglose"
+            Foreground="#424e5e" 
+            Content="Desglose:" 
+            Margin="10,252,0,0" 
+            FontFamily="Bahnschrift" 
+            FontSize="16" 
+            Width="84" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2"/>
+
+        <ListBox x:Name="lbDesglose" 
+            Margin="10,287,27,0" 
+            d:ItemsSource="{d:SampleData ItemCount=4}" 
+            Grid.Column="2" Height="104" VerticalAlignment="Top">
+            <ListBox.ToolTip>
+                <ToolTip Content="Cáculo del total de la ruta"/>
+            </ListBox.ToolTip>
+        </ListBox>
+
+        <Label x:Name="lblErrors" 
+               Content="" 
+               HorizontalAlignment="Left"
+               FontFamily="Bahnschrift" 
+               FontSize="14"
+               Foreground="Red" 
+               Margin="10,413,0,40" 
+               Width="205" Grid.Column="2"/>
+
+    </Grid>
+</Window>
