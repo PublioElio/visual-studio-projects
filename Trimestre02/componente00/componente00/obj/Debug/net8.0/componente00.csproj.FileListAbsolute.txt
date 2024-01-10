@@ -1,0 +1,12 @@
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente00\componente00\bin\Debug\net8.0\componente00.deps.json
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente00\componente00\bin\Debug\net8.0\componente00.dll
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente00\componente00\bin\Debug\net8.0\componente00.pdb
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente00\componente00\obj\Debug\net8.0\componente00.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente00\componente00\obj\Debug\net8.0\componente00.AssemblyInfoInputs.cache
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente00\componente00\obj\Debug\net8.0\componente00.AssemblyInfo.cs
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente00\componente00\obj\Debug\net8.0\componente00.csproj.CoreCompileInputs.cache
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente00\componente00\obj\Debug\net8.0\componente00.sourcelink.json
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente00\componente00\obj\Debug\net8.0\componente00.dll
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente00\componente00\obj\Debug\net8.0\refint\componente00.dll
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente00\componente00\obj\Debug\net8.0\componente00.pdb
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente00\componente00\obj\Debug\net8.0\ref\componente00.dll
