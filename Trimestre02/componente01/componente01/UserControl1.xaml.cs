@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -21,11 +22,10 @@ namespace componente01
         {
             InitializeComponent();
         }
-
         public string Label { 
             get => miLabel.Content.ToString();
             set => miLabel.Content = value;
-        }        
+        }
         public string TextBox { 
             get => miTextBox.Text.ToString();
             set => miTextBox.Text = value;
