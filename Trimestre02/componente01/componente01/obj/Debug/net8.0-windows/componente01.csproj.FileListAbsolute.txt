@@ -1,0 +1,17 @@
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01\componente01\bin\Debug\net8.0-windows\componente01.deps.json
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01\componente01\bin\Debug\net8.0-windows\componente01.dll
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01\componente01\bin\Debug\net8.0-windows\componente01.pdb
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01\componente01\obj\Debug\net8.0-windows\UserControl1.g.cs
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01\componente01\obj\Debug\net8.0-windows\componente01_MarkupCompile.cache
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01\componente01\obj\Debug\net8.0-windows\componente01_MarkupCompile.lref
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01\componente01\obj\Debug\net8.0-windows\UserControl1.baml
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01\componente01\obj\Debug\net8.0-windows\componente01.g.resources
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01\componente01\obj\Debug\net8.0-windows\componente01.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01\componente01\obj\Debug\net8.0-windows\componente01.AssemblyInfoInputs.cache
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01\componente01\obj\Debug\net8.0-windows\componente01.AssemblyInfo.cs
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01\componente01\obj\Debug\net8.0-windows\componente01.csproj.CoreCompileInputs.cache
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01\componente01\obj\Debug\net8.0-windows\componente01.sourcelink.json
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01\componente01\obj\Debug\net8.0-windows\componente01.dll
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01\componente01\obj\Debug\net8.0-windows\refint\componente01.dll
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01\componente01\obj\Debug\net8.0-windows\componente01.pdb
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01\componente01\obj\Debug\net8.0-windows\ref\componente01.dll

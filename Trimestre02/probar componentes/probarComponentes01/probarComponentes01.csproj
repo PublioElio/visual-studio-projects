@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="componente00">
+      <HintPath>..\..\componente00\componente00\bin\Debug\net8.0\componente00.dll</HintPath>
+    </Reference>
+    <Reference Include="componente01">
+      <HintPath>..\..\componente01\componente01\bin\Debug\net8.0-windows\componente01.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
