@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace componente01
 {
@@ -21,6 +22,16 @@ namespace componente01
             InitializeComponent();
         }
 
+        public string Label { 
+            get => miLabel.Content.ToString();
+            set => miLabel.Content = value;
+        }        
+        public string TextBox { 
+            get => miTextBox.Text.ToString();
+            set => miTextBox.Text = value;
+        }
+
+        /*
         public string GetLabel() => miLabel.Content.ToString();
 
         public void SetLabel(string content) => miLabel.Content = content;        
@@ -28,6 +39,7 @@ namespace componente01
         public string GetTextBox() => miTextBox.Text.ToString();
 
         public void SetTextBox(string text) => miTextBox.Text = text;
+        */
     }
 
 }

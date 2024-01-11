@@ -7,15 +7,18 @@
              mc:Ignorable="d" 
              d:DesignHeight="28" 
              d:DesignWidth="272">
+    
     <Grid x:Name="mainGrid"
           Height="28"
           Width="272">
+        
         <Label x:Name="miLabel" 
                Content="Label" 
                HorizontalAlignment="Left" 
                VerticalAlignment="Top" 
                Height="28" 
                Width="136"/>
+        
         <TextBox x:Name="miTextBox" 
                  HorizontalAlignment="Left" 
                  Margin="136,0,0,0" 
@@ -25,5 +28,7 @@
                  VerticalAlignment="Top" 
                  Width="136" 
                  Height="28"/>
+        
     </Grid>
+    
 </UserControl>
