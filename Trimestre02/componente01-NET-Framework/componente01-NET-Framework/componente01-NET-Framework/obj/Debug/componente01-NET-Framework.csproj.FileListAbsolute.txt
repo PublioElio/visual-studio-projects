@@ -1,0 +1,13 @@
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01-NET-Framework\componente01-NET-Framework\componente01-NET-Framework\bin\Debug\componente01-NET-Framework.dll
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01-NET-Framework\componente01-NET-Framework\componente01-NET-Framework\bin\Debug\componente01-NET-Framework.pdb
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01-NET-Framework\componente01-NET-Framework\componente01-NET-Framework\obj\Debug\componente01-NET-Framework.csproj.AssemblyReference.cache
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01-NET-Framework\componente01-NET-Framework\componente01-NET-Framework\obj\Debug\UserControl1.g.cs
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01-NET-Framework\componente01-NET-Framework\componente01-NET-Framework\obj\Debug\componente01-NET-Framework_MarkupCompile.cache
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01-NET-Framework\componente01-NET-Framework\componente01-NET-Framework\obj\Debug\componente01-NET-Framework_MarkupCompile.lref
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01-NET-Framework\componente01-NET-Framework\componente01-NET-Framework\obj\Debug\UserControl1.baml
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01-NET-Framework\componente01-NET-Framework\componente01-NET-Framework\obj\Debug\componente01-NET-Framework.g.resources
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01-NET-Framework\componente01-NET-Framework\componente01-NET-Framework\obj\Debug\componente01_NET_Framework.Properties.Resources.resources
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01-NET-Framework\componente01-NET-Framework\componente01-NET-Framework\obj\Debug\componente01-NET-Framework.csproj.GenerateResource.cache
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01-NET-Framework\componente01-NET-Framework\componente01-NET-Framework\obj\Debug\componente01-NET-Framework.csproj.CoreCompileInputs.cache
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01-NET-Framework\componente01-NET-Framework\componente01-NET-Framework\obj\Debug\componente01-NET-Framework.dll
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\componente01-NET-Framework\componente01-NET-Framework\componente01-NET-Framework\obj\Debug\componente01-NET-Framework.pdb

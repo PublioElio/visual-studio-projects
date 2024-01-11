@@ -13,26 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace componente01_NET_Framework
+namespace pobarComp01_NETframework
 {
     /// <summary>
-    /// Lógica de interacción para UserControl1.xaml
+    /// Lógica de interacción para MainWindow.xaml
     /// </summary>
-    public partial class UserControl1 : UserControl
+    public partial class MainWindow : Window
     {
-        public UserControl1()
+        public MainWindow()
         {
             InitializeComponent();
-        }
-        public string Label
-        {
-            get => miLabel.Content.ToString();
-            set => miLabel.Content = value;
-        }
-        public string TextBox
-        {
-            get => miTextBox.Text.ToString();
-            set => miTextBox.Text = value;
         }
     }
 }
