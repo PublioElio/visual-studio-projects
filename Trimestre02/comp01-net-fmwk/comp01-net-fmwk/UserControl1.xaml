@@ -5,28 +5,41 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:comp01_net_fmwk"
              mc:Ignorable="d" 
-             d:DesignHeight="28" 
-             d:DesignWidth="272">
-    <Grid x:Name="mainGrid"
-          Height="28"
-          Width="272">
+             d:DesignHeight="56" 
+             d:DesignWidth="136">
 
-        <Label x:Name="miLabel" 
+    <Grid x:Name="mainGrid"
+          Height="56"
+          Width="136">
+
+        <Label x:Name="myLabel" 
                Content="Label" 
                HorizontalAlignment="Left" 
-               VerticalAlignment="Top" 
+               VerticalAlignment="Top"
+               VerticalContentAlignment="Center"
                Height="28" 
-               Width="136"/>
+               Width="96"/>
 
-        <TextBox x:Name="miTextBox" 
-                 HorizontalAlignment="Left" 
-                 Margin="136,0,0,0" 
+        <TextBox x:Name="myTextBox" 
+                 HorizontalAlignment="Center" 
+                 Margin="0,28,0,0" 
                  TextWrapping="Wrap" 
                  Text="TextBox"
                  VerticalContentAlignment="Center"
-                 VerticalAlignment="Top" 
+                 VerticalAlignment="Top"
+                 MaxLength="50"
                  Width="136" 
-                 Height="28"/>
+                 Height="28" TextChanged="MyTextBoxTextChanged"/>
+
+        <Label x:Name="lbCount" 
+            Content="00/00" 
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top"
+            VerticalContentAlignment="Center"
+            Height="28" 
+            Width="40" 
+            Margin="96,0,0,0"/>
+
 
     </Grid>
 </UserControl>

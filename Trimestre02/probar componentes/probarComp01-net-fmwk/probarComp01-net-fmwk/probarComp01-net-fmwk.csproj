@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="comp01-net-fmwk">
+      <HintPath>..\..\..\comp01-net-fmwk\comp01-net-fmwk\bin\Debug\comp01-net-fmwk.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />

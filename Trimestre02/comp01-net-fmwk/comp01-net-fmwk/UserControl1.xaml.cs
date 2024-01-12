@@ -25,16 +25,23 @@ namespace comp01_net_fmwk
         {
             InitializeComponent();
         }
+
         public string Label
         {
-            get => miLabel.Content.ToString();
-            set => miLabel.Content = value;
+            get => myLabel.Content.ToString();
+            set => myLabel.Content = value;
         }
         public string TextBox
         {
-            get => miTextBox.Text.ToString();
-            set => miTextBox.Text = value;
+            get => myTextBox.Text.ToString();
+            set => myTextBox.Text = value;
         }
 
+        private void MyTextBoxTextChanged(object sender, TextChangedEventArgs e)
+        {
+            int numChar = myTextBox.Text.Length;
+            string maxLentgh = "/" + myTextBox.MaxLength.ToString();
+            lbCount.Content = numChar < 10 ? "0" + numChar + maxLentgh : numChar + maxLentgh;
+        }
     }
 }
