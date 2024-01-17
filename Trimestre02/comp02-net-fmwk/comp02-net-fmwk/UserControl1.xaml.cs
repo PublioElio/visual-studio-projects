@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -12,17 +13,27 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace comp02_net_fmwk
 {
     /// <summary>
-    /// Lógica de interacción para UserControl1.xaml
+    /// Lógica de interacción para CustomProgressBar.xaml
     /// </summary>
-    public partial class UserControl1 : UserControl
+    public partial class CustomProgressBar : UserControl
     {
-        public UserControl1()
+        public CustomProgressBar()
         {
             InitializeComponent();
+        }
+
+        private void Increase(int lenght) 
+        {
+            if (rProgress.Width > (rBackground.Width - 3)) {
+                rProgress.Width = lenght;
+            }
+            else {
+            }
         }
     }
 }

@@ -38,6 +38,9 @@
     <Reference Include="comp01-net-fmwk">
       <HintPath>..\..\..\comp01-net-fmwk\comp01-net-fmwk\bin\Debug\comp01-net-fmwk.dll</HintPath>
     </Reference>
+    <Reference Include="comp02-net-fmwk">
+      <HintPath>..\..\..\comp02-net-fmwk\comp02-net-fmwk\bin\Debug\comp02-net-fmwk.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -96,6 +99,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

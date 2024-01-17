@@ -4,10 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:probarComp01_net_fmwk"
-        xmlns:comp01_net_fmwk="clr-namespace:comp01_net_fmwk;assembly=comp01-net-fmwk" x:Class="probarComp01_net_fmwk.MainWindow"
+        xmlns:comp01_net_fmwk="clr-namespace:comp01_net_fmwk;assembly=comp01-net-fmwk" xmlns:comp02_net_fmwk="clr-namespace:comp02_net_fmwk;assembly=comp02-net-fmwk" x:Class="probarComp01_net_fmwk.MainWindow"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <comp01_net_fmwk:UserControl1 HorizontalAlignment="Left" Margin="510,267,0,0" VerticalAlignment="Top"/>
+        <comp01_net_fmwk:UserControl1 HorizontalAlignment="Left" Margin="24,29,0,0" VerticalAlignment="Top"/>
+        <comp02_net_fmwk:CustomProgressBar HorizontalAlignment="Left" Margin="231,285,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
