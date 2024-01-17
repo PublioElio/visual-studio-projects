@@ -8,6 +8,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <comp01_net_fmwk:UserControl1 HorizontalAlignment="Left" Margin="372,217,0,0" VerticalAlignment="Top"/>
+        <comp01_net_fmwk:UserControl1 HorizontalAlignment="Left" Margin="510,267,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

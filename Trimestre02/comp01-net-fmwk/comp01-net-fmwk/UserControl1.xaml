@@ -12,6 +12,14 @@
           Height="56"
           Width="136">
 
+        <Label x:Name="lbContar" 
+               Content="" 
+               HorizontalAlignment="Left" 
+               Margin="96,0,0,28" 
+               VerticalContentAlignment="center" 
+               Height="28" 
+               Width="40"/>
+
         <Label x:Name="myLabel" 
                Content="Label" 
                HorizontalAlignment="Left" 
@@ -27,19 +35,12 @@
                  Text="TextBox"
                  VerticalContentAlignment="Center"
                  VerticalAlignment="Top"
-                 MaxLength="50"
+                 MaxLength="20"
                  Width="136" 
-                 Height="28" TextChanged="MyTextBoxTextChanged"/>
-
-        <Label x:Name="lbCount" 
-            Content="00/00" 
-            HorizontalAlignment="Left" 
-            VerticalAlignment="Top"
-            VerticalContentAlignment="Center"
-            Height="28" 
-            Width="40" 
-            Margin="96,0,0,0"/>
-
+                 Height="28" 
+                 TextChanged="MyTextBoxTextChanged"/>
+        
+        
 
     </Grid>
 </UserControl>

@@ -24,24 +24,36 @@ namespace comp01_net_fmwk
         public UserControl1()
         {
             InitializeComponent();
+            ContarCaracteres();
         }
 
         public string Label
         {
             get => myLabel.Content.ToString();
-            set => myLabel.Content = value;
+            set
+            {
+                if (myLabel != null)
+                    myLabel.Content = value;
+            }
         }
         public string TextBox
         {
             get => myTextBox.Text.ToString();
-            set => myTextBox.Text = value;
+            set
+            {
+                if (myTextBox != null)
+                    myTextBox.Text = value;
+            }
         }
 
         private void MyTextBoxTextChanged(object sender, TextChangedEventArgs e)
         {
-            int numChar = myTextBox.Text.Length;
-            string maxLentgh = "/" + myTextBox.MaxLength.ToString();
-            lbCount.Content = numChar < 10 ? "0" + numChar + maxLentgh : numChar + maxLentgh;
+            ContarCaracteres();
         }
+
+        private void ContarCaracteres() {
+            lbContar.Content = myTextBox.Text.Length.ToString() + "/" + myTextBox.MaxLength.ToString();
+        }
+
     }
 }
