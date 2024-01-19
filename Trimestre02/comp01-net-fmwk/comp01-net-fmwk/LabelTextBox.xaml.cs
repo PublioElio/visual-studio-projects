@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
@@ -27,6 +28,17 @@ namespace comp01_net_fmwk
             ContarCaracteres();
         }
 
+        [Description("Número máximo de caracteres")]
+        public int TextboxMaxlenght 
+        {
+            get => myTextBox.MaxLength;
+            set {
+                myTextBox.MaxLength = value;
+                ContarCaracteres();
+            } 
+        }
+
+        [Description("Label junto al progreso")]
         public string Label
         {
             get => myLabel.Content.ToString();
@@ -36,7 +48,8 @@ namespace comp01_net_fmwk
                     myLabel.Content = value;
             }
         }
-        public string TextBox
+        [Description("Caja de texto")]
+        public string TextBoxText
         {
             get => myTextBox.Text.ToString();
             set
@@ -54,6 +67,5 @@ namespace comp01_net_fmwk
         private void ContarCaracteres() {
             lbContar.Content = myTextBox.Text.Length.ToString() + "/" + myTextBox.MaxLength.ToString();
         }
-
     }
 }

@@ -24,5 +24,6 @@ namespace probarComp01_net_fmwk
         {
             InitializeComponent();
         }
+
     }
 }

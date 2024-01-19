@@ -16,3 +16,5 @@ C:\Users\Propietario\source\visual-studio-projects\Trimestre02\probar componente
 C:\Users\Propietario\source\visual-studio-projects\Trimestre02\probar componentes\probarComp01-net-fmwk\probarComp01-net-fmwk\obj\Debug\probarComp01-net-fmwk.csproj.CopyComplete
 C:\Users\Propietario\source\visual-studio-projects\Trimestre02\probar componentes\probarComp01-net-fmwk\probarComp01-net-fmwk\obj\Debug\probarComp01-net-fmwk.exe
 C:\Users\Propietario\source\visual-studio-projects\Trimestre02\probar componentes\probarComp01-net-fmwk\probarComp01-net-fmwk\obj\Debug\probarComp01-net-fmwk.pdb
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\probar componentes\probarComp01-net-fmwk\probarComp01-net-fmwk\bin\Debug\comp02-net-fmwk.dll
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\probar componentes\probarComp01-net-fmwk\probarComp01-net-fmwk\bin\Debug\comp02-net-fmwk.pdb

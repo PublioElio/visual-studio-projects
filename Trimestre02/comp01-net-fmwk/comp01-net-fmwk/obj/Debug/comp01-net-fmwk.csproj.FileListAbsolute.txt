@@ -1,13 +1,13 @@
 C:\Users\Propietario\source\visual-studio-projects\Trimestre02\comp01-net-fmwk\comp01-net-fmwk\bin\Debug\comp01-net-fmwk.dll
 C:\Users\Propietario\source\visual-studio-projects\Trimestre02\comp01-net-fmwk\comp01-net-fmwk\bin\Debug\comp01-net-fmwk.pdb
 C:\Users\Propietario\source\visual-studio-projects\Trimestre02\comp01-net-fmwk\comp01-net-fmwk\obj\Debug\comp01-net-fmwk.csproj.AssemblyReference.cache
-C:\Users\Propietario\source\visual-studio-projects\Trimestre02\comp01-net-fmwk\comp01-net-fmwk\obj\Debug\UserControl1.g.cs
 C:\Users\Propietario\source\visual-studio-projects\Trimestre02\comp01-net-fmwk\comp01-net-fmwk\obj\Debug\comp01-net-fmwk_MarkupCompile.cache
 C:\Users\Propietario\source\visual-studio-projects\Trimestre02\comp01-net-fmwk\comp01-net-fmwk\obj\Debug\comp01-net-fmwk_MarkupCompile.lref
-C:\Users\Propietario\source\visual-studio-projects\Trimestre02\comp01-net-fmwk\comp01-net-fmwk\obj\Debug\UserControl1.baml
 C:\Users\Propietario\source\visual-studio-projects\Trimestre02\comp01-net-fmwk\comp01-net-fmwk\obj\Debug\comp01-net-fmwk.g.resources
 C:\Users\Propietario\source\visual-studio-projects\Trimestre02\comp01-net-fmwk\comp01-net-fmwk\obj\Debug\comp01_net_fmwk.Properties.Resources.resources
 C:\Users\Propietario\source\visual-studio-projects\Trimestre02\comp01-net-fmwk\comp01-net-fmwk\obj\Debug\comp01-net-fmwk.csproj.GenerateResource.cache
 C:\Users\Propietario\source\visual-studio-projects\Trimestre02\comp01-net-fmwk\comp01-net-fmwk\obj\Debug\comp01-net-fmwk.csproj.CoreCompileInputs.cache
 C:\Users\Propietario\source\visual-studio-projects\Trimestre02\comp01-net-fmwk\comp01-net-fmwk\obj\Debug\comp01-net-fmwk.dll
 C:\Users\Propietario\source\visual-studio-projects\Trimestre02\comp01-net-fmwk\comp01-net-fmwk\obj\Debug\comp01-net-fmwk.pdb
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\comp01-net-fmwk\comp01-net-fmwk\obj\Debug\LabelTextBox.g.cs
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\comp01-net-fmwk\comp01-net-fmwk\obj\Debug\LabelTextBox.baml

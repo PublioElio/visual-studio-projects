@@ -10,7 +10,7 @@
     <Grid>
 
         <Rectangle x:Name="rBackground" 
-                   HorizontalAlignment="Center"
+                   HorizontalAlignment="Right"
                    VerticalAlignment="Center"
                    Height="28" 
                    Stroke="Black"
@@ -18,13 +18,19 @@
                    Width="200"
                    IsHitTestVisible="False"/>
 
-        <Rectangle x:Name="rProgress" 
-                   HorizontalAlignment="Left"
+        <Rectangle x:Name="rProgress"
                    VerticalAlignment="Center"
                    Height="24" 
-                   Fill="CadetBlue"
-                   Width="0"
+                   Fill="CornflowerBlue"
                    IsHitTestVisible="False" 
-                   Margin="3,0,0,0"/>
+                   Margin="3,0,0,0" 
+                   HorizontalAlignment="Left" 
+                   Width="0"/>
+
+        <Label x:Name="lbProgress" 
+               Content="0%" 
+               HorizontalAlignment="Right" 
+               VerticalAlignment="Center" 
+               Margin="0,0,87,0"/>
     </Grid>
 </UserControl>

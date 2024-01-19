@@ -8,7 +8,34 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <comp01_net_fmwk:UserControl1 HorizontalAlignment="Left" Margin="24,29,0,0" VerticalAlignment="Top"/>
-        <comp02_net_fmwk:CustomProgressBar HorizontalAlignment="Left" Margin="231,285,0,0" VerticalAlignment="Top"/>
+        <comp01_net_fmwk:UserControl1 HorizontalAlignment="Center" Margin="0,74,0,0" VerticalAlignment="Top" TextboxMaxlenght="80" TextBoxText="Texto ejemplo" Label="Tamaño" />
+        <comp02_net_fmwk:CustomProgressBar HorizontalAlignment="Center" Margin="0,149,0,0" VerticalAlignment="Top" Value="51"/>
+
+        <Label x:Name="lbValorIncremento" 
+               Content="Valor incremento:" 
+               HorizontalAlignment="Left" 
+               Margin="300,199,0,0" 
+               VerticalAlignment="Top"/>
+
+        <TextBox x:Name="tbValorIncremento" 
+                 HorizontalAlignment="Left" 
+                 Margin="403,203,0,0" 
+                 TextWrapping="Wrap" 
+                 Text="" 
+                 VerticalAlignment="Top" 
+                 Width="34"/>
+
+        <Button Content="Incrementar" 
+                HorizontalAlignment="Left" 
+                Margin="303,243,0,0" 
+                VerticalAlignment="Top"/>
+
+        <Button Content="Incrementar" 
+                HorizontalAlignment="Left" 
+                Margin="303,243,0,0" 
+                VerticalAlignment="Top"/>
+        
+        
+        
     </Grid>
 </Window>

@@ -13,7 +13,7 @@
           Width="136">
 
         <Label x:Name="lbContar" 
-               Content="" 
+               Content="0/0" 
                HorizontalAlignment="Left" 
                Margin="96,0,0,28" 
                VerticalContentAlignment="center" 
@@ -29,18 +29,14 @@
                Width="96"/>
 
         <TextBox x:Name="myTextBox" 
-                 HorizontalAlignment="Center" 
                  Margin="0,28,0,0" 
                  TextWrapping="Wrap" 
                  Text="TextBox"
                  VerticalContentAlignment="Center"
                  VerticalAlignment="Top"
-                 MaxLength="20"
-                 Width="136" 
+                 MaxLength="20" 
                  Height="28" 
                  TextChanged="MyTextBoxTextChanged"/>
-        
-        
 
     </Grid>
 </UserControl>
