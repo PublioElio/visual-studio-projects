@@ -30,7 +30,15 @@ namespace comp02_net_fmwk
         [Description("Porcentaje de progreso en la barra")]
         public int Value
         {
-            get => (int)lbProgress.Content;
+            get {
+                string porcentaje = lbProgress.Content.ToString();
+                int valor;
+                if (! int.TryParse(new string(porcentaje.Where(char.IsDigit).ToArray()), out valor))
+                {
+                    valor = 0;
+                }
+                return valor;
+            }
             set 
             {
                 value = (value < 0) ? 0 : (value > 100) ? 100 : value;

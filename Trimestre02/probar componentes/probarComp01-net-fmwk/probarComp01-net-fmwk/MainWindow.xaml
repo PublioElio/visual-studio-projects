@@ -8,34 +8,51 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <comp01_net_fmwk:UserControl1 HorizontalAlignment="Center" Margin="0,74,0,0" VerticalAlignment="Top" TextboxMaxlenght="80" TextBoxText="Texto ejemplo" Label="Tamaño" />
-        <comp02_net_fmwk:CustomProgressBar HorizontalAlignment="Center" Margin="0,149,0,0" VerticalAlignment="Top" Value="51"/>
+        
+        <comp01_net_fmwk:UserControl1 x:Name="componenteTexto" 
+                                      HorizontalAlignment="Center" 
+                                      Margin="0,74,0,0" 
+                                      VerticalAlignment="Top" 
+                                      TextboxMaxlenght="80" 
+                                      TextBoxText="Texto ejemplo" 
+                                      Label="Tamaño" />
+        
+        <comp02_net_fmwk:CustomProgressBar x:Name="progressBar" 
+                                           HorizontalAlignment="Center" 
+                                           Margin="0,149,0,0" 
+                                           VerticalAlignment="Top" 
+                                           Value="51"/>
 
         <Label x:Name="lbValorIncremento" 
                Content="Valor incremento:" 
                HorizontalAlignment="Left" 
-               Margin="300,199,0,0" 
-               VerticalAlignment="Top"/>
+               Margin="332,199,0,0" 
+               VerticalAlignment="Top"
+               />
 
         <TextBox x:Name="tbValorIncremento" 
                  HorizontalAlignment="Left" 
-                 Margin="403,203,0,0" 
+                 Margin="435,203,0,0" 
                  TextWrapping="Wrap" 
-                 Text="" 
+                 Text=""
+                 MaxLength="2"
                  VerticalAlignment="Top" 
-                 Width="34"/>
+                 Width="34" TextChanged="tbValorIncremento_TextChanged"
+                 />
 
-        <Button Content="Incrementar" 
+        <Button x:Name="btnIncrementar" 
+                Content="Incrementar" 
                 HorizontalAlignment="Left" 
-                Margin="303,243,0,0" 
-                VerticalAlignment="Top"/>
+                Margin="316,243,0,0" 
+                VerticalAlignment="Top" Click="btnIncrementar_Click"/>
+        
+        <Button x:Name="btnDecrementar" 
+                Content="Decrementar" 
+                HorizontalAlignment="Left" 
+                Margin="416,243,0,0" 
+                VerticalAlignment="Top" Click="btnDecrementar_Click"/>
 
-        <Button Content="Incrementar" 
-                HorizontalAlignment="Left" 
-                Margin="303,243,0,0" 
-                VerticalAlignment="Top"/>
-        
-        
-        
+
+
     </Grid>
 </Window>

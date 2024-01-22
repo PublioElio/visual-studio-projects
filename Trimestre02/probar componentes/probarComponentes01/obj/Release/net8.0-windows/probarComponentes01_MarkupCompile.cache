@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-C:\Users\Propietario\source\visual-studio-projects\Trimestre02\probar componentes\probarComponentes01\obj\Debug\net8.0-windows\
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\probar componentes\probarComponentes01\obj\Release\net8.0-windows\
 probarComponentes01
 none
 false
-TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+TRACE;RELEASE;NET;NET8_0;NETCOREAPP
 C:\Users\Propietario\source\visual-studio-projects\Trimestre02\probar componentes\probarComponentes01\App.xaml
 11407045341
 
-41786389808
+4-1553391491
 2001280896788
 MainWindow.xaml;
 

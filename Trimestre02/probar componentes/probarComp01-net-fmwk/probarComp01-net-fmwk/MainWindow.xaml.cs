@@ -25,5 +25,27 @@ namespace probarComp01_net_fmwk
             InitializeComponent();
         }
 
+        private void btnIncrementar_Click(object sender, RoutedEventArgs e)
+        {
+            int valor;
+            int.TryParse(tbValorIncremento.Text, out valor);
+            progressBar.Value = Math.Min(100, progressBar.Value + valor);
+        }
+
+        private void tbValorIncremento_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(tbValorIncremento.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                tbValorIncremento.Text = tbValorIncremento.Text.Remove(tbValorIncremento.Text.Length - 1);
+            }
+        }
+
+        private void btnDecrementar_Click(object sender, RoutedEventArgs e)
+        {
+            int valor;
+            int.TryParse(tbValorIncremento.Text, out valor);
+            progressBar.Value = Math.Max(0, progressBar.Value - valor);
+        }
     }
 }
