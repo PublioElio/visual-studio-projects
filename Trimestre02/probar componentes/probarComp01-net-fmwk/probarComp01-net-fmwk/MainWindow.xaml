@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:probarComp01_net_fmwk"
         xmlns:comp01_net_fmwk="clr-namespace:comp01_net_fmwk;assembly=comp01-net-fmwk" xmlns:comp02_net_fmwk="clr-namespace:comp02_net_fmwk;assembly=comp02-net-fmwk" x:Class="probarComp01_net_fmwk.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" 
+        Height="450" 
+        Width="800">
     <Grid>
         
         <comp01_net_fmwk:UserControl1 x:Name="componenteTexto" 
@@ -45,14 +47,12 @@
                 HorizontalAlignment="Left" 
                 Margin="316,243,0,0" 
                 VerticalAlignment="Top" Click="btnIncrementar_Click"/>
-        
+
         <Button x:Name="btnDecrementar" 
                 Content="Decrementar" 
                 HorizontalAlignment="Left" 
                 Margin="416,243,0,0" 
                 VerticalAlignment="Top" Click="btnDecrementar_Click"/>
-
-
 
     </Grid>
 </Window>
