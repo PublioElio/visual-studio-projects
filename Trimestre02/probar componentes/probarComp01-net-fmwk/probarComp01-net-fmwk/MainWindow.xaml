@@ -22,8 +22,7 @@
         <comp02_net_fmwk:CustomProgressBar x:Name="progressBar" 
                                            HorizontalAlignment="Center" 
                                            Margin="0,149,0,0" 
-                                           VerticalAlignment="Top" 
-                                           Value="51"/>
+                                           VerticalAlignment="Top" Value="-3"/>
 
         <Label x:Name="lbValorIncremento" 
                Content="Valor incremento:" 

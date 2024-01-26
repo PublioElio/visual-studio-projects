@@ -59,18 +59,19 @@ namespace comp01_net_fmwk
             }
         }
 
+        public event EventHandler textChanged;
+
         private void MyTextBoxTextChanged(object sender, TextChangedEventArgs e)
         {
             ContarCaracteres();
+            if (textChanged != null) {
+                textChanged(this, new EventArgs());
+            }
         }
 
         private void ContarCaracteres() {
             lbContar.Content = myTextBox.Text.Length.ToString() + "/" + myTextBox.MaxLength.ToString();
         }
 
-
-        // on text changed -> otra propiedad
-        // https://stackoverflow.com/questions/13447940/how-to-create-user-define-new-event-for-user-control-in-wpf-one-small-example
-        // si se cambia el max length el valor de la barra de progreso también se tiene que actualizar
     }
 }

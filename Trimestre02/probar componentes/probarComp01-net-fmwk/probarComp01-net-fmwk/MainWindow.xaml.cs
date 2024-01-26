@@ -23,6 +23,7 @@ namespace probarComp01_net_fmwk
         public MainWindow()
         {
             InitializeComponent();
+            componenteTexto.textChanged += ComponenteTexto_textChanged;
         }
 
         private void btnIncrementar_Click(object sender, RoutedEventArgs e)
@@ -47,5 +48,11 @@ namespace probarComp01_net_fmwk
             int.TryParse(tbValorIncremento.Text, out valor);
             progressBar.Value = Math.Max(0, progressBar.Value - valor);
         }
+
+        private void ComponenteTexto_textChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
+
 }
