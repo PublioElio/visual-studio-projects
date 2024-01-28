@@ -16,24 +16,24 @@
                                       Margin="0,74,0,0" 
                                       VerticalAlignment="Top" 
                                       TextboxMaxlenght="80" 
-                                      TextBoxText="Texto ejemplo" 
+                                      TextBoxText="Texto de ejemplo" 
                                       Label="Tamaño" />
         
         <comp02_net_fmwk:CustomProgressBar x:Name="progressBar" 
                                            HorizontalAlignment="Center" 
                                            Margin="0,149,0,0" 
-                                           VerticalAlignment="Top" Value="-3"/>
+                                           VerticalAlignment="Top"/>
 
         <Label x:Name="lbValorIncremento" 
-               Content="Valor incremento:" 
+               Content="Valor para modificar la barra de progreso:" 
                HorizontalAlignment="Left" 
-               Margin="332,199,0,0" 
+               Margin="271,199,0,0" 
                VerticalAlignment="Top"
                />
 
         <TextBox x:Name="tbValorIncremento" 
                  HorizontalAlignment="Left" 
-                 Margin="435,203,0,0" 
+                 Margin="506,203,0,0" 
                  TextWrapping="Wrap" 
                  Text=""
                  MaxLength="2"

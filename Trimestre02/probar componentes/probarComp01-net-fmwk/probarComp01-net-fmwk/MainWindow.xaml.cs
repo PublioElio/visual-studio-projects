@@ -51,7 +51,11 @@ namespace probarComp01_net_fmwk
 
         private void ComponenteTexto_textChanged(object sender, EventArgs e)
         {
-            
+            progressBar.Value = CalcularProgreso(componenteTexto.TextLength, componenteTexto.TextboxMaxlenght);
+        }
+
+        private int CalcularProgreso(int valorActual, int valorMaximo){
+            return (valorActual * 100) / valorMaximo;
         }
     }
 

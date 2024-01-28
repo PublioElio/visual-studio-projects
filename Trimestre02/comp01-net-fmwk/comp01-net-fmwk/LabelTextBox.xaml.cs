@@ -28,7 +28,7 @@ namespace comp01_net_fmwk
             ContarCaracteres();
         }
 
-        [Description("Número máximo de caracteres")]
+        [Description("Número máximo de caracteres del Text Box"), Category("Mi categoria"), DisplayName("Número máximo de caracteres del Text Box")]
         public int TextboxMaxlenght 
         {
             get => myTextBox.MaxLength;
@@ -38,7 +38,7 @@ namespace comp01_net_fmwk
             } 
         }
 
-        [Description("Label junto al progreso")]
+        [Description("Label junto al progreso"), Category("Mi categoria"), DisplayName("Texto del Label")]
         public string Label
         {
             get => myLabel.Content.ToString();
@@ -48,7 +48,7 @@ namespace comp01_net_fmwk
                     myLabel.Content = value;
             }
         }
-        [Description("Caja de texto")]
+        [Description("Texto del Text Box"), Category("Mi categoria"), DisplayName("Texto del Text Box")]
         public string TextBoxText
         {
             get => myTextBox.Text.ToString();
@@ -59,6 +59,13 @@ namespace comp01_net_fmwk
             }
         }
 
+        [Description("La cantidad de caracteres que hay en el Text Box"), Category("Mi categoria"), DisplayName("Total de caracteres del Text Box")]
+        public int TextLength
+        {
+            get => myTextBox.Text.Length;
+        }
+
+        [Description("Informa si hay algún cambio en el texto en el Text Box")]
         public event EventHandler textChanged;
 
         private void MyTextBoxTextChanged(object sender, TextChangedEventArgs e)

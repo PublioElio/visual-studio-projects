@@ -11,3 +11,16 @@ C:\Users\Propietario\source\visual-studio-projects\Trimestre02\comp02-net-fmwk\c
 C:\Users\Propietario\source\visual-studio-projects\Trimestre02\comp02-net-fmwk\comp02-net-fmwk\obj\Debug\comp02-net-fmwk.pdb
 C:\Users\Propietario\source\visual-studio-projects\Trimestre02\comp02-net-fmwk\comp02-net-fmwk\obj\Debug\CustProgressBar.g.cs
 C:\Users\Propietario\source\visual-studio-projects\Trimestre02\comp02-net-fmwk\comp02-net-fmwk\obj\Debug\CustProgressBar.baml
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\comp02-net-fmwk\comp02-net-fmwk\bin\Debug\comp02-net-fmwk.dll
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\comp02-net-fmwk\comp02-net-fmwk\bin\Debug\comp02-net-fmwk.pdb
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\comp02-net-fmwk\comp02-net-fmwk\obj\Debug\comp02-net-fmwk.csproj.AssemblyReference.cache
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\comp02-net-fmwk\comp02-net-fmwk\obj\Debug\CustProgressBar.g.cs
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\comp02-net-fmwk\comp02-net-fmwk\obj\Debug\comp02-net-fmwk_MarkupCompile.cache
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\comp02-net-fmwk\comp02-net-fmwk\obj\Debug\comp02-net-fmwk_MarkupCompile.lref
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\comp02-net-fmwk\comp02-net-fmwk\obj\Debug\CustProgressBar.baml
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\comp02-net-fmwk\comp02-net-fmwk\obj\Debug\comp02-net-fmwk.g.resources
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\comp02-net-fmwk\comp02-net-fmwk\obj\Debug\comp02_net_fmwk.Properties.Resources.resources
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\comp02-net-fmwk\comp02-net-fmwk\obj\Debug\comp02-net-fmwk.csproj.GenerateResource.cache
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\comp02-net-fmwk\comp02-net-fmwk\obj\Debug\comp02-net-fmwk.csproj.CoreCompileInputs.cache
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\comp02-net-fmwk\comp02-net-fmwk\obj\Debug\comp02-net-fmwk.dll
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\comp02-net-fmwk\comp02-net-fmwk\obj\Debug\comp02-net-fmwk.pdb
