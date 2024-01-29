@@ -1,0 +1,30 @@
+﻿<UserControl x:Name="examen29" x:Class="examen_29_01_2024_Adriano_Diaz.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:examen_29_01_2024_Adriano_Diaz"
+             mc:Ignorable="d" 
+             d:DesignHeight="175" 
+             d:DesignWidth="228
+             ">
+    <Grid>
+
+        <TextBox x:Name="miTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="228" KeyDown="PulsarEnter"/>
+
+        <ListBox x:Name="miListBox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,23,0,0" Height="150
+                 " VerticalAlignment="Top" HorizontalAlignment="Left" Width="201" />
+
+        <Slider x:Name="miSlider" HorizontalAlignment="Left" Margin="143,89,0,0" VerticalAlignment="Top" Width="150" RenderTransformOrigin="0.5,0.5">
+            <Slider.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Slider.RenderTransform>
+        </Slider>
+
+    </Grid>
+</UserControl>
