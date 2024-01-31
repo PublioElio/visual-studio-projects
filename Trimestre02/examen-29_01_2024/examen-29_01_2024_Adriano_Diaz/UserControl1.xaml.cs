@@ -54,6 +54,15 @@ namespace examen_29_01_2024_Adriano_Diaz
             }
         }
 
+        public void AnyadeElemento(string elemento) { 
+            miListBox.Items.Add (elemento);
+        }
+
+        public ItemCollection ElementosListBox
+        { 
+            get => miListBox.Items; 
+        }
+
         // 3. Cada vez que los elementos del listbox cambian se actualiza el slider,
         // cuyo máximo coincidirá con el número máximo de elementos del listbox.
         // El usuario no puede modificar el slider manualmente. (1 pto.)
@@ -62,12 +71,10 @@ namespace examen_29_01_2024_Adriano_Diaz
         // el color del textbox se cambia a rojo y ya no se pueden
         // seguir introduciendo datos. (1 pto.)
 
-
-
         private void ComprobarCapacidadListBox() {
             if (miListBox.Items.Count == ListBoxMaxItems)
             {
-                miTextBox.Background = Color.FromRgb(255, 255, 255);
+                // miTextBox.Background = 
             }
             else { 
             
