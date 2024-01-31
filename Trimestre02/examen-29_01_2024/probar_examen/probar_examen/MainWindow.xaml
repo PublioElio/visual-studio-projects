@@ -1,13 +1,52 @@
 ﻿<Window
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:probar_examen"
-        xmlns:comp01_net_fmwk="clr-namespace:comp01_net_fmwk;assembly=comp01-net-fmwk" xmlns:examen_29_01_2024_Adriano_Diaz="clr-namespace:examen_29_01_2024_Adriano_Diaz;assembly=examen-29_01_2024_Adriano_Diaz" x:Class="probar_examen.MainWindow"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+    x:Class="probar_examen.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:comp01_net_fmwk="clr-namespace:comp01_net_fmwk;assembly=comp01-net-fmwk"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:examen_29_01_2024_Adriano_Diaz="clr-namespace:examen_29_01_2024_Adriano_Diaz;assembly=examen-29_01_2024_Adriano_Diaz"
+    xmlns:local="clr-namespace:probar_examen"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
     <Grid>
-        <examen_29_01_2024_Adriano_Diaz:UserControl1 x:Name="examen" HorizontalAlignment="Center" Margin="0,83,0,0" VerticalAlignment="Top" Width="228" TextboxMaxlenght="20" ListBoxMaxElements="20"/>
+        <examen_29_01_2024_Adriano_Diaz:UserControl1
+            x:Name="compExamen"
+            Width="226"
+            Height="190"
+            Margin="105,106,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            ListBoxMaxElements="3"
+            TextboxMaxlenght="4" />
+        <Button
+            x:Name="btnSeleccionarElemento"
+            Width="243"
+            Height="21"
+            Margin="366,250,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Click="Button_Click"
+            Content="Elemento de mayor longitud del List Box" />
+        <TextBox
+            x:Name="tbElementoMayorTam"
+            Width="243"
+            Margin="366,217,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            IsEnabled="False"
+            TextWrapping="Wrap" />
+        <Image
+            x:Name="imgAviso"
+            Width="100"
+            Height="100"
+            Margin="436,61,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            IsEnabled="False"
+            Source="/descarga.png"
+            Visibility="Hidden" />
     </Grid>
 </Window>

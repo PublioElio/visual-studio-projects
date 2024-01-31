@@ -11,3 +11,16 @@ C:\Users\Propietario\source\visual-studio-projects\Trimestre02\examen-29_01_2024
 C:\Users\Propietario\source\visual-studio-projects\Trimestre02\examen-29_01_2024\examen-29_01_2024_Adriano_Diaz\obj\Debug\examen-29_01_2024_Adriano_Diaz.csproj.CoreCompileInputs.cache
 C:\Users\Propietario\source\visual-studio-projects\Trimestre02\examen-29_01_2024\examen-29_01_2024_Adriano_Diaz\obj\Debug\examen-29_01_2024_Adriano_Diaz.dll
 C:\Users\Propietario\source\visual-studio-projects\Trimestre02\examen-29_01_2024\examen-29_01_2024_Adriano_Diaz\obj\Debug\examen-29_01_2024_Adriano_Diaz.pdb
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\examen-29_01_2024\examen-29_01_2024_Adriano_Diaz\bin\Debug\examen-29_01_2024_Adriano_Diaz.dll
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\examen-29_01_2024\examen-29_01_2024_Adriano_Diaz\bin\Debug\examen-29_01_2024_Adriano_Diaz.pdb
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\examen-29_01_2024\examen-29_01_2024_Adriano_Diaz\obj\Debug\examen-29_01_2024_Adriano_Diaz.csproj.AssemblyReference.cache
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\examen-29_01_2024\examen-29_01_2024_Adriano_Diaz\obj\Debug\UserControl1.g.cs
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\examen-29_01_2024\examen-29_01_2024_Adriano_Diaz\obj\Debug\examen-29_01_2024_Adriano_Diaz_MarkupCompile.cache
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\examen-29_01_2024\examen-29_01_2024_Adriano_Diaz\obj\Debug\examen-29_01_2024_Adriano_Diaz_MarkupCompile.lref
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\examen-29_01_2024\examen-29_01_2024_Adriano_Diaz\obj\Debug\UserControl1.baml
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\examen-29_01_2024\examen-29_01_2024_Adriano_Diaz\obj\Debug\examen-29_01_2024_Adriano_Diaz.g.resources
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\examen-29_01_2024\examen-29_01_2024_Adriano_Diaz\obj\Debug\examen_29_01_2024_Adriano_Diaz.Properties.Resources.resources
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\examen-29_01_2024\examen-29_01_2024_Adriano_Diaz\obj\Debug\examen-29_01_2024_Adriano_Diaz.csproj.GenerateResource.cache
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\examen-29_01_2024\examen-29_01_2024_Adriano_Diaz\obj\Debug\examen-29_01_2024_Adriano_Diaz.csproj.CoreCompileInputs.cache
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\examen-29_01_2024\examen-29_01_2024_Adriano_Diaz\obj\Debug\examen-29_01_2024_Adriano_Diaz.dll
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\examen-29_01_2024\examen-29_01_2024_Adriano_Diaz\obj\Debug\examen-29_01_2024_Adriano_Diaz.pdb
