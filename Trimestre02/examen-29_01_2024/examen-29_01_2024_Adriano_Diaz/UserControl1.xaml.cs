@@ -50,8 +50,13 @@ namespace examen_29_01_2024_Adriano_Diaz
             set => miTextBox.MaxLength = value;
         }
 
-        // [Description("Color de fondo del Slider"), Category("Mi categoria"), DisplayName("Color de fondo del Slider")]
+        /*
+        [Description("Color de fondo del Slider"), Category("Mi categoria"), DisplayName("Color de fondo del Slider")]
+        public Brush SliderBackground {
+            get => miSlider.Brush
+            set => miSlider.Background.
 
+        }*/
         private void PulsarEnter(object sender, KeyEventArgs e)
         {
             if ((e.Key == Key.Enter) && (miListBox.Items.Count < ListBoxMaxItems))
@@ -61,20 +66,11 @@ namespace examen_29_01_2024_Adriano_Diaz
                 ComprobarCapacidadListBox();
             }
         }
-        public void AnyadeElemento(string elemento)
-        {
-            miListBox.Items.Add(elemento);
-        }
-
-        public ItemCollection ElementosListBox
-        {
-            get => miListBox.Items;
-        }
         private void ComprobarCapacidadListBox()
         {
             if (miListBox.Items.Count == ListBoxMaxItems)
             {
-                // miTextBox.Background = 
+                miTextBox.Background = new SolidColorBrush(Colors.Red);
             }
             else
             {
