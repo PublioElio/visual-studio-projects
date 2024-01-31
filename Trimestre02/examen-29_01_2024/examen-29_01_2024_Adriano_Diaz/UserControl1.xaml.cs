@@ -32,7 +32,15 @@ namespace examen_29_01_2024_Adriano_Diaz
         public int ListBoxMaxElements
         {
             get => ListBoxMaxItems;
-            set => ListBoxMaxItems = value;
+            set
+            {
+                ListBoxMaxItems = value;
+                modificarSlider(ListBoxMaxItems);
+            }
+        }
+        private void modificarSlider(int listBoxMaxItems)
+        {
+            miSlider.Value = listBoxMaxItems;
         }
 
         [Description("Número máximo de caracteres del Text Box"), Category("Mi categoria"), DisplayName("Número máximo de caracteres del Text Box")]
@@ -53,14 +61,25 @@ namespace examen_29_01_2024_Adriano_Diaz
                 ComprobarCapacidadListBox();
             }
         }
-
-        public void AnyadeElemento(string elemento) { 
-            miListBox.Items.Add (elemento);
+        public void AnyadeElemento(string elemento)
+        {
+            miListBox.Items.Add(elemento);
         }
 
         public ItemCollection ElementosListBox
-        { 
-            get => miListBox.Items; 
+        {
+            get => miListBox.Items;
+        }
+        private void ComprobarCapacidadListBox()
+        {
+            if (miListBox.Items.Count == ListBoxMaxItems)
+            {
+                // miTextBox.Background = 
+            }
+            else
+            {
+
+            }
         }
 
         // 3. Cada vez que los elementos del listbox cambian se actualiza el slider,
@@ -70,15 +89,5 @@ namespace examen_29_01_2024_Adriano_Diaz
         // 4. Cuando el listbox llega al límite de su capacidad,
         // el color del textbox se cambia a rojo y ya no se pueden
         // seguir introduciendo datos. (1 pto.)
-
-        private void ComprobarCapacidadListBox() {
-            if (miListBox.Items.Count == ListBoxMaxItems)
-            {
-                // miTextBox.Background = 
-            }
-            else { 
-            
-            }
-        }
     }
 }
