@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "comp04-net-fmwk", "comp04-net-fmwk\comp04-net-fmwk.csproj", "{2BD47326-282A-4874-B912-06672379B52B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2BD47326-282A-4874-B912-06672379B52B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BD47326-282A-4874-B912-06672379B52B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BD47326-282A-4874-B912-06672379B52B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BD47326-282A-4874-B912-06672379B52B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {026D418B-A26B-4864-8765-94D310162E9E}
+	EndGlobalSection
+EndGlobal
