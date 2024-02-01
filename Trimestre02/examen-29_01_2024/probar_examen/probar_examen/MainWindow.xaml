@@ -14,18 +14,19 @@
     <Grid>
         <examen_29_01_2024_Adriano_Diaz:UserControl1
             x:Name="compExamen"
-            Width="226"
-            Height="190"
-            Margin="105,106,0,0"
+            Width="181"
+            Height="163"
+            Margin="101,101,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             ListBoxMaxElements="3"
-            TextboxMaxlenght="4" />
+            TextboxMaxlenght="4" ListBoxModificado="compExamen_ListBoxModificado"
+            />
         <Button
             x:Name="btnSeleccionarElemento"
             Width="243"
             Height="21"
-            Margin="366,250,0,0"
+            Margin="436,233,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Click="Button_Click"
@@ -33,7 +34,7 @@
         <TextBox
             x:Name="tbElementoMayorTam"
             Width="243"
-            Margin="366,217,0,0"
+            Margin="436,200,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             IsEnabled="False"

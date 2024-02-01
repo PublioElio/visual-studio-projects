@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     x:Name="examen29"
     d:DesignHeight="175"
-    d:DesignWidth="228              "
+    d:DesignWidth="228"
     mc:Ignorable="d">
     <Grid>
 
@@ -27,19 +27,12 @@
 
         <Slider
             x:Name="miSlider"
-            Margin="204,23,5,4"
+            Width="19"
+            Margin="0,23,5,4"
+            HorizontalAlignment="Right"
+            IsDirectionReversed="True"
             IsEnabled="False"
-            Orientation="Vertical"
-            RenderTransformOrigin="0.5,0.5">
-            <Slider.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform />
-                    <SkewTransform />
-                    <RotateTransform Angle="180.471" />
-                    <TranslateTransform />
-                </TransformGroup>
-            </Slider.RenderTransform>
-        </Slider>
+            Orientation="Vertical" />
 
     </Grid>
 </UserControl>

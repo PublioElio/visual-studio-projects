@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Windows;
@@ -26,14 +27,14 @@ namespace probar_examen
             InitializeComponent();
             //compExamen.ListBoxModificado += parpadeoImg();
         }
-        
+        /*
         private EventHandler parpadeoImg(object sender, EventArgs e)
         {
             System.Windows.Forms.Timer timer;  //Declared in your 'Form.Designer.cs'
             timer.Interval = 1000; //Equals the 1 second
             timer.Start(); //Always use 'Timer.Stop', when you need stoping the Timer
             timer.Enabled = true;
-        }
+        }*/
 
 
         private void OnTimedEvent(object source, ElapsedEventArgs e)
@@ -44,12 +45,12 @@ namespace probar_examen
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ItemCollection elementos = compExamen.ElementosListBox;
+            ItemCollection elementos = compExamen.ObtenerElementosListBox();
             if (elementos != null && !elementos.IsEmpty)
             {
                 int max = 0;
                 string elementoMayor = "";
-                foreach (ListItem elemento in elementos) // Problema con los tipos
+                foreach (string elemento in elementos)
                 {
                     if (elemento.ToString().Length >= max)
                     {
@@ -61,5 +62,12 @@ namespace probar_examen
             }
         }
 
+        private async void compExamen_ListBoxModificado(object sender, EventArgs e)
+        {
+            imgAviso.Visibility = Visibility.Visible;
+            await Task.Delay(1000);
+            imgAviso.Visibility = Visibility.Hidden;
+            //MessageBox.Show("Alerta");
+        }
     }
 }

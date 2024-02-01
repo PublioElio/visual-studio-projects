@@ -56,7 +56,7 @@ namespace examen_29_01_2024_Adriano_Diaz
             }
         }
 
-        // Esto lo he tenido que hacer con ChatGPT porque no he encontrado respuesta en Stack Overflow
+        // Poner en las búsquedas WPF
         [Description("Color de fondo del Slider"), Category("Mi categoria"), DisplayName("Color de fondo del Slider")]
         public Brush SliderBackground
         {
@@ -64,11 +64,10 @@ namespace examen_29_01_2024_Adriano_Diaz
             set => miSlider.Background = value;
 
         }
-
-        [Description("Elementos del List Box"), Category("Mi categoria"), DisplayName("Elementos del List Box")]
-        public ItemCollection ElementosListBox
+         
+        public ItemCollection ObtenerElementosListBox()
         {
-            get => miListBox.Items;
+            return miListBox.Items;
         }
 
         [Description("Informa si se introduce algún elemento en el List Box")]
@@ -80,14 +79,15 @@ namespace examen_29_01_2024_Adriano_Diaz
             {
                 miListBox.Items.Add(miTextBox.Text);
                 miTextBox.Text = string.Empty;
-                ModificarSlider(1);
+                ModificarSlider();
                 ComprobarCapacidadListBox();
+                if (ListBoxModificado != null) { ListBoxModificado(this, new EventArgs()); }
             }
         }
 
-        private void ModificarSlider(int value)
+        private void ModificarSlider()
         {
-            miSlider.Value += value;
+            miSlider.Value = miListBox.Items.Count;
         }
 
         private void ComprobarCapacidadListBox()
@@ -104,23 +104,23 @@ namespace examen_29_01_2024_Adriano_Diaz
             }
         }
 
-        // Esto lo he tenido que hacer con ChatGPT porque no he encontrado respuesta en Stack Overflow
         private void BorrarElementoListBox(object sender, KeyEventArgs e)
         {
             if ((e.Key == Key.Delete) || (e.Key == Key.Back))
             {
                 if (miListBox.SelectedIndex != -1)
                 {
-                    miListBox.Items.RemoveAt(miListBox.SelectedIndex);
+                    // miListBox.Items.RemoveAt(miListBox.SelectedIndex);
+                    miListBox.Items.Remove(miListBox.SelectedItem);
                     ComprobarCapacidadListBox();
-                    ModificarSlider(-1);
+                    ModificarSlider();
                 }
             }
         }
 
         private void ListBoxChanged(object sender, SizeChangedEventArgs e)
         {
-            if (ListBoxModificado != null) { ListBoxModificado(this, new EventArgs()); }
+            //if (ListBoxModificado != null) { ListBoxModificado(this, new EventArgs()); }
         }
     }
 }
