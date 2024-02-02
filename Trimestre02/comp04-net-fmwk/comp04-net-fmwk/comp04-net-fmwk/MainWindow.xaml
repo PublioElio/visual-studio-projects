@@ -13,11 +13,14 @@
 
         <Button
             x:Name="BtnAnyadir"
+            Width="213"
+            Height="33"
             Margin="0,517,0,0"
             HorizontalAlignment="Center"
             VerticalAlignment="Top"
             Click="Button_Click"
-            Content="Añadir imagen al marco" Height="33" Width="213" FontSize="16" />
+            Content="Añadir imagen al marco"
+            FontSize="16" />
 
         <local:imgLeyenda
             x:Name="compImgLeyenda"

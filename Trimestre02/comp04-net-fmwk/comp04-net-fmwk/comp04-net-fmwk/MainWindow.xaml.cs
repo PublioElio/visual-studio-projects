@@ -31,16 +31,18 @@ namespace comp04_net_fmwk
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
+            // Se puede elegir el directorio donde se abre por defecto la ventana del explorador
+            // openFileDialog.InitialDirectory = AppDomain.CurrentDomain.BaseDirectory;
             openFileDialog.Filter = "Image files | *.jpg; *.png;";
-            if (openFileDialog.ShowDialog() == true) {
-                compImgLeyenda.RecursoImagen = new BitmapImage(new Uri(openFileDialog.FileName, UriKind.Absolute));
-                string[] strings = openFileDialog.FileName.Split('\\');
-                compImgLeyenda.TextoLeyenda = System.IO.Path.GetFileNameWithoutExtension(strings[strings.Length - 1]);
+            if (openFileDialog.ShowDialog() == true)
+            {
+                string path = openFileDialog.FileName; // Guardo el path del archivo
+                // Para indicar al IDE que un string es una ruta tenemos que indicarlo con una arroba delante del string @"c:\users\user1\img.bmp"
+                compImgLeyenda.RecursoImagen = new BitmapImage(new Uri(path));
+                // string[] strings = openFileDialog.FileName.Split('\\');
+                // compImgLeyenda.TextoLeyenda = System.IO.Path.GetFileNameWithoutExtension(strings[strings.Length - 1]);
+                compImgLeyenda.TextoLeyenda = System.IO.Path.GetFileNameWithoutExtension(path);
             }
-                
         }
-
-
-
     }
 }

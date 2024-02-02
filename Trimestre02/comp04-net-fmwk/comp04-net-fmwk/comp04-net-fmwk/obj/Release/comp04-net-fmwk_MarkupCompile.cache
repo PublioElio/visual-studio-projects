@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Users\Propietario\source\visual-studio-projects\Trimestre02\comp04-net-fmwk\comp04-net-fmwk\comp04-net-fmwk\obj\Debug\
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\comp04-net-fmwk\comp04-net-fmwk\comp04-net-fmwk\obj\Release\
 comp04_net_fmwk
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\Propietario\source\visual-studio-projects\Trimestre02\comp04-net-fmwk\comp04-net-fmwk\comp04-net-fmwk\App.xaml
 2-1981368228
 
@@ -16,5 +16,5 @@ C:\Users\Propietario\source\visual-studio-projects\Trimestre02\comp04-net-fmwk\c
 13-1310406943
 imgLeyenda.xaml;MainWindow.xaml;
 
-False
+True
 

@@ -46,7 +46,16 @@ namespace comp04_net_fmwk
 
         private void Img_MouseWeel(object sender, MouseWheelEventArgs e)
         {
-
+            int SALTO_REDIMENSION = 5;
+            if (e.Delta > 0)
+            {
+                ImgCentral.Width += SALTO_REDIMENSION;
+                ImgCentral.Height += SALTO_REDIMENSION;
+            }
+            else {
+                ImgCentral.Width -= SALTO_REDIMENSION;
+                ImgCentral.Height -= SALTO_REDIMENSION;
+            }
         }
     }
 }
