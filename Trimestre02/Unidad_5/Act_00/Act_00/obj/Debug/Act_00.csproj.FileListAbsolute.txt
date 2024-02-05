@@ -1,0 +1,9 @@
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\Unidad_5\Act_00\Act_00\bin\Debug\Act_00.exe.config
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\Unidad_5\Act_00\Act_00\bin\Debug\Act_00.exe
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\Unidad_5\Act_00\Act_00\bin\Debug\Act_00.pdb
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\Unidad_5\Act_00\Act_00\obj\Debug\Act_00.csproj.AssemblyReference.cache
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\Unidad_5\Act_00\Act_00\obj\Debug\Act_00.Properties.Resources.resources
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\Unidad_5\Act_00\Act_00\obj\Debug\Act_00.csproj.GenerateResource.cache
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\Unidad_5\Act_00\Act_00\obj\Debug\Act_00.csproj.CoreCompileInputs.cache
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\Unidad_5\Act_00\Act_00\obj\Debug\Act_00.exe
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\Unidad_5\Act_00\Act_00\obj\Debug\Act_00.pdb
