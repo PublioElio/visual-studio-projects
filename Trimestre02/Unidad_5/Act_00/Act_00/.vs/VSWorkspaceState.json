@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\packages",
+    "\\packages\\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.900.148"
   ],
-  "SelectedNode": "\\Act_00.sln",
   "PreviewInSolutionExplorer": false
 }
