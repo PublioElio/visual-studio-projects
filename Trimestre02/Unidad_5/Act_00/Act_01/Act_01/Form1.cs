@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace Act_01
 {
@@ -27,10 +28,16 @@ namespace Act_01
         private void button1_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
+            string rutaOriginal = System.IO.Path.GetFullPath(Directory.GetCurrentDirectory());
+            string nuevaRuta = rutaOriginal.Replace(@"\Act_01\Act_01\bin\Debug", @"\Act_01\Resources");
+            openFileDialog.InitialDirectory = nuevaRuta;
             openFileDialog.Filter = "csv files | *.csv;";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 ruta = openFileDialog.FileName;
+                if (ruta.ToString().EndsWith(".csv")) {
+                    button2.Enabled = true;
+                }
             }
         }
 

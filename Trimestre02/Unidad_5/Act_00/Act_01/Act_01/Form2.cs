@@ -12,6 +12,7 @@ using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Act_01
 {
@@ -24,30 +25,34 @@ namespace Act_01
         public Form2()
         {
             InitializeComponent();
-            //List<Class1> lista = datos;
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
             List<Class1> lista = new List<Class1>();
-            StreamReader sr = new StreamReader(datos);
-            string line = sr.ReadLine();
-            while (line != null)
+            if (!string.IsNullOrEmpty(datos) && File.Exists(datos))
             {
-                string[] fields = line.Split(',');
-                foreach (Class1 registro in lista)
+                using (StreamReader sr = new StreamReader(datos))
                 {
-                    registro.levelType = fields[0];
-                    registro.code = fields[1];
-                    registro.name = fields[2];
-                    registro.description = fields[3];
-                    registro.sourceLink = fields[4];
-
+                    string line = sr.ReadLine();
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        string[] fields = line.Split(',');
+                        Class1 registro = new Class1();
+                        registro.levelType = fields[0];
+                        registro.code = fields[1];
+                        registro.catalogType = fields[2];
+                        registro.name = fields[3];
+                        registro.description = fields[4];
+                        registro.sourceLink = fields[5];
+                        lista.Add(registro);
+                    }
                 }
-                line = sr.ReadLine();
             }
             ReportDataSource dataSource = new ReportDataSource("DataSet1", lista);
+            this.reportViewer1.LocalReport.DataSources.Add(dataSource);
             this.reportViewer1.RefreshReport();
         }
+
     }
 }
