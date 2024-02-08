@@ -6,6 +6,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
@@ -35,7 +36,9 @@ namespace Act_01
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 ruta = openFileDialog.FileName;
-                if (ruta.ToString().EndsWith(".csv")) {
+                Leer_Archivo(ruta);
+                if (ruta.ToString().EndsWith(".csv"))
+                {
                     button2.Enabled = true;
                 }
             }
@@ -47,6 +50,29 @@ namespace Act_01
             Form2 formulario2 = new Form2();
             formulario2.DatosTabla = ruta;
             formulario2.Show();
+        }
+
+        private void Leer_Archivo(string ruta)
+        {
+            if (ruta != null)
+            {
+                int totalLines = 0;
+                using (StreamReader sr = new StreamReader(ruta))
+                {
+                    string line = sr.ReadLine();
+                    while (line != null)
+                    {
+                        totalLines++;
+                        line = sr.ReadLine();
+                    }
+                }
+
+                progressBar1.Step = 7;
+                while (totalLines-- > 0) {
+                    Thread.Sleep(10);
+                    progressBar1.PerformStep();
+                }
+            }
         }
     }
 }

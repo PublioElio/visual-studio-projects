@@ -22,6 +22,8 @@ namespace Act_01
 
         public string DatosTabla { get => datos; set => datos = value; }
 
+        public List<string> ListaElementos { get; set; }
+
         public Form2()
         {
             InitializeComponent();
