@@ -31,6 +31,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.labelProgreso = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -59,13 +60,24 @@
             this.progressBar1.Location = new System.Drawing.Point(196, 160);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(100, 23);
+            this.progressBar1.Step = 1;
             this.progressBar1.TabIndex = 2;
+            // 
+            // labelProgreso
+            // 
+            this.labelProgreso.AutoSize = true;
+            this.labelProgreso.Enabled = false;
+            this.labelProgreso.Location = new System.Drawing.Point(209, 190);
+            this.labelProgreso.Name = "labelProgreso";
+            this.labelProgreso.Size = new System.Drawing.Size(0, 13);
+            this.labelProgreso.TabIndex = 3;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(528, 279);
+            this.Controls.Add(this.labelProgreso);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -73,6 +85,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -81,6 +94,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label labelProgreso;
     }
 }
 

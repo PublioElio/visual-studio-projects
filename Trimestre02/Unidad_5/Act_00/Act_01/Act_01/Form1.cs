@@ -67,11 +67,30 @@ namespace Act_01
                     }
                 }
 
-                progressBar1.Step = 7;
-                while (totalLines-- > 0) {
-                    Thread.Sleep(10);
-                    progressBar1.PerformStep();
-                }
+                GestionarProgressBar(totalLines);
+            }
+        }
+
+        private void GestionarProgressBar(int totalLines)
+        {
+            progressBar1.Maximum = totalLines;
+
+            while (totalLines-- > 0)
+            {
+                progressBar1.PerformStep();
+                NotificarProgreso(progressBar1.Value);
+            }
+        }
+
+        private void NotificarProgreso(int valorProgressBar)
+        {
+            if (progressBar1.Maximum != valorProgressBar)
+            {
+                labelProgreso.Text = $"Progreso: {progressBar1.Value}%";
+            }
+            else
+            {
+                labelProgreso.Text = "¡Finalizado!";
             }
         }
     }
