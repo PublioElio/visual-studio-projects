@@ -32,5 +32,15 @@ namespace Act_01.Properties {
                 return ((string)(this["TuViajeFindeCursoConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Host=localhost;Database=empleados;Username=postgres;Password=A123456a")]
+        public string EmpleadosDB {
+            get {
+                return ((string)(this["EmpleadosDB"]));
+            }
+        }
     }
 }

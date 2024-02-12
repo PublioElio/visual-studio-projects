@@ -1,5 +1,6 @@
 ﻿using Microsoft.Reporting.Map.WebForms.BingMaps;
 using Microsoft.Reporting.WinForms;
+using Npgsql;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,9 +20,7 @@ namespace Act_01
     public partial class Form2 : Form
     {
         private string datos;
-
         public string DatosTabla { get => datos; set => datos = value; }
-
         public List<string> ListaElementos { get; set; }
 
         public Form2()
@@ -31,6 +30,12 @@ namespace Act_01
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'tuViajeFindeCursoDataSet.destinos' Puede moverla o quitarla según sea necesario.
+            this.destinosTableAdapter.Fill(this.tuViajeFindeCursoDataSet.destinos);
+            // TODO: esta línea de código carga datos en la tabla 'tuViajeFindeCursoDataSet.clientes' Puede moverla o quitarla según sea necesario.
+            this.clientesTableAdapter.Fill(this.tuViajeFindeCursoDataSet.clientes);
+            // TODO: esta línea de código carga datos en la tabla 'tuViajeFindeCursoDataSet.agencias' Puede moverla o quitarla según sea necesario.
+            this.agenciasTableAdapter.Fill(this.tuViajeFindeCursoDataSet.agencias);
             List<Class1> lista = new List<Class1>();
             if (!string.IsNullOrEmpty(datos) && File.Exists(datos))
             {

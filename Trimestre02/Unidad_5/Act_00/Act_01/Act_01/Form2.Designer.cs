@@ -28,18 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.tuViajeFindeCursoDataSet = new Act_01.TuViajeFindeCursoDataSet();
+            this.agenciasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.agenciasTableAdapter = new Act_01.TuViajeFindeCursoDataSetTableAdapters.agenciasTableAdapter();
+            this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.clientesTableAdapter = new Act_01.TuViajeFindeCursoDataSetTableAdapters.clientesTableAdapter();
+            this.destinosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.destinosTableAdapter = new Act_01.TuViajeFindeCursoDataSetTableAdapters.destinosTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.tuViajeFindeCursoDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agenciasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.destinosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "ViajesAgencias";
+            reportDataSource1.Value = this.agenciasBindingSource;
+            reportDataSource2.Name = "ViajesClientes";
+            reportDataSource2.Value = this.clientesBindingSource;
+            reportDataSource3.Name = "ViajesDestinos";
+            reportDataSource3.Value = this.destinosBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Act_01.Reports.Report1.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
+            // 
+            // tuViajeFindeCursoDataSet
+            // 
+            this.tuViajeFindeCursoDataSet.DataSetName = "TuViajeFindeCursoDataSet";
+            this.tuViajeFindeCursoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // agenciasBindingSource
+            // 
+            this.agenciasBindingSource.DataMember = "agencias";
+            this.agenciasBindingSource.DataSource = this.tuViajeFindeCursoDataSet;
+            // 
+            // agenciasTableAdapter
+            // 
+            this.agenciasTableAdapter.ClearBeforeFill = true;
+            // 
+            // clientesBindingSource
+            // 
+            this.clientesBindingSource.DataMember = "clientes";
+            this.clientesBindingSource.DataSource = this.tuViajeFindeCursoDataSet;
+            // 
+            // clientesTableAdapter
+            // 
+            this.clientesTableAdapter.ClearBeforeFill = true;
+            // 
+            // destinosBindingSource
+            // 
+            this.destinosBindingSource.DataMember = "destinos";
+            this.destinosBindingSource.DataSource = this.tuViajeFindeCursoDataSet;
+            // 
+            // destinosTableAdapter
+            // 
+            this.destinosTableAdapter.ClearBeforeFill = true;
             // 
             // Form2
             // 
@@ -50,6 +106,10 @@
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tuViajeFindeCursoDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agenciasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.destinosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -57,5 +117,12 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private TuViajeFindeCursoDataSet tuViajeFindeCursoDataSet;
+        private System.Windows.Forms.BindingSource agenciasBindingSource;
+        private TuViajeFindeCursoDataSetTableAdapters.agenciasTableAdapter agenciasTableAdapter;
+        private System.Windows.Forms.BindingSource clientesBindingSource;
+        private TuViajeFindeCursoDataSetTableAdapters.clientesTableAdapter clientesTableAdapter;
+        private System.Windows.Forms.BindingSource destinosBindingSource;
+        private TuViajeFindeCursoDataSetTableAdapters.destinosTableAdapter destinosTableAdapter;
     }
 }
