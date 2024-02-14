@@ -19,6 +19,7 @@ namespace Act_01
 {
     public partial class Form2 : Form
     {
+
         private string datos;
         public string DatosTabla { get => datos; set => datos = value; }
         public List<string> ListaElementos { get; set; }
@@ -30,12 +31,10 @@ namespace Act_01
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'tuViajeFindeCursoDataSet.destinos' Puede moverla o quitarla según sea necesario.
             this.destinosTableAdapter.Fill(this.tuViajeFindeCursoDataSet.destinos);
-            // TODO: esta línea de código carga datos en la tabla 'tuViajeFindeCursoDataSet.clientes' Puede moverla o quitarla según sea necesario.
             this.clientesTableAdapter.Fill(this.tuViajeFindeCursoDataSet.clientes);
-            // TODO: esta línea de código carga datos en la tabla 'tuViajeFindeCursoDataSet.agencias' Puede moverla o quitarla según sea necesario.
             this.agenciasTableAdapter.Fill(this.tuViajeFindeCursoDataSet.agencias);
+
             List<Class1> lista = new List<Class1>();
             if (!string.IsNullOrEmpty(datos) && File.Exists(datos))
             {
@@ -58,8 +57,34 @@ namespace Act_01
             }
             ReportDataSource dataSource = new ReportDataSource("DataSet1", lista);
             this.reportViewer1.LocalReport.DataSources.Add(dataSource);
-            this.reportViewer1.RefreshReport();
-        }
+            
+            // Establecer la conexión con la base de datos
+            string connectionString = "Host=localhost;Port=5432;Username=postgres;Password=A123456a;Database=TuViajeFindeCurso";
+            NpgsqlConnection connection = new NpgsqlConnection(connectionString);
+            connection.Open();
 
+            NpgsqlCommand cmd = new NpgsqlCommand("SELECT * FROM Agencias", connection);
+
+            // El resultado de reader es un Array (tengo que obtener datos por posiciones)
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+
+            // Esta lista es donde guardaré los resultados de la consulta
+            List<Agencia> lista2 = new List<Agencia>();
+            
+            while (reader.Read())
+            {
+                Agencia agencia = new Agencia();
+                agencia.agencia_id = reader[0].ToString();
+                agencia.nombre = reader[1].ToString();
+                agencia.direccion = reader[2].ToString();
+                agencia.telefono = reader[3].ToString();
+                lista2.Add(agencia);
+            }
+
+            connection.Close();
+            ReportDataSource dataSource1 = new ReportDataSource("ViajesAgencias", lista);
+            this.reportViewer1.RefreshReport();
+            
+        }
     }
 }

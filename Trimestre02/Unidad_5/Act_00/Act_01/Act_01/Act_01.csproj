@@ -82,6 +82,7 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agencia.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="empleadosDataSet.Designer.cs">
       <AutoGen>True</AutoGen>

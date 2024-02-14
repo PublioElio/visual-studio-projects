@@ -33,15 +33,15 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.tuViajeFindeCursoDataSet = new Act_01.TuViajeFindeCursoDataSet();
             this.agenciasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.agenciasTableAdapter = new Act_01.TuViajeFindeCursoDataSetTableAdapters.agenciasTableAdapter();
+            this.tuViajeFindeCursoDataSet = new Act_01.TuViajeFindeCursoDataSet();
             this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clientesTableAdapter = new Act_01.TuViajeFindeCursoDataSetTableAdapters.clientesTableAdapter();
             this.destinosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.agenciasTableAdapter = new Act_01.TuViajeFindeCursoDataSetTableAdapters.agenciasTableAdapter();
+            this.clientesTableAdapter = new Act_01.TuViajeFindeCursoDataSetTableAdapters.clientesTableAdapter();
             this.destinosTableAdapter = new Act_01.TuViajeFindeCursoDataSetTableAdapters.destinosTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.tuViajeFindeCursoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agenciasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tuViajeFindeCursoDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.destinosBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -65,33 +65,33 @@
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // tuViajeFindeCursoDataSet
-            // 
-            this.tuViajeFindeCursoDataSet.DataSetName = "TuViajeFindeCursoDataSet";
-            this.tuViajeFindeCursoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // agenciasBindingSource
             // 
             this.agenciasBindingSource.DataMember = "agencias";
             this.agenciasBindingSource.DataSource = this.tuViajeFindeCursoDataSet;
             // 
-            // agenciasTableAdapter
+            // tuViajeFindeCursoDataSet
             // 
-            this.agenciasTableAdapter.ClearBeforeFill = true;
+            this.tuViajeFindeCursoDataSet.DataSetName = "TuViajeFindeCursoDataSet";
+            this.tuViajeFindeCursoDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // clientesBindingSource
             // 
             this.clientesBindingSource.DataMember = "clientes";
             this.clientesBindingSource.DataSource = this.tuViajeFindeCursoDataSet;
             // 
-            // clientesTableAdapter
-            // 
-            this.clientesTableAdapter.ClearBeforeFill = true;
-            // 
             // destinosBindingSource
             // 
             this.destinosBindingSource.DataMember = "destinos";
             this.destinosBindingSource.DataSource = this.tuViajeFindeCursoDataSet;
+            // 
+            // agenciasTableAdapter
+            // 
+            this.agenciasTableAdapter.ClearBeforeFill = true;
+            // 
+            // clientesTableAdapter
+            // 
+            this.clientesTableAdapter.ClearBeforeFill = true;
             // 
             // destinosTableAdapter
             // 
@@ -106,8 +106,8 @@
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.tuViajeFindeCursoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.agenciasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tuViajeFindeCursoDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.destinosBindingSource)).EndInit();
             this.ResumeLayout(false);
