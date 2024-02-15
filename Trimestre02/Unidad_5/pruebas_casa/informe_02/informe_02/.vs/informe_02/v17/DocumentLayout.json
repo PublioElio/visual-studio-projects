@@ -1,0 +1,90 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\adria\\source\\repos\\PublioElio\\repos\\Trimestre02\\Unidad_5\\pruebas_casa\\informe_02\\informe_02\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{60767867-D654-442F-A459-BD1E617FB952}|informe_02\\informe_02.csproj|c:\\users\\adria\\source\\repos\\publioelio\\repos\\trimestre02\\unidad_5\\pruebas_casa\\informe_02\\informe_02\\informe_02\\reports\\report1.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}",
+      "RelativeMoniker": "D:0:0:{60767867-D654-442F-A459-BD1E617FB952}|informe_02\\informe_02.csproj|solutionrelative:informe_02\\reports\\report1.rdlc||{46F6D2A1-5E86-4080-A799-01F3D0E23796}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60767867-D654-442F-A459-BD1E617FB952}|informe_02\\informe_02.csproj|c:\\users\\adria\\source\\repos\\publioelio\\repos\\trimestre02\\unidad_5\\pruebas_casa\\informe_02\\informe_02\\informe_02\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60767867-D654-442F-A459-BD1E617FB952}|informe_02\\informe_02.csproj|solutionrelative:informe_02\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60767867-D654-442F-A459-BD1E617FB952}|informe_02\\informe_02.csproj|C:\\Users\\adria\\source\\repos\\PublioElio\\repos\\Trimestre02\\Unidad_5\\pruebas_casa\\informe_02\\informe_02\\informe_02\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60767867-D654-442F-A459-BD1E617FB952}|informe_02\\informe_02.csproj|solutionrelative:informe_02\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60767867-D654-442F-A459-BD1E617FB952}|informe_02\\informe_02.csproj|C:\\Users\\adria\\source\\repos\\PublioElio\\repos\\Trimestre02\\Unidad_5\\pruebas_casa\\informe_02\\informe_02\\informe_02\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{60767867-D654-442F-A459-BD1E617FB952}|informe_02\\informe_02.csproj|solutionrelative:informe_02\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Report1.rdlc [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\adria\\source\\repos\\PublioElio\\repos\\Trimestre02\\Unidad_5\\pruebas_casa\\informe_02\\informe_02\\informe_02\\Reports\\Report1.rdlc",
+              "RelativeDocumentMoniker": "informe_02\\Reports\\Report1.rdlc",
+              "ToolTip": "C:\\Users\\adria\\source\\repos\\PublioElio\\repos\\Trimestre02\\Unidad_5\\pruebas_casa\\informe_02\\informe_02\\informe_02\\Reports\\Report1.rdlc [Dise\u00F1o]",
+              "RelativeToolTip": "informe_02\\Reports\\Report1.rdlc [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001755|",
+              "WhenOpened": "2024-02-15T19:11:53.791Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\adria\\source\\repos\\PublioElio\\repos\\Trimestre02\\Unidad_5\\pruebas_casa\\informe_02\\informe_02\\informe_02\\Producto.cs",
+              "RelativeDocumentMoniker": "informe_02\\Producto.cs",
+              "ToolTip": "C:\\Users\\adria\\source\\repos\\PublioElio\\repos\\Trimestre02\\Unidad_5\\pruebas_casa\\informe_02\\informe_02\\informe_02\\Producto.cs",
+              "RelativeToolTip": "informe_02\\Producto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-15T19:02:58.397Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\adria\\source\\repos\\PublioElio\\repos\\Trimestre02\\Unidad_5\\pruebas_casa\\informe_02\\informe_02\\informe_02\\Form1.cs",
+              "RelativeDocumentMoniker": "informe_02\\Form1.cs",
+              "ToolTip": "C:\\Users\\adria\\source\\repos\\PublioElio\\repos\\Trimestre02\\Unidad_5\\pruebas_casa\\informe_02\\informe_02\\informe_02\\Form1.cs",
+              "RelativeToolTip": "informe_02\\Form1.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAgwBUAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-15T18:55:35.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\adria\\source\\repos\\PublioElio\\repos\\Trimestre02\\Unidad_5\\pruebas_casa\\informe_02\\informe_02\\informe_02\\Form1.cs",
+              "RelativeDocumentMoniker": "informe_02\\Form1.cs",
+              "ToolTip": "C:\\Users\\adria\\source\\repos\\PublioElio\\repos\\Trimestre02\\Unidad_5\\pruebas_casa\\informe_02\\informe_02\\informe_02\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "informe_02\\Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-15T18:49:21.651Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

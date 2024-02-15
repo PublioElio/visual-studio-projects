@@ -1,4 +1,0 @@
-C:\Users\Propietario\source\visual-studio-projects\Trimestre02\Unidad_5\Act_00\Act_00_report\obj\Debug\Act_00_report.csproj.AssemblyReference.cache
-C:\Users\Propietario\source\visual-studio-projects\Trimestre02\Unidad_5\Act_00\Act_00_report\obj\Debug\Act_00_report.Properties.Resources.resources
-C:\Users\Propietario\source\visual-studio-projects\Trimestre02\Unidad_5\Act_00\Act_00_report\obj\Debug\Act_00_report.csproj.GenerateResource.cache
-C:\Users\Propietario\source\visual-studio-projects\Trimestre02\Unidad_5\Act_00\Act_00_report\obj\Debug\Act_00_report.csproj.CoreCompileInputs.cache
