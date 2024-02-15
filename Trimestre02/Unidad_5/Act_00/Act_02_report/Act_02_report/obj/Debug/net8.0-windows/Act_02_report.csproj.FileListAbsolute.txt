@@ -1,0 +1,7 @@
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\Unidad_5\Act_00\Act_02_report\Act_02_report\obj\Debug\net8.0-windows\Act_02_report.Formulario1.resources
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\Unidad_5\Act_00\Act_02_report\Act_02_report\obj\Debug\net8.0-windows\Act_02_report.csproj.GenerateResource.cache
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\Unidad_5\Act_00\Act_02_report\Act_02_report\obj\Debug\net8.0-windows\Act_02_report.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\Unidad_5\Act_00\Act_02_report\Act_02_report\obj\Debug\net8.0-windows\Act_02_report.AssemblyInfoInputs.cache
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\Unidad_5\Act_00\Act_02_report\Act_02_report\obj\Debug\net8.0-windows\Act_02_report.AssemblyInfo.cs
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\Unidad_5\Act_00\Act_02_report\Act_02_report\obj\Debug\net8.0-windows\Act_02_report.csproj.CoreCompileInputs.cache
+C:\Users\Propietario\source\visual-studio-projects\Trimestre02\Unidad_5\Act_00\Act_02_report\Act_02_report\obj\Debug\net8.0-windows\Act_02_report.sourcelink.json
