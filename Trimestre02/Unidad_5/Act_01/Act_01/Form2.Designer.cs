@@ -32,11 +32,12 @@
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource4 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.agenciasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tuViajeFindeCursoDataSet = new Act_01.TuViajeFindeCursoDataSet();
             this.clientesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.destinosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.agenciasTableAdapter = new Act_01.TuViajeFindeCursoDataSetTableAdapters.agenciasTableAdapter();
             this.clientesTableAdapter = new Act_01.TuViajeFindeCursoDataSetTableAdapters.clientesTableAdapter();
             this.destinosTableAdapter = new Act_01.TuViajeFindeCursoDataSetTableAdapters.destinosTableAdapter();
@@ -45,25 +46,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.destinosBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // reportViewer1
-            // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "ViajesAgencias";
-            reportDataSource1.Value = this.agenciasBindingSource;
-            reportDataSource2.Name = "ViajesClientes";
-            reportDataSource2.Value = this.clientesBindingSource;
-            reportDataSource3.Name = "ViajesDestinos";
-            reportDataSource3.Value = this.destinosBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Act_01.Reports.Report1.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
-            this.reportViewer1.TabIndex = 0;
             // 
             // agenciasBindingSource
             // 
@@ -84,6 +66,28 @@
             // 
             this.destinosBindingSource.DataMember = "destinos";
             this.destinosBindingSource.DataSource = this.tuViajeFindeCursoDataSet;
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "ViajesAgencias";
+            reportDataSource1.Value = this.agenciasBindingSource;
+            reportDataSource2.Name = "ViajesClientes";
+            reportDataSource2.Value = this.clientesBindingSource;
+            reportDataSource3.Name = "ViajesDestinos";
+            reportDataSource3.Value = this.destinosBindingSource;
+            reportDataSource4.Name = "AgenciasSQL";
+            reportDataSource4.Value = this.agenciasBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource4);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Act_01.Reports.Report1.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(800, 450);
+            this.reportViewer1.TabIndex = 0;
             // 
             // agenciasTableAdapter
             // 
