@@ -1,0 +1,17 @@
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\recuperacion_componentes\reloj_analogico\reloj_analogico\reloj_analogico\bin\Debug\reloj_analogico.exe.config
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\recuperacion_componentes\reloj_analogico\reloj_analogico\reloj_analogico\bin\Debug\reloj_analogico.exe
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\recuperacion_componentes\reloj_analogico\reloj_analogico\reloj_analogico\bin\Debug\reloj_analogico.pdb
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\recuperacion_componentes\reloj_analogico\reloj_analogico\reloj_analogico\obj\Debug\reloj_analogico.csproj.AssemblyReference.cache
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\recuperacion_componentes\reloj_analogico\reloj_analogico\reloj_analogico\obj\Debug\componentes\reloj.g.cs
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\recuperacion_componentes\reloj_analogico\reloj_analogico\reloj_analogico\obj\Debug\MainWindow.g.cs
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\recuperacion_componentes\reloj_analogico\reloj_analogico\reloj_analogico\obj\Debug\App.g.cs
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\recuperacion_componentes\reloj_analogico\reloj_analogico\reloj_analogico\obj\Debug\reloj_analogico_MarkupCompile.cache
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\recuperacion_componentes\reloj_analogico\reloj_analogico\reloj_analogico\obj\Debug\reloj_analogico_MarkupCompile.lref
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\recuperacion_componentes\reloj_analogico\reloj_analogico\reloj_analogico\obj\Debug\componentes\reloj.baml
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\recuperacion_componentes\reloj_analogico\reloj_analogico\reloj_analogico\obj\Debug\MainWindow.baml
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\recuperacion_componentes\reloj_analogico\reloj_analogico\reloj_analogico\obj\Debug\reloj_analogico.g.resources
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\recuperacion_componentes\reloj_analogico\reloj_analogico\reloj_analogico\obj\Debug\reloj_analogico.Properties.Resources.resources
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\recuperacion_componentes\reloj_analogico\reloj_analogico\reloj_analogico\obj\Debug\reloj_analogico.csproj.GenerateResource.cache
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\recuperacion_componentes\reloj_analogico\reloj_analogico\reloj_analogico\obj\Debug\reloj_analogico.csproj.CoreCompileInputs.cache
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\recuperacion_componentes\reloj_analogico\reloj_analogico\reloj_analogico\obj\Debug\reloj_analogico.exe
+C:\Users\adria\source\repos\PublioElio\repos\Trimestre02\recuperacion_componentes\reloj_analogico\reloj_analogico\reloj_analogico\obj\Debug\reloj_analogico.pdb

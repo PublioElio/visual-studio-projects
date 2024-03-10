@@ -1,0 +1,79 @@
+﻿<UserControl
+    x:Class="reloj_analogico.componentes.reloj"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:reloj_analogico.componentes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="450"
+    d:DesignWidth="450"
+    mc:Ignorable="d">
+    <Grid>
+        <Ellipse
+            x:Name="Elipse"
+            Width="450"
+            Height="450"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Stroke="Black" />
+
+        <Rectangle
+            x:Name="Manecilla_Horas"
+            Width="5"
+            Height="125"
+            Margin="220,100,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            RenderTransformOrigin="0.532,0.991"
+            Stroke="Black"
+            StrokeThickness="5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform x:Name="anguloHora" Angle="0" />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle
+            x:Name="Manecilla_minutos"
+            Width="3"
+            Height="185"
+            Margin="220,40,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            RenderTransformOrigin="0.532,0.991"
+            Stroke="#FF888888"
+            StrokeThickness="5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform x:Name="anguloMinutos" Angle="0" />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle
+            x:Name="Manecilla_segundos"
+            Width="3"
+            Height="185"
+            Margin="220,40,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            RenderTransformOrigin="0.532,0.991"
+            Stroke="#FF0004F3"
+            StrokeThickness="2">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform />
+                    <SkewTransform />
+                    <RotateTransform x:Name="anguloSegundos" Angle="0" />
+                    <TranslateTransform />
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+
+    </Grid>
+</UserControl>
