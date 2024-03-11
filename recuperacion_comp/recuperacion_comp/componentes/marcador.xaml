@@ -1,0 +1,147 @@
+﻿<UserControl
+    x:Class="recuperacion_comp.componentes.marcador"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:recuperacion_comp.componentes"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Width="550"
+    d:DesignHeight="250"
+    mc:Ignorable="d">
+    <Grid>
+        <Label
+            x:Name="LabelTeamName1"
+            Width="250"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Nombre equipo 1" />
+
+        <Label
+            x:Name="LabelTeamName2"
+            Width="250"
+            Margin="300,0,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Nombre equipo2" />
+
+        <Label
+            x:Name="LabelGolesTeam1"
+            Width="106"
+            Margin="72,88,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="0"
+            FontSize="35"
+            FontWeight="Heavy" />
+
+        <Label
+            x:Name="LabelGolesTeam2"
+            Width="106"
+            Margin="372,88,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="0"
+            FontSize="35"
+            FontWeight="Heavy" />
+
+        <Label
+            x:Name="LabelAddedTime"
+            Width="103"
+            Margin="300,214,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Tiempo añadido:"
+            FontWeight="Bold" />
+
+        <Label
+            x:Name="LabelAddedMin"
+            Width="27"
+            Margin="408,214,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="0" />
+
+        <Label
+            x:Name="LabelAddedSeconds"
+            Width="26"
+            Margin="472,214,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="0" />
+
+        <Label
+            x:Name="LabelDosPuntosAddedTime"
+            Width="27"
+            Margin="440,214,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content=":" />
+
+        <Label
+            x:Name="LabelTiempoTranscurrido"
+            Width="128"
+            Margin="11,214,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Tiempo transcurrido:"
+            FontWeight="Bold" />
+
+        <Label
+            x:Name="LabelMinutosTranscurridos"
+            Width="24"
+            Margin="144,214,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            HorizontalContentAlignment="Right"
+            Content="0" />
+
+        <Label
+            x:Name="LabelSegundosTranscurridos"
+            Width="26"
+            Margin="181,214,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            HorizontalContentAlignment="Right"
+            Content="0" />
+
+        <Label
+            x:Name="LabelDosPuntosTiempoTranscurrido"
+            Width="13"
+            Margin="168,214,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content=":" />
+
+        <Label
+            x:Name="LabelParteActual"
+            Width="98"
+            Margin="11,171,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Parte actual:"
+            FontWeight="Black" />
+
+        <Label
+            x:Name="LabelParte"
+            Width="107"
+            Margin="114,171,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="Primer tiempo"
+            FontWeight="Bold" />
+
+        <Button
+            Margin="227,217,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="+" />
+
+        <Button
+            Width="12"
+            Margin="210,217,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Content="-" />
+
+    </Grid>
+</UserControl>

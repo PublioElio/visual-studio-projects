@@ -39,3 +39,4 @@ C:\Users\adria\source\repos\PublioElio\repos\02_poject\obj\Debug\net6.0-windows\
 C:\Users\adria\source\repos\PublioElio\repos\02_poject\obj\Debug\net6.0-windows\02_poject.genruntimeconfig.cache
 C:\Users\adria\source\repos\PublioElio\repos\02_poject\obj\Debug\net6.0-windows\ref\02_poject.dll
 C:\Users\adria\source\repos\PublioElio\repos\02_poject\obj\Debug\net6.0-windows\02_poject.sourcelink.json
+C:\Users\Propietario\source\visual-studio-projects\02_poject\obj\Debug\net6.0-windows\02_poject.sourcelink.json
