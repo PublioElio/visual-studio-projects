@@ -21,10 +21,10 @@
             Margin="234,468,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            GolesEquipo1="1"
+            GolesEquipo1="5"
             GolesEquipo2="3"
-            TeamName1="Celta"
-            TeamName2="Logroñés" />
+            TeamName1="Málaga"
+            TeamName2="Madrid" MinutosActuales="92" AddedMinunes="8" />
         <Label
             x:Name="LabelGolesEquipo1"
             Margin="87,113,0,0"
@@ -96,23 +96,28 @@
             FontSize="14"
             FontWeight="Bold" />
 
-        <Button
-            x:Name="ButtoRestarMin"
-            Width="33"
-            Margin="641,190,0,0"
+        <RepeatButton
+            x:Name="RepeatBtnAdd"
+            Width="29"
+            Height="24"
+            Margin="716,188,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Click="ButtoRestarMin_Click"
-            Content="-" />
+            Click="RepeatBtnAdd_Click"
+            Content="+"
+            Delay="500"
+            Interval="100" />
 
-        <Button
-            x:Name="ButtoSumarMin"
-            Width="33"
-            Margin="716,190,0,0"
+        <RepeatButton
+            x:Name="RepeatBtnDecrementar"
+            Width="30"
+            Height="24"
+            Margin="643,188,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Click="ButtoSumarMin_Click"
-            Content="+" />
+            Content="-"
+            Delay="500"
+            Interval="100" Click="RepeatBtnDecrementar_Click" />
 
     </Grid>
 </Window>

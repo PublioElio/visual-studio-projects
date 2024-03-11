@@ -14,7 +14,8 @@
             Width="250"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Content="Nombre equipo 1" />
+            Content="Nombre equipo 1"
+            FontWeight="Black" />
 
         <Label
             x:Name="LabelTeamName2"
@@ -22,14 +23,16 @@
             Margin="300,0,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Content="Nombre equipo2" />
+            Content="Nombre equipo2"
+            FontWeight="Black" />
 
         <Label
             x:Name="LabelGolesTeam1"
             Width="106"
-            Margin="72,88,0,0"
+            Margin="75,45,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
+            HorizontalContentAlignment="Center"
             Content="0"
             FontSize="35"
             FontWeight="Heavy" />
@@ -37,9 +40,10 @@
         <Label
             x:Name="LabelGolesTeam2"
             Width="106"
-            Margin="372,88,0,0"
+            Margin="372,45,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
+            HorizontalContentAlignment="Center"
             Content="0"
             FontSize="35"
             FontWeight="Heavy" />
@@ -115,7 +119,7 @@
         <Label
             x:Name="LabelParteActual"
             Width="98"
-            Margin="11,171,0,0"
+            Margin="11,125,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Parte actual:"
@@ -124,7 +128,7 @@
         <Label
             x:Name="LabelParte"
             Width="107"
-            Margin="114,171,0,0"
+            Margin="114,125,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Content="Primer tiempo"

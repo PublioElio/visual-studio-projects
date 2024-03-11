@@ -50,22 +50,22 @@ namespace recuperacion_comp
             }
         }
 
-        private void ButtoRestarMin_Click(object sender, RoutedEventArgs e)
-        {
-            int minutos = int.Parse(TextBoxAnyadirTiempo.Text);
-            if (minutos > 0)
-            {
-                minutos--;
-                TextBoxAnyadirTiempo.Text = minutos.ToString();
-            }
-        }
-
-        private void ButtoSumarMin_Click(object sender, RoutedEventArgs e)
+        private void RepeatBtnAdd_Click(object sender, RoutedEventArgs e)
         {
             int minutos = int.Parse(TextBoxAnyadirTiempo.Text);
             if (minutos < 20)
             {
                 minutos++;
+                TextBoxAnyadirTiempo.Text = minutos.ToString();
+            }
+        }
+
+        private void RepeatBtnDecrementar_Click(object sender, RoutedEventArgs e)
+        {
+            int minutos = int.Parse(TextBoxAnyadirTiempo.Text);
+            if (minutos > 0)
+            {
+                minutos--;
                 TextBoxAnyadirTiempo.Text = minutos.ToString();
             }
         }
